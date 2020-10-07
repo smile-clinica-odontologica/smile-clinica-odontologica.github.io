@@ -1,0 +1,16 @@
+{
+  "name": "smile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
+    "build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed"
+  },
+  "keywords": [],
+  "author": "Grupo Amarelo - HcodeLab",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.26.10"
+  }
+}

@@ -1,0 +1,24 @@
+:root {
+  --main: #FFF;
+  --second: #000;
+}
+
+body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr, form {
+  display: flex;
+}
+
+body {
+  margin: 0;
+  flex-direction: column;
+}
+body > main {
+  min-height: calc(100vh - 400px);
+}
+
+@media (min-width: 1200px) {
+  body > main {
+    min-height: calc(100vh - 341px);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
