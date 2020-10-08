@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr, form {
@@ -9,6 +10,8 @@ body, div, article, aside, footer, header, main, nav, section, ul, ol, li, butto
 body {
     margin: 0;
     flex-direction: column;
+    font-family: 'Manrope', sans-serif;
+    font-weight: normal;
     > main {
         min-height: calc(100vh - 400px);
     }
