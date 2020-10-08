@@ -1,5 +1,5 @@
 # smile
-<img src="assets/imagens/logo.svg" width="100px">
+<img src="assets/images/logo.svg" width="100px">
 <hr />
 
 ## Como começar?
