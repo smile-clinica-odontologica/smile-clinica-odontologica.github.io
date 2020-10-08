@@ -1,4 +1,5 @@
 # smile
+<img src="assets/imagens/logo.svg" width="100px">
 <hr />
 
 ## Como começar?
@@ -12,10 +13,36 @@
 git pull origin master
 ```
 
+## Requisitos do Projeto
+- Temos de usar as fotos de clínicas, tanto das áreas internas quanto das áreas internas.
+    - quando falar da clínica é para usar imagens da clinica mesmo, não usar imagens de outros lugares.
+- As outras imagens são apenas sugestões, não são obrigatórias e podemos buscar outras imagens também.
+- Não tem quantidade de imagens mínima.
+
+
+
+
 ## To-do
 
-- [] Colocar o favicon
+- [x] Colocar o favicon
+    - Temos apenas um problema: o site favicon-generator não gerou os favicons com fundo transparente.
 - [] Colocar link para voltar para a home tanto no logotipo do header, quanto no do footer
 - [] Definir quais páginas teremos
+    - Home = capa + Blog + Chamada Franquia + Contato
+    - Franquia (explicação + formulário)
+    - Estética
+    - Ortodontia
+    - Clínico
+    - Implantes
+    - Agendamento
+    - Cadastro
+
+
 - [] Concluir a criação do Layout
 - [] Fazer a divisão das tarefas
+    - Footer: Myltiane
+    - Header: João
+    - Design: Lucas e João
+
+- [] Adicione aqui as tarefas que você achar importantes...
+
