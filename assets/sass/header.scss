@@ -70,7 +70,6 @@ header {
       list-style: none;
       width: 300px;
       margin: 0;
-      justify-content: flex-end;
       height: 100vh;
       background-color: #f8f8f8;
       position: fixed;
@@ -181,11 +180,227 @@ header {
         ul {
           li {
             opacity: 1;
+
+            &#login {
+              position: absolute;
+              bottom: 0;
+              margin-bottom: 20px;
+              background-color: var(--main);
+              width: 200px;
+              align-items: center;
+              justify-content: center;
+              border-radius: 6px;
+              
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+
+        .info {
+          display: none;
+        }
+      }
+    }
+
+    &.logged {
+      nav {
+        ul {
+          li {
+            &#login {
+              display: none;
+            }
           }
         }
 
         .info {
           opacity: 1;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    .menu {
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      .logo {
+        top: 0;
+        right:calc(100vw - 160px);
+        margin-top: 10px;
+      }
+
+      &.open {
+        .logo {
+          top: 0;
+          right:calc(100vw - 160px);
+          margin-top: 10px;
+          padding: 10px;
+        }
+
+        nav {
+          ul {
+            li {
+              &#login {
+                background-color: var(--main);
+                border-radius: 6px;
+                display: block;
+                position: initial;
+                width: initial;
+                margin: auto 0;
+                padding: 6px 12px;
+
+                a {
+                  color: white;
+                  padding: 6px 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.logged {
+        nav {
+          flex-direction: row;
+          padding: 0;
+          ul {
+            li {
+              &#login {
+                display: none;
+              }
+            }
+          }
+
+          .info {
+            display: block;
+            width: initial;
+            height: initial;
+            hr {
+              display: none;
+            }
+
+            .content {
+              picture {
+                img {
+                  width: 40px;
+                  height: 40px;
+                  margin: auto 0;
+                }
+              }
+              div {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .btn-open {
+        display: none;
+      }
+
+      .btn-close {
+        display: none;
+      }
+
+      nav {
+        min-width: 600px;
+        height: 50px;
+        position: initial;
+        align-items: center;
+        padding: 0;
+        padding: 0 40px;
+        background-color: transparent;
+
+        ul {
+          height: 50px;
+          width: 100%;
+          justify-content: space-evenly;
+          padding: 0;
+          background-color:  white;
+          flex-direction: row;
+          border-radius: 6px;
+          box-shadow: 0px 0px 4px var(--main-80);
+
+          li {
+            opacity: 1;
+
+            &#login {
+              background-color: var(--main);
+              border-radius: 6px;
+              display: block;
+              position: initial;
+              width: initial;
+              margin: auto 0;
+              padding: 6px 12px;
+
+              a {
+                color: white;
+                padding: 6px 12px;
+              }
+            }
+          }
+        }
+
+        .info {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    .menu {
+      nav {
+        margin-right: 40px;
+      }
+
+      &.logged {
+        nav {
+          flex-direction: row;
+          padding: 0;
+          ul {
+            li {
+              &#login {
+                display: none;
+              }
+            }
+          }
+
+          .info {
+            display: block;
+            width: initial;
+            height: initial;
+            hr {
+              display: none;
+            }
+
+            .content {
+              picture {
+                img {
+                  width: 40px;
+                  height: 40px;
+                  margin: auto 0;
+                }
+              }
+              div {
+                display: block;
+
+                a {
+                  display: flex;
+                  flex-direction: column;
+                }
+              }
+            }
+          }
         }
       }
     }

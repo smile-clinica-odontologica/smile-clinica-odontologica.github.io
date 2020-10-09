@@ -1,6 +1,8 @@
 const btnOpen = document.querySelector('.btn-open');
-const btnClose = document.querySelector('.btn-close')
-const menu = document.querySelector('.menu')
+const btnClose = document.querySelector('.btn-close');
+const menu = document.querySelector('.menu');
+
+const btnLogin = document.querySelector('#login');
 
 btnOpen.addEventListener('click', e => {
 
@@ -11,5 +13,11 @@ btnOpen.addEventListener('click', e => {
 btnClose.addEventListener('click', e => {
 
   menu.classList.remove('open')
+
+})
+
+btnLogin.addEventListener('click', e => {
+
+  menu.classList.add('logged')
 
 })
