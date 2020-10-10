@@ -4,6 +4,7 @@
   --main-80: #5A96D580;
   --second: #2D2B87;
   --dark-blue: #415a77;
+  --border-radius: 4px;
   --text: #636363;
 }
 
@@ -72,6 +73,64 @@ body > main {
     width: 120px;
   }
 }
+form {
+  width: 100%;
+  padding: 20px;
+  flex-direction: column;
+}
+form .form-title {
+  color: var(--main);
+  font-weight: bold;
+  font-size: 20px;
+}
+form .field {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+form .field label {
+  position: absolute;
+  font-size: 20px;
+  top: 15px;
+  left: 10px;
+  transition: 0.2s all;
+  color: var(--main-80);
+}
+form .field input {
+  border: 1px solid var(--main);
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 10px;
+  line-height: 2em;
+  font-size: 20px;
+  outline: none;
+  color: var(--main);
+  transition: 0.2s all;
+}
+form .field input:focus {
+  border: 1px solid var(--second);
+}
+form .field input:focus + label {
+  color: var(--second);
+}
+form .field input:valid + label, form .field input:focus + label {
+  top: 2px;
+  font-size: 14px;
+}
+form button {
+  max-width: 120px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 30px;
+  border: 1px solid var(--main);
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  color: var(--main);
+  cursor: pointer;
+}
+
 header {
   height: 80px;
   width: 100%;

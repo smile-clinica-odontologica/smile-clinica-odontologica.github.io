@@ -1,0 +1,59 @@
+form {
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    .form-title {
+        color: var(--main);
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .field {
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+        label {
+            position: absolute;
+            font-size: 20px;
+            top: 15px;
+            left: 10px;
+            transition: 0.2s all;
+            color: var(--main-80);
+        }
+        input {
+            border: 1px solid var(--main);
+            border-radius: var(--border-radius);
+            width: 100%;
+            padding-top: 15px;
+            padding-left: 10px;
+            line-height: 2em;
+            font-size: 20px;
+            outline: none;
+            color: var(--main);
+            transition: 0.2s all;
+            &:focus {
+                border: 1px solid var(--second);
+                + label {
+                    color: var(--second);
+                }
+            }
+            &:valid, &:focus {
+                + label {
+                    top: 2px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    button {
+        max-width: 120px;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 5px 30px;
+        border: 1px solid var(--main);
+        background-color: #fff;
+        border-radius: var(--border-radius);
+        color: var(--main);
+        cursor: pointer;
+    }
+}
