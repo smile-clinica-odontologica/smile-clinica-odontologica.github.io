@@ -4,14 +4,16 @@
   --main-80: #5A96D580;
   --second: #2D2B87;
   --dark-blue: #415a77;
+  --white: #FFF;
+  --hover-button: #f9f9f9ea;
   --space: 20px;
   --border-radius: 4px;
   --text: #636363;
   --bg-footer: #fff;
   --text-footer: var(--main);
   --text-footer-copyright: #fff;
-  --letters-body: #f8f8f8;
   --letters-title: #636363;
+  --letters-body: #f8f8f8;
 }
 
 * {
@@ -597,7 +599,7 @@ header .menu.logged nav .info {
   height: 150px;
 }
 #home .highlights div h2, #home .highlights div p {
-  color: var(--letters);
+  color: var(--letters-body);
 }
 #home .highlights div h2 {
   margin: 0;
@@ -674,6 +676,63 @@ header .menu.logged nav .info {
   margin: 0;
   font-size: 15px;
   font-weight: 300;
+}
+#home .free-trial {
+  width: 100%;
+  height: 600px;
+  background-image: url("../images/photos/free-trial-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#home .free-trial .free-trial-opacity {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  background-color: var(--main);
+  opacity: 50%;
+  flex-direction: column;
+  padding: var(--space);
+}
+#home .free-trial .free-trial-opacity strong, #home .free-trial .free-trial-opacity p, #home .free-trial .free-trial-opacity small {
+  color: var(--letters-body);
+  font-weight: 600;
+  z-index: 2;
+}
+#home .free-trial .free-trial-opacity strong {
+  font-size: 65px;
+  margin-bottom: 15px;
+}
+#home .free-trial .free-trial-opacity p {
+  font-size: 30px;
+  margin: 0;
+}
+#home .free-trial .free-trial-opacity small {
+  font-size: 38px;
+}
+#home .free-trial .free-trial-opacity button {
+  min-width: 130px;
+  width: 205px;
+  border: solid 1px var(--main);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  margin-top: calc(var(--space) * 4);
+}
+#home .free-trial .free-trial-opacity button:hover {
+  background-color: var(--hover-button);
+}
+#home .free-trial .free-trial-opacity button a {
+  text-decoration: none;
+  color: var(--main);
 }
 
 @media (min-width: 768px) {

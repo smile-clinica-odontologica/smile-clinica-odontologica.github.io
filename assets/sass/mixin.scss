@@ -1,0 +1,19 @@
+@mixin button {
+    min-width: 130px;
+    width: 205px;
+    border: solid 1px var(--main);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    background: var(--white);
+    &:hover {
+        background-color: var(--hover-button);
+    }
+}
