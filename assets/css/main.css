@@ -4,8 +4,12 @@
   --main-80: #5A96D580;
   --second: #2D2B87;
   --dark-blue: #415a77;
+  --space: 20px;
   --border-radius: 4px;
   --text: #636363;
+  --bg-footer: #fff;
+  --text-footer: var(--main);
+  --text-footer-copyright: #fff;
 }
 
 * {
@@ -34,6 +38,7 @@ body > main {
 }
 form {
   width: 100%;
+  max-width: 400px;
   padding: 20px;
   flex-direction: column;
 }
@@ -88,6 +93,67 @@ form button {
   border-radius: var(--border-radius);
   color: var(--main);
   cursor: pointer;
+}
+
+footer {
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--bg-footer);
+  color: var(--text-footer);
+}
+footer .footer-title {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-title h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+footer .footer-title h5 strong {
+  font-weight: bold;
+}
+footer .footer-container {
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+footer .footer-container .container-col {
+  width: 100%;
+  position: relative;
+}
+footer .footer-container .container-col ul {
+  flex-direction: column;
+  padding: var(--space);
+}
+footer .footer-container .container-col ul li {
+  flex-direction: column;
+  font-weight: normal;
+  margin: 10px 0;
+}
+footer .footer-container .container-col ul li.li-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: var(--space) 0;
+}
+footer .footer-container .container-col ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--text-footer);
+}
+footer .footer-container .container-col .footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--space) 0;
+}
+footer .footer-container .container-col .footer-logo img {
+  width: 50%;
+}
+footer .footer-copyright {
+  color: var(--text-footer-copyright);
+  background-color: var(--main);
 }
 
 header {
