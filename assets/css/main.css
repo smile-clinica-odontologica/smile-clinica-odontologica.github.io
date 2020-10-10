@@ -10,6 +10,8 @@
   --bg-footer: #fff;
   --text-footer: var(--main);
   --text-footer-copyright: #fff;
+  --letters-body: #f8f8f8;
+  --letters-title: #636363;
 }
 
 * {
@@ -33,6 +35,8 @@ body .wrap {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -40vh 0vw;
+  width: 100%;
+  height: 945px;
 }
 body > main {
   min-height: calc(100vh - 400px);
@@ -515,6 +519,9 @@ header .menu.logged nav .info {
     flex-direction: column;
   }
 }
+#home {
+  flex-direction: column;
+}
 #home header {
   width: 100%;
   height: 100vh;
@@ -568,6 +575,105 @@ header .menu.logged nav .info {
   height: 100vh;
   background-image: url("../images/photos/back-image-header.png");
   background-size: cover;
+}
+#home .highlights {
+  width: 100%;
+  flex-direction: column;
+}
+#home .highlights div {
+  width: 100%;
+  height: 500px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main);
+  padding: 50px 35px;
+}
+#home .highlights div.odd {
+  opacity: 80%;
+}
+#home .highlights div img {
+  width: 150px;
+  height: 150px;
+}
+#home .highlights div h2, #home .highlights div p {
+  color: var(--letters);
+}
+#home .highlights div h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 1.2rem 0;
+}
+#home .highlights div p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+#home .professional {
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#home .professional .professional-photo {
+  background-image: url("../images/photos/doctor-ivanesia-peixoto.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 415px;
+  opacity: 70%;
+  margin-top: 50px;
+}
+#home .professional .legend {
+  flex-direction: column;
+  text-align: center;
+}
+#home .professional .legend strong, #home .professional .legend p {
+  font-weight: 400;
+}
+#home .professional .legend strong {
+  font-size: 30px;
+  color: var(--letters-title);
+  margin-top: var(--space);
+  margin-bottom: 10px;
+}
+#home .professional .legend p {
+  font-size: 25px;
+  color: var(--main);
+  padding: 0 20px;
+  margin: 0;
+}
+#home .professional div {
+  margin: var(--space);
+}
+#home .professional div.professional-icons {
+  width: 120px;
+  height: 120px;
+  border: solid 4px var(--main);
+  padding: 10px;
+}
+#home .professional div.professional-icons img {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+#home .professional div.professional-icons-text {
+  flex-direction: column;
+}
+#home .professional div.professional-icons-text > h3, #home .professional div.professional-icons-text > p {
+  color: var(--main);
+}
+#home .professional div.professional-icons-text > h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: var(--space);
+}
+#home .professional div.professional-icons-text > p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 @media (min-width: 768px) {
