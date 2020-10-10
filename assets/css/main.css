@@ -5,6 +5,7 @@
   --second: #2D2B87;
   --dark-blue: #415a77;
   --white: #FFF;
+  --black: #000;
   --hover-button: #f9f9f9ea;
   --space: 20px;
   --border-radius: 4px;
@@ -733,6 +734,89 @@ header .menu.logged nav .info {
 #home .free-trial .free-trial-opacity button a {
   text-decoration: none;
   color: var(--main);
+}
+#home .doctors {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+#home .doctors .doctors-title {
+  flex-direction: column;
+  padding: var(--space);
+}
+#home .doctors .doctors-title h3, #home .doctors .doctors-title strong, #home .doctors .doctors-title p {
+  color: var(--main);
+}
+#home .doctors .doctors-title h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin: var(--space) 0;
+}
+#home .doctors .doctors-title strong {
+  font-size: 25px;
+  font-weight: 400;
+}
+#home .doctors .doctors-title p {
+  font-size: 20px;
+  font-weight: 300;
+  margin: var(--space) 0;
+}
+#home .doctors .doctors-title + div {
+  flex-direction: column;
+}
+#home .doctors .doctor-information {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#home .doctors .doctor-information img {
+  max-width: 340px;
+}
+#home .doctors .doctor-information .doctors-social-media {
+  width: 350px;
+  height: 80px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  background-color: var(--main);
+  opacity: 30%;
+  border-radius: var(--border-radius);
+}
+#home .doctors .doctor-information .doctors-social-media a {
+  margin: auto 0;
+}
+#home .doctors .doctor-information .doctors-social-media a > img {
+  width: 30px;
+  height: 30px;
+  margin: auto 0;
+}
+#home .doctors .doctor-information h3, #home .doctors .doctor-information strong, #home .doctors .doctor-information p {
+  text-align: center;
+}
+#home .doctors .doctor-information h3, #home .doctors .doctor-information p {
+  color: var(--main);
+}
+#home .doctors .doctor-information h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: var(--space);
+}
+#home .doctors .doctor-information strong {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--letters-title);
+}
+#home .doctors .doctor-information p {
+  margin: 0;
+  margin-top: var(--space);
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0 calc(var(--space) * 2);
 }
 
 @media (min-width: 768px) {
