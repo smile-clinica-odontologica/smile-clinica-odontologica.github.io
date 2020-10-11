@@ -287,6 +287,70 @@
       }
     }
   }
+  .testimonials {
+    flex-direction: column;
+    margin-top: var(--space);
+    .testimonials-title {
+      flex-direction: column;
+      padding: var(--space);
+      h3, strong {
+        color: var(--main);
+      }
+      h3 {
+        margin: var(--space) 0;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+      }
+      strong {
+        font-size: 35px;
+        font-weight: 400;
+      }
+    }
+    .testimonials-photo {
+      width: 100%;
+      > img {
+        height: 340px;
+        margin: 0 auto;
+        border-radius: var(--border-radius);
+      }
+    }
+    .testimonials-people {
+      flex-direction: column;
+      padding: var(--space);
+      p, strong {
+        color: var(--letters-title);
+      }
+      p {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      strong {
+        font-size: 25px;
+        font-weight: 300;
+        margin-top: var(--space);
+      }
+      small {
+        font-size: 40px;
+        font-weight: 400;
+        color: var(--second);
+        margin-top: -20px;
+      }
+    }
+    .testimonials-photo + img {
+      width: 100px;
+      height: 100px;
+      margin-top: var(--space);
+      margin-left: var(--space);
+    }
+    .testimonials-people + img {
+      width: 100px;
+      height: 100px;
+      justify-content: flex-end;
+      margin-left: calc(100vw - 120px);
+    }
+  }
 }
 
 @media (min-width: 768px) {

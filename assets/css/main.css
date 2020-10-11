@@ -819,6 +819,70 @@ header .menu.logged nav .info {
   font-weight: 300;
   padding: 0 calc(var(--space) * 2);
 }
+#home .testimonials {
+  flex-direction: column;
+  margin-top: var(--space);
+}
+#home .testimonials .testimonials-title {
+  flex-direction: column;
+  padding: var(--space);
+}
+#home .testimonials .testimonials-title h3, #home .testimonials .testimonials-title strong {
+  color: var(--main);
+}
+#home .testimonials .testimonials-title h3 {
+  margin: var(--space) 0;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+#home .testimonials .testimonials-title strong {
+  font-size: 35px;
+  font-weight: 400;
+}
+#home .testimonials .testimonials-photo {
+  width: 100%;
+}
+#home .testimonials .testimonials-photo > img {
+  height: 340px;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+}
+#home .testimonials .testimonials-people {
+  flex-direction: column;
+  padding: var(--space);
+}
+#home .testimonials .testimonials-people p, #home .testimonials .testimonials-people strong {
+  color: var(--letters-title);
+}
+#home .testimonials .testimonials-people p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+#home .testimonials .testimonials-people strong {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: var(--space);
+}
+#home .testimonials .testimonials-people small {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--second);
+  margin-top: -20px;
+}
+#home .testimonials .testimonials-photo + img {
+  width: 100px;
+  height: 100px;
+  margin-top: var(--space);
+  margin-left: var(--space);
+}
+#home .testimonials .testimonials-people + img {
+  width: 100px;
+  height: 100px;
+  justify-content: flex-end;
+  margin-left: calc(100vw - 120px);
+}
 
 @media (min-width: 768px) {
   #home header {
