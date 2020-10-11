@@ -813,8 +813,7 @@ header .menu.logged nav .info {
   color: var(--letters-title);
 }
 #home .doctors .doctor-information p {
-  margin: 0;
-  margin-top: var(--space);
+  margin: var(--space) 0;
   font-size: 15px;
   font-weight: 300;
   padding: 0 calc(var(--space) * 2);
