@@ -143,68 +143,96 @@ form button {
   cursor: pointer;
 }
 
-footer {
+#footer {
   flex-direction: column;
   width: 100%;
   background-color: var(--bg-footer);
   color: var(--text-footer);
 }
-footer .footer-title {
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-footer .footer-title h5 {
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: normal;
-}
-footer .footer-title h5 strong {
-  font-weight: bold;
-}
-footer .footer-container {
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-}
-footer .footer-container .container-col {
-  width: 100%;
-  position: relative;
-}
-footer .footer-container .container-col ul {
-  flex-direction: column;
+#footer .footer-title {
+  text-align: left;
   padding: var(--space);
 }
-footer .footer-container .container-col ul li {
+#footer .footer-title h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+#footer .footer-container {
   flex-direction: column;
-  font-weight: normal;
-  margin: 10px 0;
+  width: 100%;
 }
-footer .footer-container .container-col ul li.li-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin: var(--space) 0;
+#footer .footer-container .container-col ul {
+  flex-direction: column;
+  padding: var(--space);
+  margin: 0;
 }
-footer .footer-container .container-col ul li a {
+#footer .footer-container .container-col ul li {
+  flex-direction: row;
+  font-weight: 300;
+  height: 50px;
+  margin: auto 0;
+}
+#footer .footer-container .container-col ul li.li-title {
   font-size: 20px;
+  font-weight: 600;
+}
+#footer .footer-container .container-col ul li img {
+  width: 30px;
+  height: 30px;
+  margin-right: var(--space);
+}
+#footer .footer-container .container-col ul li a {
+  font-size: 17px;
   text-decoration: none;
   color: var(--text-footer);
 }
-footer .footer-container .container-col ul li a img {
-  width: 20px;
-}
-footer .footer-container .container-col .footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#footer .footer-container .logo {
+  width: 100%;
   margin: var(--space) 0;
 }
-footer .footer-container .container-col .footer-logo img {
-  width: 50%;
+#footer .footer-container .logo a {
+  margin-left: calc(50% - 45px);
 }
-footer .footer-copyright {
+#footer .footer-container .logo a img {
+  width: 90px;
+}
+#footer .footer-copyright {
   color: var(--text-footer-copyright);
   background-color: var(--main);
+  flex-direction: column;
+  font-weight: 600;
+}
+#footer .footer-copyright h3 {
+  font-size: 20px;
+  padding-left: var(--space);
+}
+#footer .footer-copyright > div {
+  flex-direction: row;
+}
+#footer .footer-copyright > div a {
+  text-decoration: none;
+  color: var(--text-footer-copyright);
+  margin-left: var(--space);
+  font-size: 15px;
+}
+#footer .footer-copyright > div p + a {
+  margin: 0;
+}
+#footer .footer-copyright > div p {
+  margin: 0 10px;
+}
+#footer .footer-copyright .footer-copyright-images {
+  justify-content: space-evenly;
+  margin: var(--space) 0;
+}
+#footer .footer-copyright .footer-copyright-images a {
+  margin: 0;
+}
+#footer .footer-copyright .footer-copyright-images img {
+  width: 30px;
+  height: 30px;
+  margin: auto 0;
 }
 
 header {
