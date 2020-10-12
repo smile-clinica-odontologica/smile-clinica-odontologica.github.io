@@ -1077,7 +1077,7 @@ header .menu.logged nav .info {
   }
   #home .free-trial > button {
     position: relative;
-    top: calc(50% - 30px);
+    top: calc(70% - 30px);
     left: 80%;
   }
   #home .doctors .doctors-title {
@@ -1103,14 +1103,25 @@ header .menu.logged nav .info {
     font-weight: 400;
   }
   #home .testimonials .testimonials-title strong {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
   }
   #home .testimonials .testimonials-title + div {
     flex-direction: row;
   }
+  #home .testimonials .testimonials-title + div .testimonials-people + img {
+    margin-left: calc(90% - 120px);
+  }
   #home .testimonials .testimonials-photo {
     width: 35%;
+  }
+  #home .testimonials .testimonials-people {
+    margin-left: 120px;
+    padding-right: 120px;
+  }
+  #home .testimonials .testimonials-people p {
+    font-size: 55px;
+    max-width: 70vw;
   }
   #home .our-values .price-tables {
     flex-direction: row;
