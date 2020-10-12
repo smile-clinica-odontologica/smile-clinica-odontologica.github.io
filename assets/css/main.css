@@ -7,6 +7,7 @@
   --white: #FFF;
   --black: #000;
   --hover-button: #f9f9f9ea;
+  --bg-gray: #f8f8f8;
   --space: 20px;
   --border-radius: 4px;
   --text: #636363;
@@ -909,6 +910,83 @@ header .menu.logged nav .info {
   height: 100px;
   justify-content: flex-end;
   margin-left: calc(100vw - 120px);
+}
+#home .our-values {
+  flex-direction: column;
+  background-color: var(--bg-gray);
+  margin: var(--space) 0;
+  padding-bottom: var(--space);
+}
+#home .our-values h3 {
+  text-align: center;
+  font-size: 40px;
+  color: var(--second);
+  font-weight: 600;
+  margin: var(--space) 0;
+}
+#home .our-values .price-tables {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#home .our-values .price-tables .price-tables-types {
+  flex-direction: column;
+  width: 90%;
+  max-width: 370px;
+  height: 610px;
+  border: solid 4px var(--main);
+  margin: var(--space) 100px;
+}
+#home .our-values .price-tables .price-tables-types > h3 {
+  font-size: 60px;
+  font-weight: 400;
+  color: var(--letters-title);
+}
+#home .our-values .price-tables .price-tables-types span {
+  font-size: 50px;
+  color: var(--second);
+  font-weight: 600;
+}
+#home .our-values .price-tables .price-tables-types strong {
+  font-size: 50px;
+  color: var(--letters-title);
+  font-weight: 600;
+}
+#home .our-values .price-tables .price-tables-types small {
+  color: var(--letters-title);
+  font-size: 20px;
+  font-weight: 600;
+  margin: auto 0;
+}
+#home .our-values .price-tables .price-tables-types > p {
+  text-align: center;
+  color: var(--letters-title);
+  font-weight: 300;
+  font-size: 20px;
+}
+#home .our-values .price-tables .price-tables-types button {
+  min-width: 130px;
+  width: 205px;
+  border: solid 1px var(--main);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  background-color: transparent;
+  border: solid 4px var(--main);
+  color: var(--main);
+  margin-left: calc(50% - 102.5px);
+}
+#home .our-values .price-tables .price-tables-types button:hover {
+  background-color: var(--hover-button);
 }
 
 @media (min-width: 768px) {
