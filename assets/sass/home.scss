@@ -183,7 +183,6 @@
       strong, p, small {
         color: var(--letters-body);
         font-weight: 600;
-        z-index: 2;
       }
       strong {
         font-size: 65px;
@@ -194,15 +193,17 @@
         margin: 0;
       }
       small {
-        font-size: 38px;
+        font-size: 40px;
       }
-      button {
-        @include button;
-        margin-top: calc(var(--space) * 4);
-        a{
-          text-decoration: none;
-          color: var(--main);
-        }
+    }
+    button {
+      @include button;
+      position: absolute;
+      top: 75%;
+      left: calc(50% - 102.5px);
+      a{
+        text-decoration: none;
+        color: var(--main);
       }
     }
   }
@@ -309,11 +310,26 @@
         font-weight: 400;
       }
     }
+    .testimonials-title + div {
+      flex-direction: column;
+    }
+    .testimonials-photo + div {
+      flex-direction: column;
+      img {
+        width: 100px;
+        height: 100px;
+        justify-content: flex-start;
+        margin-left: var(--space);
+      }
+      .testimonials-people + img {
+        margin-left: calc(100% - 120px);
+      }
+    }
     .testimonials-photo {
       width: 100%;
       > img {
         height: 340px;
-        margin: 0 auto;
+        margin: var(--space) auto;
         border-radius: var(--border-radius);
       }
     }
@@ -339,18 +355,6 @@
         color: var(--second);
         margin-top: -20px;
       }
-    }
-    .testimonials-photo + img {
-      width: 100px;
-      height: 100px;
-      margin-top: var(--space);
-      margin-left: var(--space);
-    }
-    .testimonials-people + img {
-      width: 100px;
-      height: 100px;
-      justify-content: flex-end;
-      margin-left: calc(100vw - 120px);
     }
   }
   .our-values {
@@ -447,6 +451,65 @@
       flex-direction: row;
       .professional-photo {
         height: 90%;
+      }
+    }
+    .free-trial {
+      height: 300px;
+      flex-direction: row;
+      .free-trial-opacity {
+        height: 300px;
+        strong {
+          font-size: 100px;
+        }
+        p, small {
+          font-size: 50px;
+        }
+        p + br {
+          display: none;
+        }
+      }
+      > button {
+        position: relative;
+        top: calc(50% - 30px);
+        left: 80%;
+      }
+    }
+    .doctors {
+      .doctors-title {
+        text-align: center;
+        strong {
+          font-size: 60px;
+        }
+        p {
+          padding: 0 20%;
+        }
+      }
+      .doctors-title + div {
+        flex-direction: row;
+      }
+      .doctor-information {
+        p {
+          padding: 0 30%;
+        }
+      }
+    }
+    .testimonials {
+      .testimonials-title{
+        text-align: center;
+        h3 {
+          font-size: 40px;
+          font-weight: 400;
+        }
+        strong {
+          font-size: 60px;
+          font-weight: 600;
+        }
+      }
+      .testimonials-title + div {
+        flex-direction: row;
+      }
+      .testimonials-photo {
+        width: 35%;
       }
     }
     .our-values {
