@@ -18,7 +18,6 @@ body {
         background-image: url('../images/photos/back-image-header.png');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: -40vh 0vw;
         width: 100%;
         height: 945px;
     }
@@ -28,7 +27,7 @@ body {
     }
 }
 
-@media (min-width: 650px) {
+/*@media (min-width: 650px) {
     body {
         .wrap {
             background-position: -25vh 0vw;
@@ -95,4 +94,4 @@ body {
             }
         }
     }
-}
+}*/

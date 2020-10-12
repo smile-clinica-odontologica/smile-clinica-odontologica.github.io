@@ -93,3 +93,15 @@
     }
 
 }
+
+@media (min-width: 1200px) {
+    #footer {
+        .footer-container {
+            flex-direction: row;
+            justify-content: space-between;
+            .logo {
+                width: 15%;
+            }
+        }
+    }
+}

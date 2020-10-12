@@ -111,6 +111,9 @@
         opacity: 70%;
         margin-top: 50px;
     }
+    .only-desktop {
+      flex-direction: column;
+    }
     .legend {
       flex-direction: column;
       text-align: center;
@@ -428,6 +431,27 @@
             margin: 0;
           }
         }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #home {
+    .highlights {
+      flex-direction: row;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .professional {
+      flex-direction: row;
+      .professional-photo {
+        height: 90%;
+      }
+    }
+    .our-values {
+      .price-tables{
+        flex-direction: row;
       }
     }
   }
