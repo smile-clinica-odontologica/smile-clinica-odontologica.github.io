@@ -537,7 +537,7 @@
       }
       > button {
         position: relative;
-        top: calc(50% - 30px);
+        top: calc(70% - 30px);
         left: 80%;
       }
     }
@@ -563,15 +563,26 @@
           font-weight: 400;
         }
         strong {
-          font-size: 60px;
+          font-size: 50px;
           font-weight: 600;
         }
       }
       .testimonials-title + div {
         flex-direction: row;
+        .testimonials-people + img {
+          margin-left: calc(90% - 120px);
+        }
       }
       .testimonials-photo {
         width: 35%;
+      }
+      .testimonials-people {
+        margin-left: 120px;
+        padding-right: 120px;
+        p {
+          font-size: 55px;
+          max-width: 70vw;
+        }
       }
     }
     .our-values {
