@@ -45,74 +45,42 @@ body > main {
   min-height: calc(100vh - 400px);
 }
 
-/*@media (min-width: 650px) {
-    body {
-        .wrap {
-            background-position: -25vh 0vw;
-        }
-    }
+@media (min-width: 650px) {
+  body .wrap {
+    background-position: -25vh 0vw;
+  }
 }
-
 @media (min-width: 768px) {
-    body {
-        .wrap {
-            background-position: -5vh 0vw;
-        }
-    }
+  body .wrap {
+    background-position: -5vh 0vw;
+  }
 }
-
 @media (min-width: 1000px) {
-    body {
-        .wrap {
-            background-position: 0vh 0vw;
-        }
-    }
+  body .wrap {
+    background-position: 0vh 0vw;
+  }
 }
-
 @media (min-width: 1200px) {
-    body {
-        .wrap {
-            background-image: url('../images/photos/back-image-header@2x.png');
-
-            #home {
-                min-height: calc(100vh - 341px);
-
-                header {
-                    .hero {
-                        padding: 0 100px 200px;
-                    }
-                }
-            }
-        }
-    }
+  body .wrap {
+    background-image: url("../images/photos/back-image-header@2x.png");
+  }
+  body .wrap #home header .hero {
+    padding: 0 100px 200px;
+  }
 }
-
 @media (min-width: 1300px) {
-    body {
-        .wrap {
-            #home {
-                header {
-                    .hero {
-                        .hero-text {
-                            h1 {
-                                font-size: 50px;
-                            }
-                            p {
-                                font-size: 26px;
-                            }
-
-                            button {
-                                font-size: 20px;
-                                padding: 11px 19px;
-                                width: 120px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}*/
+  body .wrap #home header .hero .hero-text h1 {
+    font-size: 50px;
+  }
+  body .wrap #home header .hero .hero-text p {
+    font-size: 26px;
+  }
+  body .wrap #home header .hero .hero-text button {
+    font-size: 20px;
+    padding: 11px 19px;
+    width: 120px;
+  }
+}
 form {
   width: 100%;
   max-width: 400px;
@@ -597,6 +565,7 @@ header .menu.logged nav .info {
   padding-top: 40px;
   flex-direction: column;
   z-index: 3;
+  margin-bottom: 107px;
 }
 #home header .hero {
   align-items: flex-start;
@@ -692,10 +661,15 @@ header .menu.logged nav .info {
   width: 100%;
   height: 415px;
   opacity: 70%;
-  margin-top: 50px;
 }
 #home .professional .only-desktop {
   flex-direction: column;
+}
+#home .professional .only-desktop div {
+  flex-direction: column;
+}
+#home .professional .only-desktop div .professional-icons {
+  margin: var(--space) auto;
 }
 #home .professional .legend {
   flex-direction: column;
@@ -764,12 +738,13 @@ header .menu.logged nav .info {
   flex-direction: column;
   padding: var(--space);
 }
-#home .free-trial .free-trial-opacity strong, #home .free-trial .free-trial-opacity p, #home .free-trial .free-trial-opacity small {
+#home .free-trial .free-trial-opacity h2, #home .free-trial .free-trial-opacity p, #home .free-trial .free-trial-opacity small {
   color: var(--letters-body);
   font-weight: 600;
 }
-#home .free-trial .free-trial-opacity strong {
+#home .free-trial .free-trial-opacity h2 {
   font-size: 65px;
+  margin: 0;
   margin-bottom: 15px;
 }
 #home .free-trial .free-trial-opacity p {
@@ -816,6 +791,7 @@ header .menu.logged nav .info {
 #home .doctors .doctors-title {
   flex-direction: column;
   padding: var(--space);
+  align-items: center;
 }
 #home .doctors .doctors-title h3, #home .doctors .doctors-title strong, #home .doctors .doctors-title p {
   color: var(--main);
@@ -825,6 +801,9 @@ header .menu.logged nav .info {
   font-size: 40px;
   font-weight: 600;
   margin: var(--space) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #home .doctors .doctors-title strong {
   font-size: 25px;
@@ -874,8 +853,7 @@ header .menu.logged nav .info {
   font-size: 20px;
   font-weight: 400;
   margin: 0;
-  margin-top: 10px;
-  margin-bottom: var(--space);
+  margin: 10px 0 3px;
 }
 #home .doctors .doctor-information strong {
   font-size: 30px;
@@ -884,7 +862,7 @@ header .menu.logged nav .info {
 }
 #home .doctors .doctor-information p {
   margin: var(--space) 0;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   padding: 0 calc(var(--space) * 2);
 }
@@ -1033,6 +1011,17 @@ header .menu.logged nav .info {
   background-color: var(--hover-button);
 }
 
+@media (min-width: 550px) {
+  #home .professional .only-desktop div {
+    flex-direction: row;
+  }
+  #home .professional .only-desktop div .professional-icons {
+    margin: var(--space) 10px;
+  }
+  #home .professional .only-desktop div .professional-icons-text {
+    flex-direction: column;
+  }
+}
 @media (min-width: 768px) {
   #home header {
     flex-direction: row;
@@ -1046,18 +1035,46 @@ header .menu.logged nav .info {
   #home header .hero .hero-text h1 {
     margin: 0;
   }
+  #home .highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #home .highlights #div-3 {
+    opacity: 100%;
+  }
+  #home .highlights #div-4 {
+    opacity: 80%;
+  }
+  #home .doctors .doctors-title p {
+    width: 700px;
+    text-align: center;
+  }
+}
+@media (min-width: 920px) {
+  #home .free-trial .free-trial-opacity {
+    padding: var(--space) calc(var(--space) * 2);
+  }
+  #home .free-trial .free-trial-opacity h2 {
+    margin-top: calc(var(--space) * 2);
+  }
 }
 @media (min-width: 1200px) {
   #home .highlights {
-    flex-direction: row;
-    width: 90%;
-    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+  }
+  #home .highlights #div-3 {
+    opacity: 80%;
+  }
+  #home .highlights #div-4 {
+    opacity: 100%;
   }
   #home .professional {
     flex-direction: row;
   }
   #home .professional .professional-photo {
-    height: 90%;
+    height: 100%;
+    background-position: -60vh 0vw;
   }
   #home .free-trial {
     height: 300px;
@@ -1084,16 +1101,13 @@ header .menu.logged nav .info {
     text-align: center;
   }
   #home .doctors .doctors-title strong {
-    font-size: 60px;
+    font-size: 30px;
   }
   #home .doctors .doctors-title p {
-    padding: 0 20%;
+    width: 800px;
   }
   #home .doctors .doctors-title + div {
     flex-direction: row;
-  }
-  #home .doctors .doctor-information p {
-    padding: 0 30%;
   }
   #home .testimonials .testimonials-title {
     text-align: center;
@@ -1114,6 +1128,15 @@ header .menu.logged nav .info {
   }
   #home .our-values .price-tables {
     flex-direction: row;
+  }
+}
+@media (min-width: 1600px) {
+  #home .professional {
+    flex-direction: row;
+  }
+  #home .professional .professional-photo {
+    height: 100%;
+    background-position: -40vh 0vw;
   }
 }
 
