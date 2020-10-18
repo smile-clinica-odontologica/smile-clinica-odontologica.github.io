@@ -48,27 +48,27 @@ git pull origin master
     
 - [] Designação de desenvolvimento em HTML e CSS
     
-    -Home = João
+    -Home: João
 
-    -Sobre = João
+    -Sobre: João
 
-    -Blog = Myltiane
+    -Blog: Myltiane
 
-    -Login = Myltiane
+    -Login: Myltiane
 
-    -Consulta Grátis = Vanessa
+    -Consulta Grátis: Vanessa
     
-    -404 = Vanessa
+    -404: Vanessa
 
-    -Franquias = Lucas
+    -Franquias: Lucas
 
-    -Serviços = Lucas
+    -Serviços: Lucas
 
-    -Cadastro =Velter
+    -Cadastro: Velter
 
-    -Perfil = Velter
+    -Perfil: Velter
 
-    -Agende sua Consulta = Velter
+    -Agende sua Consulta: Velter
 
 
 
