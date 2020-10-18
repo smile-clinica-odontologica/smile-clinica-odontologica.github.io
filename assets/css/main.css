@@ -245,6 +245,7 @@ header {
 header .menu {
   width: 100%;
   height: 80px;
+  z-index: 10;
 }
 header .menu .logo {
   padding: 10px;
@@ -1160,10 +1161,65 @@ header .menu.logged nav .info {
 }
 #franchises {
   width: 100%;
-  height: 800px;
 }
-#franchises img {
-  margin: auto;
+#franchises .full-banner-franchises {
+  width: 100%;
+  height: 758px;
+  position: relative;
+  flex-direction: column;
+}
+#franchises .full-banner-franchises img {
+  position: absolute;
+  width: 100%;
+  margin-top: -80px;
+}
+#franchises .full-banner-franchises img.franchises-banner-desktop {
+  display: none;
+}
+#franchises .full-banner-franchises h1, #franchises .full-banner-franchises p {
+  color: var(--letters-title);
+  margin: 0;
+  text-align: center;
+  z-index: 1;
+  margin-bottom: var(--space);
+  padding: 0 var(--space);
+}
+#franchises .full-banner-franchises h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 90%;
+}
+#franchises .full-banner-franchises p {
+  font-size: 15px;
+  font-weight: 400;
+}
+#franchises .full-banner-franchises button {
+  min-width: 130px;
+  width: 205px;
+  border: solid 1px var(--main);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  background-color: var(--white);
+  z-index: 1;
+  margin: 0 auto;
+}
+#franchises .full-banner-franchises button:hover {
+  background-color: var(--hover-button);
+}
+#franchises .full-banner-franchises button a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--main);
 }
 
 /*# sourceMappingURL=main.css.map */
