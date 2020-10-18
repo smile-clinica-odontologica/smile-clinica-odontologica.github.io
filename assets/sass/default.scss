@@ -15,9 +15,6 @@ body {
 
     .wrap {
         flex-direction: column;
-        background-image: url('../images/photos/back-image-header.png');
-        background-repeat: no-repeat;
-        background-size: cover;
         width: 100%;
         height: 100vh;
         background-position: -28vh 0vw;
@@ -54,9 +51,7 @@ body {
 
 @media (min-width: 1200px) {
     body {
-        .wrap {
-            background-image: url('../images/photos/back-image-header@2x.png');
-            
+        .wrap {            
             #home {
                 header {
                     .hero {
