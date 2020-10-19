@@ -15,7 +15,7 @@ body {
 
     .wrap {
         flex-direction: column;
-        background-image: url('../images/photos/back-image-header.png');
+        background-image: url('../images/photos/wrap.png');
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -55,7 +55,7 @@ body {
 @media (min-width: 1200px) {
     body {
         .wrap {
-            background-image: url('../images/photos/back-image-header@2x.png');
+            background-image: url('../images/photos/wrap@2x.png');
             
             #home {
                 header {
