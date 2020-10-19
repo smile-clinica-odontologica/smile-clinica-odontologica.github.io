@@ -43,6 +43,34 @@ git pull origin master
     - Footer: Myltiane
     - Header: João
     - Design: Lucas e João
+    
+    --//--
+    
+- [] Designação de desenvolvimento em HTML e CSS
+    
+    -Home: João
+
+    -Sobre: João
+
+    -Blog: Myltiane
+
+    -Login: Myltiane
+
+    -Consulta Grátis: Vanessa
+    
+    -404: Vanessa
+
+    -Franquias: Lucas
+
+    -Serviços: Lucas
+
+    -Cadastro: Velter
+
+    -Perfil: Velter
+
+    -Agende sua Consulta: Velter
+
+
 
 - [] Adicione aqui as tarefas que você achar importantes...
 
