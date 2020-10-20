@@ -46,3 +46,14 @@ git pull origin master
 
 - [] Adicione aqui as tarefas que você achar importantes...
 
+
+&::-webkit-datetime-edit-month-field {
+    color: red;
+  }
+  &::-webkit-datetime-edit-day-field {
+    color: white;
+  }
+  &::-webkit-datetime-edit-year-field {
+    color: blue;
+  }
+
