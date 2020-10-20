@@ -15,6 +15,10 @@ header {
       right: calc(50vw - 60px);
       margin-top: 30px;
       z-index: 6;
+
+      &#white {
+        display: none;
+      }
     
       img {
         width: 100px;
@@ -257,11 +261,9 @@ header {
                 position: initial;
                 width: initial;
                 margin: auto 0;
-                padding: 6px 12px;
 
                 a {
                   color: white;
-                  padding: 6px 12px;
                 }
               }
             }
@@ -342,11 +344,10 @@ header {
               position: initial;
               width: initial;
               margin: auto 0;
-              padding: 6px 12px;
+              padding: 6px 6px;
 
               a {
                 color: white;
-                padding: 6px 12px;
               }
             }
           }
