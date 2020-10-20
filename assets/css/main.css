@@ -1343,7 +1343,6 @@ header .menu.logged nav .info {
     background-position: -40vh 0vw;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 1700px) {
   #home .full-banner-home {
     background-position: 30vw 0vh;
@@ -1356,7 +1355,8 @@ header .menu.logged nav .info {
   }
   #home .full-banner-home header .hero .hero-text p {
     font-size: 24px;
-=======
+  }
+}
 #register {
   flex-direction: column;
   padding-bottom: 20px;
@@ -1424,7 +1424,6 @@ header .menu.logged nav .info {
   #register > footer {
     position: absolute;
     bottom: 0;
->>>>>>> b4886285c4e86bbbef46989d1860b04e4739b246
   }
 }
 #franchises {
