@@ -43,6 +43,45 @@ git pull origin master
     - Footer: Myltiane
     - Header: João
     - Design: Lucas e João
+    
+    --//--
+    
+- [] Designação de desenvolvimento em HTML e CSS
+    
+    -Home: João
+
+    -Sobre: João
+
+    -Blog: Myltiane
+
+    -Login: Myltiane
+
+    -Consulta Grátis: Vanessa
+    
+    -404: Vanessa
+
+    -Franquias: Lucas
+
+    -Serviços: Lucas
+
+    -Cadastro: Velter
+
+    -Perfil: Velter
+
+    -Agende sua Consulta: Velter
+
+
 
 - [] Adicione aqui as tarefas que você achar importantes...
+
+
+&::-webkit-datetime-edit-month-field {
+    color: red;
+  }
+  &::-webkit-datetime-edit-day-field {
+    color: white;
+  }
+  &::-webkit-datetime-edit-year-field {
+    color: blue;
+  }
 

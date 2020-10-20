@@ -13,7 +13,33 @@
     cursor: pointer;
     border-radius: var(--border-radius);
     background: var(--white);
+    transition: background-color .2s ease-in-out;
     &:hover {
         background-color: var(--hover-button);
+    }
+}
+
+@mixin button-green {
+    @include button;
+    background-color: var(--bt-green);
+    color: var(--white);
+    &:hover {
+        background-color: var(--bt-green-hover);
+    }
+    &:active {
+        background-color: var(--bt-green-active);
+    }
+}
+
+@mixin button-border {
+    @include button;
+    background-color: transparent;
+    border: 1px solid var(--bt-border-border);
+    color: var(--white);
+    &:hover {
+        background-color: var(--bt-border-hover);
+    }
+    &:active {
+        background-color: var(--bt-border-active);
     }
 }
