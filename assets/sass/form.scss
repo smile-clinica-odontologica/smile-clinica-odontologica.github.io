@@ -1,41 +1,48 @@
 form {
     width: 100%;
-    max-width: 400px;
-    padding: 20px;
+    max-width: 650px;
+    padding: 0 40px;
     flex-direction: column;
+    z-index: 1;
+    .fields {
+        flex-direction: column;
+    }
     .form-title {
-        color: var(--main);
+        color: var(--form-title-color);
         font-weight: bold;
-        font-size: 20px;
+        font-size: 50px;
+        align-self: center;
+        margin: 0;
+        margin-bottom: 40px;
     }
     .field {
         position: relative;
         flex-direction: column;
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
         label {
             position: absolute;
             font-size: 20px;
             top: 15px;
-            left: 10px;
             transition: 0.2s all;
-            color: var(--main-80);
+            color: var(--text-main);
         }
         input {
-            border: 1px solid var(--main);
-            border-radius: var(--border-radius);
+            border: none;
+            border-bottom: 2px solid var(--text-main);
             width: 100%;
             padding-top: 15px;
-            padding-left: 10px;
             line-height: 2em;
             font-size: 20px;
             outline: none;
-            color: var(--main);
+            color: var(--third);
+            font-weight: bold;
             transition: 0.2s all;
+            background-color: transparent;
             &:focus {
-                border: 1px solid var(--second);
+                border-bottom: 2px solid var(--text-main-80);
                 + label {
-                    color: var(--second);
+                    color: var(--text-main-80);
                 }
             }
             &:valid, &:focus {
@@ -44,17 +51,45 @@ form {
                     font-size: 14px;
                 }
             }
+            &[type="date"] {
+                background: url('/assets/images/photos/hour.svg')  97% 50% no-repeat ;
+              }
+            &[type="date"]::-webkit-inner-spin-button {
+            display: none;
+            }
+            &[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            }
+        }
+    }
+    .actions {
+        flex-direction: column;
+        span {
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+        a {
+            @include button-border;
+            width: 120px;
+            height: 45px;
+            font-size: 18px;
         }
     }
     button {
-        max-width: 120px;
-        font-weight: bold;
-        font-size: 20px;
-        padding: 5px 30px;
-        border: 1px solid var(--main);
-        background-color: #fff;
-        border-radius: var(--border-radius);
-        color: var(--main);
-        cursor: pointer;
+        margin-bottom: 25px;
+        &.bt-green {
+            @include button-green;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    form {
+        .fields {
+            flex-direction: row;
+            .field + .field {
+                margin-left: 60px;
+            }
+        }
     }
 }

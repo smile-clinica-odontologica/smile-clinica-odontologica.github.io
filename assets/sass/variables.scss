@@ -1,7 +1,9 @@
 :root {
   --main: #5A96D5;
   --main-80: #5A96D580;
+  --main-90: #5a95d5e8;
   --second: #2D2B87;
+  --third:#69E0A5;
   --dark-blue:  #415a77;
   --white: #FFF;
   --black: #000;
@@ -20,4 +22,18 @@
   // Texts
   --letters-title: #636363;
   --letters-body: #f8f8f8;
+
+  //form
+  --text-main: #fff;
+  --text-main-80: rgba(255, 255, 255, 0.80);
+  --form-title-color: #fff;
+
+  //Button-green
+  --bt-green: #69E0A5;
+  --bt-green-hover: #63d49b;
+  --bt-green-active: #6fecae;
+  //Button Border
+  --bt-border-border: #f8f8f8;
+  --bt-border-hover: #2D2B8744;
+  --bt-border-active: #2D2B87;
 }
