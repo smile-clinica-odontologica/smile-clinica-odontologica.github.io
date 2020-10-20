@@ -46,11 +46,9 @@ body {
 }
 body .wrap {
   flex-direction: column;
-  background-image: url("../images/photos/back-image-header.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 945px;
 }
 body > main {
   min-height: calc(100vh - 400px);
@@ -58,7 +56,7 @@ body > main {
 
 @media (min-width: 650px) {
   body .wrap {
-    background-position: -25vh 0vw;
+    background-position: -10vh 0vw;
   }
 }
 @media (min-width: 768px) {
@@ -73,7 +71,7 @@ body > main {
 }
 @media (min-width: 1200px) {
   body .wrap {
-    background-image: url("../images/photos/back-image-header@2x.png");
+    background-image: url("../images/photos/wrap@2x.png");
   }
   body .wrap #home header .hero {
     padding: 0 100px 200px;
@@ -344,6 +342,7 @@ header {
 header .menu {
   width: 100%;
   height: 80px;
+  z-index: 10;
 }
 header .menu .logo {
   padding: 10px;
@@ -653,42 +652,50 @@ header .menu.logged nav .info {
 #home {
   flex-direction: column;
 }
-#home header {
+#home .full-banner-home {
+  position: relative;
+  height: 410px;
+}
+#home .full-banner-home > img {
+  position: absolute;
   width: 100%;
-  height: 100vh;
+  left: 30px;
+}
+#home .full-banner-home header {
+  width: 100%;
+  height: calc(100vh - 80px);
   padding-top: 40px;
   flex-direction: column;
   z-index: 3;
-  margin-bottom: 107px;
 }
-#home header .hero {
+#home .full-banner-home header .hero {
   align-items: flex-start;
   flex-direction: column;
   z-index: 2;
   padding-top: 40px;
-  height: 100vh;
   justify-content: flex-end;
-  padding-bottom: 120px;
 }
-#home header .hero .hero-text {
-  padding: 0 40px;
+#home .full-banner-home header .hero .hero-text {
+  padding: 0 40px 0 20px;
   flex-direction: column;
 }
-#home header .hero .hero-text h1 {
+#home .full-banner-home header .hero .hero-text h1 {
   color: white;
   margin-bottom: 0;
   text-shadow: 0px 2px 5px var(--text);
+  font-size: 16px;
 }
-#home header .hero .hero-text h1 strong {
+#home .full-banner-home header .hero .hero-text h1 strong {
   color: var(--main);
   text-shadow: none;
+  font-size: 16px;
 }
-#home header .hero .hero-text p {
+#home .full-banner-home header .hero .hero-text p {
   color: var(--main);
-  font-size: 20px;
+  font-size: 15px;
   margin: 5px 0 10px;
 }
-#home header .hero .hero-text button {
+#home .full-banner-home header .hero .hero-text button {
   padding: 10px 18px;
   background-color: white;
   border: none;
@@ -697,16 +704,10 @@ header .menu.logged nav .info {
   width: 90px;
   display: inline-block;
 }
-#home header .hero .hero-text button a {
+#home .full-banner-home header .hero .hero-text button a {
   color: var(--main);
   text-decoration: none;
   font-weight: bold;
-}
-#home header .back-image {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../images/photos/back-image-header.png");
-  background-size: cover;
 }
 #home .highlights {
   width: 100%;
@@ -979,8 +980,9 @@ header .menu.logged nav .info {
   text-align: center;
 }
 #home .testimonials .testimonials-title strong {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 400;
+  margin: 0 auto;
 }
 #home .testimonials .testimonials-title + div {
   flex-direction: column;
@@ -989,8 +991,8 @@ header .menu.logged nav .info {
   flex-direction: column;
 }
 #home .testimonials .testimonials-photo + div img {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   justify-content: flex-start;
   margin-left: var(--space);
 }
@@ -1131,6 +1133,13 @@ header .menu.logged nav .info {
   #home header .hero .hero-text h1 {
     margin: 0;
   }
+  #home .testimonials .testimonials-photo + div img {
+    width: 80px;
+    height: 80px;
+  }
+  #home .testimonials .testimonials-info {
+    padding: 0 50px;
+  }
   #home .highlights {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1225,12 +1234,15 @@ header .menu.logged nav .info {
   #home .testimonials .testimonials-photo {
     width: 35%;
   }
+  #home .testimonials .testimonials-info {
+    padding: 0;
+  }
   #home .testimonials .testimonials-people {
     margin-left: 120px;
     padding-right: 120px;
   }
   #home .testimonials .testimonials-people p {
-    font-size: 55px;
+    font-size: 45px;
     max-width: 70vw;
   }
   #home .our-values .price-tables {
@@ -1314,6 +1326,69 @@ header .menu.logged nav .info {
     position: absolute;
     bottom: 0;
   }
+}
+#franchises {
+  width: 100%;
+}
+#franchises .full-banner-franchises {
+  width: 100%;
+  height: 758px;
+  position: relative;
+  flex-direction: column;
+}
+#franchises .full-banner-franchises img {
+  position: absolute;
+  width: 100%;
+  margin-top: -80px;
+}
+#franchises .full-banner-franchises img.franchises-banner-desktop {
+  display: none;
+}
+#franchises .full-banner-franchises h1, #franchises .full-banner-franchises p {
+  color: var(--letters-title);
+  margin: 0;
+  text-align: center;
+  z-index: 1;
+  margin-bottom: var(--space);
+  padding: 0 var(--space);
+}
+#franchises .full-banner-franchises h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 90%;
+}
+#franchises .full-banner-franchises p {
+  font-size: 15px;
+  font-weight: 400;
+}
+#franchises .full-banner-franchises button {
+  min-width: 130px;
+  width: 205px;
+  border: solid 1px var(--main);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  transition: background-color 0.2s ease-in-out;
+  background-color: var(--white);
+  z-index: 1;
+  margin: 0 auto;
+}
+#franchises .full-banner-franchises button:hover {
+  background-color: var(--hover-button);
+}
+#franchises .full-banner-franchises button a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--main);
 }
 
 /*# sourceMappingURL=main.css.map */
