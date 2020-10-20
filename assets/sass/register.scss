@@ -1,11 +1,13 @@
 #register {
     flex-direction: column;
+    align-items: center;
     padding-bottom: 20px;
     background-image: url('../images/photos/back-image-header.png');
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
     > header {
         align-items:center;
         justify-content: center;
@@ -43,7 +45,7 @@
         flex-direction: row-reverse;
         align-items:center;
         justify-content: center;
-        height: 100vh;
+       
         padding: 0;
         overflow-y: auto;
         > header {
@@ -65,10 +67,12 @@
 
         }
         > footer {
+            z-index: 5;
             position: absolute;
             bottom: 0;
             p {
-                
+                color: var(--second);
+
             }
         }
     }
