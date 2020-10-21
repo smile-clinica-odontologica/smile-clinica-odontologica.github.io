@@ -96,6 +96,7 @@
           color: var(--text);
         }
       }
+
       img {
         width: 150px;
         height: 150px;
@@ -115,6 +116,19 @@
         font-size: 15px;
         font-weight: 300;
         text-align: center;
+      }
+    }
+    #div-3 {
+      img {
+        display: none;
+      }
+      #img-green {
+        display: block;
+      }
+    }
+    #div-4 {
+      #img-green {
+        display: none;
       }
     }
   }
@@ -449,11 +463,18 @@
         .card {
           width: 100%;
           max-width: 350px;
-          margin: 20px 20px;
+          margin: 20px auto;
           flex-direction: column;
           box-shadow: 0 1px 10px #ccc;
           border-radius: 18px;
           padding-bottom: 10px;
+
+          > img {
+            object-fit: cover;
+            height: 300px;
+            width: 100%;
+            border-radius: 18px;
+          }
 
           .card-text {
             flex-direction: column;
@@ -615,9 +636,35 @@
       grid-template-columns: 1fr 1fr;
       #div-3 {
         opacity: 100%;
+        background-color: var(--main);
+        border: none;
+
+        img {
+          display: block;
+        }
+
+        #img-green {
+          display: none;
+        }
+        
+        h2, p { 
+          color: var(--letters-body);
+        }
       }
       #div-4 {
-        opacity: 80%;
+        background-color: transparent;
+        border: 2px solid var(--third);
+
+        img {
+          display: none;
+        }
+        #img-green {
+          display: block;
+        }
+
+        h2, p {
+          color: var(--text);
+        }
       }
     }
 
@@ -779,6 +826,7 @@
 
     .home-blog {
       .wrap {
+
         .cards {
           grid-template-columns: 1fr 1fr 1fr;
         }
@@ -806,6 +854,25 @@
             p {
               font-size: 24px;
             }
+          }
+        }
+      }
+    }
+    .home-blog {
+      .wrap {
+        .arrow {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        .cards {
+          .card {
+            max-width: 380px;
           }
         }
       }
