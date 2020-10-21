@@ -737,6 +737,15 @@ header .menu.logged nav .info {
   font-weight: 300;
   text-align: center;
 }
+#home .highlights #div-3 img {
+  display: none;
+}
+#home .highlights #div-3 #img-green {
+  display: block;
+}
+#home .highlights #div-4 #img-green {
+  display: none;
+}
 #home .professional {
   flex-direction: column;
   width: 100%;
@@ -1199,9 +1208,30 @@ header .menu.logged nav .info {
   }
   #home .highlights #div-3 {
     opacity: 100%;
+    background-color: var(--main);
+    border: none;
+  }
+  #home .highlights #div-3 img {
+    display: block;
+  }
+  #home .highlights #div-3 #img-green {
+    display: none;
+  }
+  #home .highlights #div-3 h2, #home .highlights #div-3 p {
+    color: var(--letters-body);
   }
   #home .highlights #div-4 {
-    opacity: 80%;
+    background-color: transparent;
+    border: 2px solid var(--third);
+  }
+  #home .highlights #div-4 img {
+    display: none;
+  }
+  #home .highlights #div-4 #img-green {
+    display: block;
+  }
+  #home .highlights #div-4 h2, #home .highlights #div-4 p {
+    color: var(--text);
   }
   #home .doctors .doctors-title p {
     width: 700px;
