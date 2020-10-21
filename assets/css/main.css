@@ -1362,9 +1362,16 @@ header .menu.logged nav .info {
 #schedules {
   flex-direction: column;
 }
-#schedules img {
+#schedules .full-banner-schedules {
   width: 100%;
   height: 100%;
+  position: relative;
+}
+#schedules .full-banner-schedules img {
+  position: relative;
+  width: 100%;
+  margin-top: -80px;
+  display: inline;
 }
 #schedules h1 {
   color: var(--letters-title);
@@ -1443,15 +1450,25 @@ header .menu.logged nav .info {
   font-size: 20px;
 }
 #schedules .button {
-  width: 350px;
-  height: 100px;
-  text-align: center;
-  padding: 15px 15px;
-  border: 1px solid;
-  border-radius: 6px;
-  background-color: var(--white);
-  font-size: 18px;
-  margin: 0 auto;
+  min-width: 130px;
+  width: 205px;
+  border: solid 1px var(--main);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  transition: background-color 0.2s ease-in-out;
+  color: var(--main);
+}
+#schedules .button:hover {
+  background-color: var(--hover-button);
 }
 
 @media (min-width: 1200px) {

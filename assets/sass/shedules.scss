@@ -1,8 +1,15 @@
 #schedules {
     flex-direction: column;
-    img {
+    .full-banner-schedules {
         width: 100%;
         height: 100%;
+        position: relative;
+        img {
+            position: relative;
+            width: 100%;
+            margin-top: -80px;
+            display: inline;
+        }
     }
     h1 {
         color: var(--letters-title);
@@ -85,18 +92,11 @@
         
     }
     .button {
-        width: 350px;
-        height: 100px;
-        text-align: center;
-        padding: 15px 15px;
-        border: 1px solid;
-        border-radius: 6px;
-        background-color: var(--white);
-        font-size: 18px;
-        margin: 0 auto;
-       
+        @include button;
+        color: var(--main);
     }
 }
+
 @media (min-width: 1200px) {
     #schedules {
         flex-direction: row;
