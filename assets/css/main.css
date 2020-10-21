@@ -1643,6 +1643,7 @@ header .menu.logged nav .info {
 #franchises .full-banner-franchises img {
   position: absolute;
   width: 100%;
+  max-height: 800px;
   margin-top: -80px;
 }
 #franchises .full-banner-franchises img.franchises-banner-desktop {
@@ -1765,31 +1766,34 @@ header .menu.logged nav .info {
   letter-spacing: 0;
   opacity: 1;
 }
-#franchises .know-more {
+#franchises #know-more {
   width: 100%;
   flex-direction: column;
   background-color: var(--main);
 }
-#franchises .know-more h4 {
+#franchises #know-more > div {
+  flex-direction: column;
+}
+#franchises #know-more h4 {
   font-size: 30px;
   font-weight: 600;
   text-align: center;
   color: var(--letters-body);
 }
-#franchises .know-more form .field {
+#franchises #know-more form .field {
   position: relative;
   flex-direction: column;
   width: 100%;
   margin-bottom: 40px;
 }
-#franchises .know-more form .field label {
+#franchises #know-more form .field label {
   position: absolute;
   font-size: 20px;
   top: 15px;
   transition: 0.2s all;
   color: var(--text-main);
 }
-#franchises .know-more form .field input {
+#franchises #know-more form .field input {
   border: none;
   border-bottom: 2px solid var(--text-main);
   width: 100%;
@@ -1802,26 +1806,26 @@ header .menu.logged nav .info {
   transition: 0.2s all;
   background-color: transparent;
 }
-#franchises .know-more form .field input:focus {
+#franchises #know-more form .field input:focus {
   border-bottom: 2px solid var(--text-main-80);
 }
-#franchises .know-more form .field input:focus + label {
+#franchises #know-more form .field input:focus + label {
   color: var(--text-main-80);
 }
-#franchises .know-more form .field input:valid + label, #franchises .know-more form .field input:focus + label {
+#franchises #know-more form .field input:valid + label, #franchises #know-more form .field input:focus + label {
   top: 2px;
   font-size: 14px;
 }
-#franchises .know-more form .field input[type=date] {
+#franchises #know-more form .field input[type=date] {
   background: url("/assets/images/photos/hour.svg") 97% 50% no-repeat;
 }
-#franchises .know-more form .field input[type=date]::-webkit-inner-spin-button {
+#franchises #know-more form .field input[type=date]::-webkit-inner-spin-button {
   display: none;
 }
-#franchises .know-more form .field input[type=date]::-webkit-calendar-picker-indicator {
+#franchises #know-more form .field input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
-#franchises .know-more button {
+#franchises #know-more button {
   min-width: 130px;
   width: 205px;
   border: solid 1px var(--main);
@@ -1840,16 +1844,125 @@ header .menu.logged nav .info {
   margin: var(--space) auto;
   margin-left: calc(100% - 245px);
 }
-#franchises .know-more button:hover {
+#franchises #know-more button:hover {
   background-color: var(--hover-button);
 }
-#franchises .know-more button a {
+#franchises #know-more button a {
   text-decoration: none;
   display: flex;
   align-items: flex-end;
   color: var(--main);
 }
 
+@media (min-width: 576px) {
+  #franchises .full-banner-franchises {
+    max-height: 260px;
+  }
+  #franchises .full-banner-franchises img.franchises-banner-mobile {
+    display: none;
+  }
+  #franchises .full-banner-franchises img.franchises-banner-desktop {
+    display: flex;
+  }
+  #franchises .full-banner-franchises h1 {
+    margin-top: 11%;
+    font-size: 20px;
+  }
+  #franchises .why-franchises-smile-content img {
+    margin: 0 auto;
+  }
+  #franchises #know-more button {
+    margin: var(--space) auto;
+  }
+}
+@media (min-width: 1200px) {
+  #franchises .full-banner-franchises {
+    max-height: none;
+    height: 675px;
+  }
+  #franchises .full-banner-franchises h1 {
+    font-size: 62px;
+  }
+  #franchises .full-banner-franchises p {
+    font-size: 40px;
+    padding: 0 8%;
+  }
+  #franchises .full-banner-franchises button {
+    position: absolute;
+    top: 20.5em;
+    left: calc(50% - 102.5px);
+  }
+  #franchises .why-franchises .why-franchises-title > h2 {
+    font-size: 46px;
+    padding-left: 50%;
+  }
+  #franchises .why-franchises .why-franchises-content {
+    flex-direction: row-reverse;
+  }
+  #franchises .why-franchises .why-franchises-content img {
+    width: 600px;
+    padding-right: var(--space);
+  }
+  #franchises .why-franchises .why-franchises-content p {
+    font-size: 25px;
+  }
+  #franchises .why-franchises-smile {
+    margin-top: 150px;
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-title > h3 {
+    text-align: right;
+    font-size: 46px;
+    padding-right: 62%;
+    margin: var(--space) 0;
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-content {
+    flex-direction: row;
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-content img {
+    padding-left: var(--space);
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-content p {
+    font-size: 28px;
+    margin: auto;
+  }
+  #franchises #know-more {
+    margin-top: var(--space);
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #franchises #know-more > div {
+    margin: var(--space) 0;
+  }
+  #franchises #know-more h4 {
+    font-size: 45px;
+    margin: auto 0;
+  }
+}
+@media (min-width: 1500px) {
+  #franchises .full-banner-franchises {
+    height: 750px;
+  }
+  #franchises .full-banner-franchises button {
+    top: 22em;
+  }
+  #franchises .why-franchises .why-franchises-title {
+    padding-left: 20%;
+  }
+  #franchises .why-franchises .why-franchises-content {
+    justify-content: space-around;
+  }
+  #franchises .why-franchises .why-franchises-content p {
+    padding: 0 var(--space);
+    margin: auto 0;
+    font-size: 35px;
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-title {
+    padding-right: 25%;
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-content img {
+    padding: 0 calc(var(--space) *2);
+  }
+}
 #order-franchises-confirm {
   width: 100vw;
   max-width: 100vw;
