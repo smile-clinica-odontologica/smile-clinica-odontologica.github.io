@@ -299,8 +299,9 @@
         max-width: 340px;
       }
       .doctors-social-media {
-        width: 350px;
-        height: 80px;
+        width: 320px;
+        min-width: 280px;
+        height: 75px;
         margin: 0 auto;
         justify-content: space-evenly;
         align-items: center;
