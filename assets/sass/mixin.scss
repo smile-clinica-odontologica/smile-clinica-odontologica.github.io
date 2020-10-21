@@ -19,18 +19,6 @@
     }
 }
 
-@mixin button-green {
-    @include button;
-    background-color: var(--bt-green);
-    color: var(--white);
-    &:hover {
-        background-color: var(--bt-green-hover);
-    }
-    &:active {
-        background-color: var(--bt-green-active);
-    }
-}
-
 @mixin button-border {
     @include button;
     background-color: transparent;

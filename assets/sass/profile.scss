@@ -1,0 +1,49 @@
+#profile {
+
+        .photo-preview, .profile-data > img {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .photo-preview {
+            width: 150px;
+            height: 150px;
+            margin-bottom: -12px;
+        }
+        .profile-data {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            > img {
+                width: 250px;
+                height: 250px;
+            }
+            .profile-content {
+                flex-direction: column;
+                padding: 10px;
+                padding-left: 25px;
+                border-left: 10px solid var(--third);
+                font-size: 20px;
+                line-height: 30px;
+                margin-top: 12px;
+                .profile-name {
+                    margin: 0;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+                .profile-email {
+                    font-weight: bold;
+                }
+                
+            }
+        }
+        #photo {
+            display: none;
+        } 
+        .label-photo-preview {
+            @include button;
+            color: var(--main);
+            font-size: 18px;
+            width: 150px;
+            height: 40px;
+        }
+}

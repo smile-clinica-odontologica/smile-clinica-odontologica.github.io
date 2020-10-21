@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile </title>
+    <meta name="description" content="Conheça a Ferrari Auto Center">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#E1DEDD">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#E1DEDD">
+    <link rel="preload" href="assets/css/main.css" as="style" />
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+
+            <a href="/index.html" class="logo" id="blue">
+                <img src="assets/images/logo_white.svg" alt="Logo Smile">
+            </a>
+
+            <button class="btn-open">
+                <svg id="menu-black-18dp" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <path id="Caminho_215" data-name="Caminho 215" d="M0,0H32V32H0Z" fill="none" />
+                    <path id="Caminho_216" data-name="Caminho 216" d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z"
+                        transform="translate(0 4)" />
+                </svg>
+            </button>
+
+            <button class="btn-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M0,0H24V24H0Z" fill="none" />
+                    <path
+                        d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z" />
+                </svg>
+            </button>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Agendar Consulta</a></li>
+                    <li><a href="#">Perfil</a></li>
+                    <li id="login"><a href="/index.html">Sair</a></li>
+                </ul>
+
+                <div class="info">
+                    <hr />
+                    <div class="content">
+                        <picture>
+                            <img src="assets/images/photos/joaozitodeskater.gif" alt="Imagem perfil">
+                        </picture>
+                        <div>
+                            <a href="profile.html">
+                                <strong>João Rafael</strong>
+                                <small>joaorceschini@gmail.com</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+    <section id="profile" class="page-admin">
+        <main>
+            <div class="section-header white">
+                <span>Editar seus dados do perfil</span>
+            </div>
+
+            <form id="form-profile">
+
+                <img class="photo-preview" src="assets/images/photos/testimonials-ana-silva.jpg"
+                    alt="Foto de Perfil do Usuário">
+                <input type="file" name="photo" id="photo" />
+                <label class="label-photo-preview" for="photo">
+                    Alterar Foto
+                </label>
+
+                <div class="fields">
+                    <div class="field">
+                        <input type="email" name="email" id="email" value="aninhasilva@gmail.com" required />
+                        <label for="email">E-mail</label>
+
+                    </div>
+
+                    <div class="field">
+                        <input type="text" name="name" id="name" value="Ana Silva" required />
+                        <label for="name">Nome Completo</label>
+
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <div class="field">
+                        <input type="date" name="birth_at" id="birth_at" value="01/05/1997" />
+                        <label for="birth_at">Data de Nascimento</label>
+
+                    </div>
+
+                    <div class="field">
+                        <input type="tel" name="phone" id="phone" value="(51)98199-5768" required />
+                        <label for="phone">Telefone</label>
+
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <div class="field">
+                        <input type="password" name="password" id="password-new" required />
+                        <label for="password-new">Crie uma senha</label>
+
+                    </div>
+
+                    <div class="field">
+                        <input type="password" name="password-confirm" id="password-confirm" required />
+                        <label for="password-confirm">Confirme a senha</label>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="actions">
+                    <button class="bt-green" type="submit">Atualizar</button>
+                </div>
+
+            </form>
+
+            <form id="form-password">
+
+                <div class="fields">
+
+                    <div class="field">
+                        <input type="password" name="password" id="password-current" required />
+                        <label for="password-current">Senha atual</label>
+
+                    </div>
+
+                    <div class="field">
+                        <input type="password" name="password" id="password-new" required />
+                        <label for="password-new">Nova senha</label>
+
+                    </div>
+
+
+                </div>
+
+                <div class="field only">
+                    <input type="password" name="password-confirm" id="password-confirm" required />
+                    <label for="password-confirm">Confirme a nova senha</label>
+
+                </div>
+
+
+
+                <div class="actions">
+                    <button class="bt-green" type="submit">Salvar</button>
+                </div>
+
+            </form>
+
+        </main>
+        <section class="second">
+            <div class="overlay"></div>
+            <div class="second-content">
+                <div class="section-header">
+                    <span>Seus dados atuais</span>
+                </div>
+
+                <div class="profile-data">
+                    <img src="assets/images/photos/testimonials-ana-silva.jpg" alt="Foto de Perfil do Usuário">
+                    <div class="profile-content">
+                        <h3 class="profile-name">Ana Silva</h3>
+                        <span class="profile-birth">01/05/1997</span>
+                        <span class="profile-email">aninhasilva@gmail.com</span>
+                        <span class="profile-phone">(11) 98199 - 5768</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>© Smile 2020 Allright reserved.</p>
+        </footer>
+    </section>
+
+</body>
+
+</html>
