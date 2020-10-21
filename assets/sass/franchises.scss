@@ -9,6 +9,7 @@
         img {
             position: absolute;
             width: 100%;
+            max-height: 800px;
             margin-top: -80px;
             &.franchises-banner-desktop {
                 display: none;
@@ -116,10 +117,13 @@
             }
         }
     }
-    .know-more {
+    #know-more {
         width: 100%;
         flex-direction: column;
         background-color: var(--main);
+        > div {
+            flex-direction: column;
+        }
         h4 {
             font-size: 30px;
             font-weight: 600;
@@ -184,6 +188,142 @@
                 display: flex;
                 align-items: flex-end;
                 color: var(--main);
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    #franchises {
+        .full-banner-franchises {
+            max-height: 260px;
+            img {
+                &.franchises-banner-mobile {
+                    display: none;
+                }
+                &.franchises-banner-desktop {
+                    display: flex;
+                }
+            }
+            h1 {
+                margin-top: 11%;
+                font-size: 20px;
+            }
+        }
+        .why-franchises-smile-content {
+            img {
+                margin: 0 auto;
+            }
+        }
+        #know-more {
+            button {
+                margin: var(--space) auto;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #franchises {
+        .full-banner-franchises {
+            max-height: none;
+            height: 675px;
+            h1 {
+                font-size: 62px;
+            }
+            p {
+                font-size: 40px;
+                padding: 0 8%;
+            }
+            button {
+                position: absolute;
+                top: 20.5em;
+                left: calc(50% - 102.5px);
+            }
+        }
+        .why-franchises {
+            .why-franchises-title {
+                > h2 {
+                    font-size: 46px;
+                    padding-left: 50%;
+                }
+            }
+            .why-franchises-content {
+                flex-direction: row-reverse;
+                img {
+                    width: 600px;
+                    padding-right: var(--space);
+                }
+                p {
+                    font-size: 25px;
+                }
+            }
+        }
+        .why-franchises-smile {
+            margin-top: 150px;
+            .why-franchises-smile-title {
+                > h3 {
+                    text-align: right;
+                    font-size: 46px;
+                    padding-right: 62%;
+                    margin: var(--space) 0;
+                }
+            }
+            .why-franchises-smile-content {
+                flex-direction: row;
+                img {
+                    padding-left: var(--space);
+                }
+                p {
+                    font-size: 28px;
+                    margin: auto;
+                }
+            }
+        }
+        #know-more {
+            margin-top: var(--space);
+            flex-direction: row;
+            justify-content: space-evenly;
+            > div {
+                margin: var(--space) 0;
+            }
+            h4 {
+                font-size: 45px;
+                margin: auto 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1500px) {
+    #franchises {
+        .full-banner-franchises {
+            height: 750px;
+            button {
+                top: 22em;
+            }
+        }
+        .why-franchises {
+            .why-franchises-title {
+                padding-left: 20%;
+            }
+            .why-franchises-content {
+                justify-content: space-around;
+                p {
+                    padding: 0 var(--space);
+                    margin: auto  0;
+                    font-size: 35px;
+                }
+            }
+        }
+        .why-franchises-smile {
+            .why-franchises-smile-title {
+                padding-right: 25%;
+            }
+            .why-franchises-smile-content {
+                img {
+                    padding: 0 calc(var(--space) *2);
+                }
             }
         }
     }
