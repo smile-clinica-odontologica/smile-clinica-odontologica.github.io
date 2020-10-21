@@ -20,9 +20,9 @@
   --text-footer-copyright: #fff;
   --letters-title: #636363;
   --letters-body: #f8f8f8;
-  --text-main: #fff;
-  --text-main-80: rgba(255, 255, 255, 0.80);
-  --form-title-color: #fff;
+  --text-main: #5A96D5;
+  --text-main-80: #5A96D5;
+  --form-title-color: #5A96D5;
   --bt-green: #69E0A5;
   --bt-green-hover: #63d49b;
   --bt-green-active: #6fecae;
@@ -74,6 +74,7 @@ form {
   padding: 0 40px;
   flex-direction: column;
   z-index: 1;
+  margin: 0 auto;
 }
 form .fields {
   flex-direction: column;
@@ -81,20 +82,20 @@ form .fields {
 form .form-title {
   color: var(--form-title-color);
   font-weight: bold;
-  font-size: 50px;
+  font-size: 40px;
   align-self: center;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 form .field {
   position: relative;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 form .field label {
   position: absolute;
-  font-size: 20px;
+  font-size: 18px;
   top: 15px;
   transition: 0.2s all;
   color: var(--text-main);
@@ -105,7 +106,7 @@ form .field input {
   width: 100%;
   padding-top: 15px;
   line-height: 2em;
-  font-size: 20px;
+  font-size: 18px;
   outline: none;
   color: var(--third);
   font-weight: bold;
@@ -172,6 +173,14 @@ form .actions a:active {
 }
 form button {
   margin-bottom: 25px;
+  background-color: transparent;
+  padding: 10px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--main);
+  color: var(--main);
 }
 form button.bt-green {
   min-width: 130px;
@@ -210,6 +219,16 @@ form button.bt-green:active {
     margin-left: 60px;
   }
 }
+@media (min-width: 1200px) {
+  form {
+    margin: initial;
+  }
+}
+@media (min-width: 1300px) {
+  form .field input {
+    min-width: 320px;
+  }
+}
 #footer {
   flex-direction: column;
   width: 100%;
@@ -238,7 +257,6 @@ form button.bt-green:active {
   flex-direction: row;
   font-weight: 300;
   height: 50px;
-  margin: auto 0;
 }
 #footer .footer-container .container-col ul li.li-title {
   font-size: 20px;
@@ -272,15 +290,17 @@ form button.bt-green:active {
 }
 #footer .footer-copyright h3 {
   font-size: 20px;
-  padding-left: var(--space);
+  margin: 1em auto;
 }
 #footer .footer-copyright > div {
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
 }
 #footer .footer-copyright > div a {
   text-decoration: none;
   color: var(--text-footer-copyright);
-  margin-left: var(--space);
   font-size: 15px;
 }
 #footer .footer-copyright > div p + a {
@@ -290,11 +310,12 @@ form button.bt-green:active {
   margin: 0 10px;
 }
 #footer .footer-copyright .footer-copyright-images {
-  justify-content: space-evenly;
   margin: var(--space) 0;
+  max-width: 500px;
+  margin: 10px auto;
 }
 #footer .footer-copyright .footer-copyright-images a {
-  margin: 0;
+  margin: 0 var(--space);
 }
 #footer .footer-copyright .footer-copyright-images img {
   width: 30px;
@@ -309,6 +330,11 @@ form button.bt-green:active {
   }
   #footer .footer-container .logo {
     width: 15%;
+  }
+}
+@media (max-width: 300px) {
+  #footer .footer-copyright .footer-copyright-images a {
+    margin: 0 10px;
   }
 }
 header {
@@ -931,8 +957,9 @@ header .menu.logged nav .info {
   max-width: 340px;
 }
 #home .doctors .doctor-information .doctors-social-media {
-  width: 350px;
-  height: 80px;
+  width: 320px;
+  min-width: 280px;
+  height: 75px;
   margin: 0 auto;
   justify-content: space-evenly;
   align-items: center;
