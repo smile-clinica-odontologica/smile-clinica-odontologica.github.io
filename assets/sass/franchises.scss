@@ -1,5 +1,6 @@
 #franchises {
     width: 100%;
+    flex-direction: column;
     .full-banner-franchises {
         width: 100%;
         height: 758px;
@@ -39,6 +40,149 @@
                 text-decoration: none;
                 font-size: 20px;
                 font-weight: 600;
+                color: var(--main);
+            }
+        }
+    }
+    .why-franchises {
+        width: 100%;
+        flex-direction: column;
+        .why-franchises-title {
+            width: 100%;
+            > h2 {
+                margin: 0;
+                padding-left: var(--space);
+                padding-bottom: var(--space);
+                font-size: 30px;
+                font-weight: 600;
+                color: var(--main);
+            }
+        }
+        .why-franchises-content {
+            width: 100%;
+            flex-direction: column;
+            img {
+            width: 325px;
+            margin: 0 auto;
+            box-shadow: 5px 5px 5px #0000005C;
+            border-radius: 4px;
+            opacity: 1;
+            }
+            p {
+            margin: 0;
+            padding: var(--space);
+            text-align: left;
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--letters-title);
+            letter-spacing: 0;
+            opacity: 1;
+            }
+        }
+        
+    }
+    .why-franchises-smile {
+        width: 100%;
+        flex-direction: column;
+        .why-franchises-smile-title {
+            width: 100%;
+            h3 {
+                margin: 0;
+                padding-left: var(--space);
+                text-align: left;
+                font-size: 30px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                color: var(--main);
+                opacity: 1;
+            }
+        }
+        .why-franchises-smile-content {
+            width: 100%;
+            flex-direction: column;
+            img {
+                width: 100%;
+                max-width: 475px;
+            }
+            p {
+                margin: 0;
+                padding: var(--space);
+                text-align: left;
+                font-size: 18px;
+                font-weight: 300;
+                color: var(--letters-title);
+                letter-spacing: 0;
+                opacity: 1;
+            }
+        }
+    }
+    .know-more {
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--main);
+        h4 {
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            color: var(--letters-body);
+        }
+        form{
+            .field {
+                position: relative;
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 40px;
+                label {
+                    position: absolute;
+                    font-size: 20px;
+                    top: 15px;
+                    transition: 0.2s all;
+                    color: var(--text-main);
+                }
+                input {
+                    border: none;
+                    border-bottom: 2px solid var(--text-main);
+                    width: 100%;
+                    padding-top: 15px;
+                    line-height: 2em;
+                    font-size: 20px;
+                    outline: none;
+                    color: var(--letters-body);
+                    font-weight: bold;
+                    transition: 0.2s all;
+                    background-color: transparent;
+                    &:focus {
+                        border-bottom: 2px solid var(--text-main-80);
+                        + label {
+                            color: var(--text-main-80);
+                        }
+                    }
+                    &:valid, &:focus {
+                        + label {
+                            top: 2px;
+                            font-size: 14px;
+                        }
+                    }
+                    &[type="date"] {
+                        background: url('/assets/images/photos/hour.svg')  97% 50% no-repeat ;
+                      }
+                    &[type="date"]::-webkit-inner-spin-button {
+                    display: none;
+                    }
+                    &[type="date"]::-webkit-calendar-picker-indicator {
+                    opacity: 0;
+                    }
+                }
+            }
+        }
+        button {
+            @include button;
+            margin: var(--space) auto;
+            margin-left: calc(100% - 245px); 
+            a {
+                text-decoration: none;
+                display: flex;
+                align-items: flex-end;
                 color: var(--main);
             }
         }

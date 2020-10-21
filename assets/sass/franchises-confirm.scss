@@ -1,0 +1,34 @@
+#order-franchises-confirm {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    background-color: var(--gray);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: var(--main);
+    font-weight: 600;
+    margin: 0;
+    img, h1, h2, p {
+        position: absolute;
+    }
+    img {
+        width: 150px;
+        top: 10vh;
+    }
+    h1 {
+        font-size: 30px;
+        top: 50vh;
+    } 
+    h2 {
+        font-size: 15px;
+        top: 60vh;
+    }
+    p {
+        font-size: 20px;
+        top: 90vh;
+    }
+}
