@@ -1427,7 +1427,7 @@ header .menu.logged nav .info {
   margin-left: 70px;
   margin-right: 70px;
   background-color: var(--white);
-  box-shadow: 10px 9px 8px rgba(50, 50, 50, 0.77);
+  box-shadow: 5px 5px 20px #0000005C;
   display: block;
 }
 #schedules .blocks h1 {
@@ -1495,27 +1495,10 @@ header .menu.logged nav .info {
     display: block;
   }
 }
-#error .columns, #error .colum {
-  background-color: var(--main);
+#error .columns {
   flex-direction: column;
-}
-#error h1 {
-  font-size: 18px;
-  color: var(--white);
-  position: relative;
-}
-#error h1 b {
-  background-image: -webkit-linear-gradient(#eee, #333);
-}
-#error .button {
-  text-align: center;
-  padding: 10px 10px;
-  border: 1px solid;
-  border-radius: 6px;
-  background-color: var(--white);
-  font-size: 18px;
-  margin: 0 auto;
-  color: var(--main);
+  background-color: var(--main-90);
+  margin-top: -80px;
 }
 
 #register {
