@@ -86,6 +86,7 @@ form {
         justify-content: center;
         border: 1px solid var(--main);
         color: var(--main);
+        cursor: pointer;
         &.bt-green {
             @include button-green;
         }
