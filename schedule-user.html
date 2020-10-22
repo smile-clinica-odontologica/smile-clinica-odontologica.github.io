@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil | Smile </title>
+    <title>Agende sua Consulta | Smile </title>
     <meta name="description" content="Conheça a Ferrari Auto Center">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
@@ -79,31 +79,38 @@
     <section id="profile" class="page-admin">
         <main>
             <div class="section-header white">
-                <span>Editar seus dados do perfil</span>
+                <span>Consulta</span>
+                <h1>Agende sua Consulta</h1>
+                <p>Você pode se sentir a vontade para escolher o seu Doutor preferido! Veja como é fácil, preencha o formulário abaixo!</p>
             </div>
 
             <form id="form-profile">
 
-                <div class="photo-field">
-                    <img class="photo-preview" src="assets/images/photos/testimonials-ana-silva.jpg"
-                    alt="Foto de Perfil do Usuário">
-                    <input type="file" name="photo" id="photo" />
-                    <label class="label-photo-preview" for="photo">
-                        Alterar Foto
-                    </label>
-                </div>
-
 
                 <div class="fields">
                     <div class="field">
-                        <input type="email" name="email" id="email" value="aninhasilva@gmail.com" required />
-                        <label for="email">E-mail</label>
+                        <select name="service" id="service" required>
+                            <option selected disabled></option>
+                            <option value="pdf">Ortodontia</option>
+                            <option value="txt">Estética</option>
+                            <option value="epub">ePub</option>
+                            <option value="fb2">fb2</option>
+                            <option value="mobi">mobi</option>
+                         </select>
+                        <label for="service">Selecione um serviço</label>
 
                     </div>
 
                     <div class="field">
-                        <input type="text" name="name" id="name" value="Ana Silva" required />
-                        <label for="name">Nome Completo</label>
+                        <select name="doctor" id="doctor" required>
+                            <option selected disabled></option>
+                            <option value="pdf">Dra. Ivanesia Peixoto</option>
+                            <option value="txt">Dr. Luiz Peixoto</option>
+                            <option value="epub">Dr. Lucas Filho</option>
+                            <option value="fb2">fb2</option>
+                            <option value="mobi">mobi</option>
+                         </select>
+                        <label for="doctor">Escolha um doutor</label>
 
                     </div>
                 </div>
@@ -111,13 +118,13 @@
                 <div class="fields">
                     <div class="field">
                         <input type="date" name="birth_at" id="birth_at" value="01/05/1997" />
-                        <label for="birth_at">Data de Nascimento</label>
+                        <label for="birth_at">Data</label>
 
                     </div>
 
                     <div class="field">
-                        <input type="tel" name="phone" id="phone" value="(51)98199-5768" required />
-                        <label for="phone">Telefone</label>
+                        <input type="time" name="time" id="time" />
+                        <label for="time">Hora</label>
 
                     </div>
                 </div>
@@ -126,54 +133,21 @@
 
 
                 <div class="actions">
-                    <button class="bt-green" type="submit">Atualizar</button>
+                    <button class="bt-green" type="submit">Agendar</button>
                 </div>
 
             </form>
 
-            <div class="section-header white">
-                <span>Alterar sua senha</span>
-            </div>
-
-            <form id="form-password">
-
-                <div class="fields">
-
-                    <div class="field">
-                        <input type="password" name="password" id="password-current" required />
-                        <label for="password-current">Senha atual</label>
-
-                    </div>
-
-                    <div class="field">
-                        <input type="password" name="password" id="password-new" required />
-                        <label for="password-new">Nova senha</label>
-
-                    </div>
-
-
-                </div>
-
-                <div class="field only">
-                    <input type="password" name="password-confirm" id="password-confirm" required />
-                    <label for="password-confirm">Confirme a nova senha</label>
-
-                </div>
-
-
-
-                <div class="actions">
-                    <button class="bt-green" type="submit">Salvar</button>
-                </div>
-
-            </form>
+            
 
         </main>
         <section class="second">
             <div class="overlay"></div>
             <div class="second-content">
-                <div class="section-header center">
-                    <span>Seus dados atuais</span>
+                <div class="section-header">
+                    <span>Disponibilidade</span>
+                    <h2>Na data escolhida</h2>
+                    <p>Aqui você consegue ver a agenda do seu médico. Escolha um horário disponível ou caso necessário altere o data escolhida.</p>
                 </div>
 
                 <div class="profile-data">

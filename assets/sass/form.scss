@@ -30,7 +30,21 @@ form {
             transition: 0.2s all;
             color: var(--text-main);
         }
-        input {
+        select {
+            -webkit-appearance:none;
+            -moz-appearance:none;
+            -ms-appearance:none;
+            appearance:none;
+            cursor: pointer;
+            background: url('/assets/images/photos/arrow-select.svg')  97% 50% no-repeat ;
+            
+        }
+        
+        select + label {
+            z-index: 0;
+        }
+        input, select {
+            
             border: none;
             border-bottom: 2px solid var(--text-main);
             width: 100%;
@@ -62,6 +76,17 @@ form {
             }
             &[type="date"]::-webkit-calendar-picker-indicator {
             opacity: 0;
+            cursor: pointer;
+            }
+            &[type="time"] {
+            background: var(--main) url('../images/photos/relogio.png')  97% 50% no-repeat ;
+            }
+            &[type="time"]::-webkit-inner-spin-button {
+                display: none;
+            }
+            &[type="time"]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            cursor: pointer;
             }
         }
     }

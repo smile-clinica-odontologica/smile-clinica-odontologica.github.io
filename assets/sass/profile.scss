@@ -1,5 +1,11 @@
 #profile {
 
+        .photo-field {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
         .photo-preview, .profile-data > img {
             border-radius: 50%;
             object-fit: cover;
@@ -14,8 +20,8 @@
             align-items: center;
             justify-content: center;
             > img {
-                width: 250px;
-                height: 250px;
+                width: 200px;
+                height: 200px;
             }
             .profile-content {
                 flex-direction: column;
@@ -46,4 +52,17 @@
             width: 150px;
             height: 40px;
         }
+}
+
+@media (min-width: 768px) {
+    #profile {
+
+        .profile-data {
+            flex-direction: row;
+            .profile-content {
+                margin-left: 40px;
+                margin-top: 0;
+            }
+        }
+    }
 }

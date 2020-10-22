@@ -127,7 +127,18 @@ form .field label {
   transition: 0.2s all;
   color: var(--text-main);
 }
-form .field input {
+form .field select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: url("/assets/images/photos/arrow-select.svg") 97% 50% no-repeat;
+}
+form .field select + label {
+  z-index: 0;
+}
+form .field input, form .field select {
   border: none;
   border-bottom: 2px solid var(--text-main);
   width: 100%;
@@ -140,24 +151,35 @@ form .field input {
   transition: 0.2s all;
   background-color: transparent;
 }
-form .field input:focus {
+form .field input:focus, form .field select:focus {
   border-bottom: 2px solid var(--text-main-80);
 }
-form .field input:focus + label {
+form .field input:focus + label, form .field select:focus + label {
   color: var(--text-main-80);
 }
-form .field input:valid + label, form .field input:focus + label {
+form .field input:valid + label, form .field input:focus + label, form .field select:valid + label, form .field select:focus + label {
   top: 2px;
   font-size: 14px;
 }
-form .field input[type=date] {
+form .field input[type=date], form .field select[type=date] {
   background: url("/assets/images/photos/hour.svg") 97% 50% no-repeat;
 }
-form .field input[type=date]::-webkit-inner-spin-button {
+form .field input[type=date]::-webkit-inner-spin-button, form .field select[type=date]::-webkit-inner-spin-button {
   display: none;
 }
-form .field input[type=date]::-webkit-calendar-picker-indicator {
+form .field input[type=date]::-webkit-calendar-picker-indicator, form .field select[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
+  cursor: pointer;
+}
+form .field input[type=time], form .field select[type=time] {
+  background: var(--main) url("../images/photos/relogio.png") 97% 50% no-repeat;
+}
+form .field input[type=time]::-webkit-inner-spin-button, form .field select[type=time]::-webkit-inner-spin-button {
+  display: none;
+}
+form .field input[type=time]::-webkit-calendar-picker-indicator, form .field select[type=time]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
 }
 form .actions {
   flex-direction: column;
@@ -1653,8 +1675,10 @@ header .menu.logged nav .info {
 }
 .page-admin > main {
   flex-direction: column;
+  align-items: center;
   margin-top: -80px;
   padding-top: 150px;
+  padding-bottom: 40px;
   background-color: var(--main);
   border-radius: 0 0 20px 20px;
   box-shadow: 0 0 10px #000000cc;
@@ -1687,13 +1711,23 @@ header .menu.logged nav .info {
   z-index: 0;
 }
 .page-admin .section-header {
+  flex-direction: column;
   color: var(--text);
   padding: 0 40px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 .page-admin .section-header > span {
   font-size: 20px;
   text-transform: uppercase;
+}
+.page-admin .section-header > h1, .page-admin .section-header > h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+.page-admin .section-header > p {
+  font-size: 14px;
 }
 .page-admin .section-header.white {
   color: var(--white);
@@ -1706,6 +1740,69 @@ header .menu.logged nav .info {
   font-size: 18px;
 }
 
+@media (min-width: 1200px) {
+  .page-admin {
+    flex-direction: row;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  .page-admin > main {
+    height: 100vh;
+    overflow-y: auto;
+    min-width: 50vw;
+    border-radius: 0;
+  }
+  .page-admin > main::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(42, 42, 42, 0.5);
+  }
+  .page-admin > main::-webkit-scrollbar, .page-admin > main::-webkit-scrollbar-track {
+    background-color: #b8b8b8;
+    border-radius: 5px;
+  }
+  .page-admin > main::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+  }
+  .page-admin > main::-webkit-scrollbar-thumb {
+    background-color: var(--third);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .page-admin .second {
+    width: 50%;
+    height: 100vh;
+    margin-top: -80px;
+    padding-top: 0;
+  }
+  .page-admin .section-header {
+    width: 100%;
+    max-width: 650px;
+  }
+  .page-admin .section-header > span {
+    align-self: flex-start;
+  }
+  .page-admin .section-header.center {
+    width: initial;
+  }
+  .page-admin footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+  }
+}
+@media (min-width: 1500px) {
+  .page-admin .section-header > span {
+    font-size: 25px;
+  }
+}
+#profile .photo-field {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
 #profile .photo-preview, #profile .profile-data > img {
   border-radius: 50%;
   object-fit: cover;
@@ -1721,8 +1818,8 @@ header .menu.logged nav .info {
   justify-content: center;
 }
 #profile .profile-data > img {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 #profile .profile-data .profile-content {
   flex-direction: column;
@@ -1767,6 +1864,16 @@ header .menu.logged nav .info {
 }
 #profile .label-photo-preview:hover {
   background-color: var(--hover-button);
+}
+
+@media (min-width: 768px) {
+  #profile .profile-data {
+    flex-direction: row;
+  }
+  #profile .profile-data .profile-content {
+    margin-left: 40px;
+    margin-top: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
