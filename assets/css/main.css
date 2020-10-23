@@ -2053,10 +2053,10 @@ header .menu.logged nav .info {
   top: 90vh;
 }
 
-header .menu .logo#white {
+.header-about .menu .logo#white {
   display: block;
 }
-header .menu .logo#blue {
+.header-about .menu .logo#blue {
   display: none;
 }
 
