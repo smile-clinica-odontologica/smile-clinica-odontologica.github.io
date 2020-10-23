@@ -24,7 +24,6 @@
                     flex-direction: row;
                     font-weight: 300;
                     height: 50px;
-                    margin: auto 0;
                     &.li-title {
                         font-size: 20px;
                         font-weight: 600;
@@ -61,14 +60,16 @@
         font-weight: 600;
         h3 {
             font-size: 20px;
-            padding-left: var(--space);
+            margin: 1em auto;
         }
         > div {
             flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
             a {
                 text-decoration: none;
                 color: var(--text-footer-copyright);
-                margin-left: var(--space);
                 font-size: 15px;
             }
             p + a {
@@ -79,10 +80,11 @@
             }
         }
         .footer-copyright-images {
-            justify-content: space-evenly;
             margin: var(--space) 0;
+            max-width: 500px;
+            margin: 10px auto;
                 a {
-                    margin: 0;
+                    margin: 0 var(--space);
                 }
                 img {
                     width: 30px;
@@ -101,6 +103,18 @@
             justify-content: space-between;
             .logo {
                 width: 15%;
+            }
+        }
+    }
+}
+
+@media (max-width: 300px) {
+    #footer  {
+        .footer-copyright {
+            .footer-copyright-images {
+                a {
+                    margin: 0 10px;
+                }
             }
         }
     }

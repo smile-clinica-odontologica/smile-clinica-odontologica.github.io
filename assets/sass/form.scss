@@ -4,25 +4,26 @@ form {
     padding: 0 40px;
     flex-direction: column;
     z-index: 1;
+    margin: 0 auto;
     .fields {
         flex-direction: column;
     }
     .form-title {
         color: var(--form-title-color);
         font-weight: bold;
-        font-size: 50px;
+        font-size: 40px;
         align-self: center;
         margin: 0;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
     .field {
         position: relative;
         flex-direction: column;
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         label {
             position: absolute;
-            font-size: 20px;
+            font-size: 18px;
             top: 15px;
             transition: 0.2s all;
             color: var(--text-main);
@@ -33,7 +34,7 @@ form {
             width: 100%;
             padding-top: 15px;
             line-height: 2em;
-            font-size: 20px;
+            font-size: 18px;
             outline: none;
             color: var(--third);
             font-weight: bold;
@@ -77,6 +78,14 @@ form {
     }
     button {
         margin-bottom: 25px;
+        background-color: transparent;
+        padding: 10px;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--main);
+        color: var(--main);
         &.bt-green {
             @include button-green;
         }
@@ -89,6 +98,22 @@ form {
             flex-direction: row;
             .field + .field {
                 margin-left: 60px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    form {
+        margin: initial;
+    }
+}
+
+@media (min-width: 1300px) {
+    form {
+        .field {
+            input {
+                min-width: 320px;
             }
         }
     }
