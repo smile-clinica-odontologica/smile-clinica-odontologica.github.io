@@ -37,9 +37,10 @@ form {
             appearance:none;
             cursor: pointer;
             background: url('/assets/images/photos/arrow-select.svg')  97% 50% no-repeat ;
-            
+            &:focus {
+                color: var(--second);
+            }
         }
-        
         select + label {
             z-index: 0;
         }

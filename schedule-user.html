@@ -76,87 +76,142 @@
 
         </div>
     </header>
-    <section id="profile" class="page-admin">
+    <section id="schedule-user" class="page-admin static">
         <main>
-            <div class="section-header white">
-                <span>Consulta</span>
-                <h1>Agende sua Consulta</h1>
-                <p>Você pode se sentir a vontade para escolher o seu Doutor preferido! Veja como é fácil, preencha o formulário abaixo!</p>
+            <div class="main-content">
+                <div class="section-header white">
+                    <span>Consulta</span>
+                    <h1>Agende sua Consulta</h1>
+                    <p>Você pode se sentir a vontade para escolher o seu Doutor preferido! Veja como é fácil, preencha o
+                        formulário abaixo!</p>
+                </div>
+
+                <form id="form-profile">
+
+
+                    <div class="fields">
+                        <div class="field">
+                            <select name="service" id="service" required>
+                                <option disabled></option>
+                                <option value="txt">Estética</option>
+                                <option selected value="pdf">Ortodontia</option>
+                                <option value="epub">Clínica</option>
+                                <option value="fb2">Implantes</option>
+                            </select>
+                            <label for="service">Selecione um serviço</label>
+
+                        </div>
+
+                        <div class="field">
+                            <select name="doctor" id="doctor" required>
+                                <option disabled></option>
+                                <option selected value="pdf">Dra. Ivanesia Peixoto</option>
+                                <option value="txt">Dr. Luiz Peixoto</option>
+                                <option value="epub">Dr. Lucas Filho</option>
+                                <option value="fb2">Dr. João Rafael</option>
+                                <option value="mobi">Dra. Vanessa Blanco</option>
+                            </select>
+                            <label for="doctor">Escolha um doutor</label>
+
+                        </div>
+                    </div>
+
+                    <div class="fields">
+                        <div class="field">
+                            <input type="date" name="birth_at" id="birth_at" value="2020-10-26" />
+                            <label for="birth_at">Data</label>
+
+                        </div>
+
+                        <div class="field">
+                            <input type="time" name="time" id="time" />
+                            <label for="time">Hora</label>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="actions">
+                        <button class="bt-green" type="submit">Agendar</button>
+                    </div>
+
+                </form>
+
+
             </div>
-
-            <form id="form-profile">
-
-
-                <div class="fields">
-                    <div class="field">
-                        <select name="service" id="service" required>
-                            <option selected disabled></option>
-                            <option value="pdf">Ortodontia</option>
-                            <option value="txt">Estética</option>
-                            <option value="epub">ePub</option>
-                            <option value="fb2">fb2</option>
-                            <option value="mobi">mobi</option>
-                         </select>
-                        <label for="service">Selecione um serviço</label>
-
-                    </div>
-
-                    <div class="field">
-                        <select name="doctor" id="doctor" required>
-                            <option selected disabled></option>
-                            <option value="pdf">Dra. Ivanesia Peixoto</option>
-                            <option value="txt">Dr. Luiz Peixoto</option>
-                            <option value="epub">Dr. Lucas Filho</option>
-                            <option value="fb2">fb2</option>
-                            <option value="mobi">mobi</option>
-                         </select>
-                        <label for="doctor">Escolha um doutor</label>
-
-                    </div>
-                </div>
-
-                <div class="fields">
-                    <div class="field">
-                        <input type="date" name="birth_at" id="birth_at" value="01/05/1997" />
-                        <label for="birth_at">Data</label>
-
-                    </div>
-
-                    <div class="field">
-                        <input type="time" name="time" id="time" />
-                        <label for="time">Hora</label>
-
-                    </div>
-                </div>
-
-
-
-
-                <div class="actions">
-                    <button class="bt-green" type="submit">Agendar</button>
-                </div>
-
-            </form>
-
-            
-
         </main>
         <section class="second">
             <div class="overlay"></div>
             <div class="second-content">
                 <div class="section-header">
                     <span>Disponibilidade</span>
-                    <h2>Na data escolhida</h2>
-                    <p>Aqui você consegue ver a agenda do seu médico. Escolha um horário disponível ou caso necessário altere o data escolhida.</p>
+                    <h2 class="desktop">Na data escolhida</h2>
+                    <p class="desktop">Aqui você consegue ver a agenda do seu médico. Escolha um horário disponível ou
+                        caso necessário
+                        altere o data escolhida.</p>
                 </div>
 
-                <div class="profile-data">
-                    <img src="assets/images/photos/testimonials-ana-silva.jpg" alt="Foto de Perfil do Usuário">
-                    <div class="profile-content">
-                        <h3 class="profile-name">Ana Silva</h3>
-                        <span class="profile-birth">01/05/1997</span>
-                        <span class="profile-email">aninhasilva@gmail.com</span>
-                        <span class="profile-phone">(11) 98199 - 5768</span>
+                <div class="schedule-times">
+
+                    <figure>
+                        <picture>
+                            <img class="photo-doctor" src="assets/images/photos/doctor-peixoto.png"
+                                alt="Foto do doutor selecionado">
+                        </picture>
+                        <figcaption>
+                            <h3 class="doctor-name">Dra. Ivanesia Peixoto</h3>
+                        </figcaption>
+                    </figure>
+
+
+                    <div class="options-wrap">
+                        <h3>Segunda, 26 de Outubro de 2020</h3>
+
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="option" value="8:00" disabled>
+                                <span>8:00</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="option" value="9:00">
+                                <span>9:00</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="option" value="10:00" disabled>
+                                <span>10:00</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="option" value="11:00" disabled>
+                                <span>11:00</span>
+                            </label>
+
+
+                            <label>
+                                <input type="radio" name="option" value="13:00">
+                                <span>13:00</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="option" value="14:00">
+                                <span>14:00</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="option" value="15:00" disabled>
+                                <span>15:00</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="option" value="12:00">
+                                <span>16:00</span>
+                            </label>
+
+                        </div>
+
                     </div>
                 </div>
 

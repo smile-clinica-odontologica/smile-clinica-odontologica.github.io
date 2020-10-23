@@ -1,6 +1,8 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&display=swap");
 :root {
   --main: #5A96D5;
+  --main-30: rgba(90, 149, 213, 0.3);
   --main-80: #5A96D580;
   --main-90: #5a95d5e8;
   --second: #2D2B87;
@@ -13,6 +15,7 @@
   --green:#69E0A5;
   --gray:#F8F8F8;
   --gray-90:#f8f8f8e8;
+  --dark: #CCC4C4;
   --space: 20px;
   --border-radius: 4px;
   --text: #636363;
@@ -134,6 +137,9 @@ form .field select {
   appearance: none;
   cursor: pointer;
   background: url("/assets/images/photos/arrow-select.svg") 97% 50% no-repeat;
+}
+form .field select:focus {
+  color: var(--second);
 }
 form .field select + label {
   z-index: 0;
@@ -1524,6 +1530,248 @@ header .menu.logged nav .info {
   color: var(--main);
 }
 
+#blog {
+  flex-direction: column;
+}
+#blog .full-banner-blog {
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  background-image: url("../images/photos/Grupodemáscara34.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: -80px;
+  height: 100vh;
+}
+#blog .full-banner-blog header {
+  width: 100%;
+  height: calc(100vh - 80px);
+  padding-top: 40px;
+  flex-direction: column;
+  z-index: 3;
+  justify-content: flex-end;
+}
+#blog .full-banner-blog header .hero {
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 2;
+  padding: 40px 0 20px;
+  justify-content: flex-end;
+}
+#blog .full-banner-blog header .hero .hero-text {
+  padding: 0 40px 0 20px;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+#blog .full-banner-blog header .hero .hero-text > div {
+  flex-direction: column;
+}
+#blog .full-banner-blog header .hero .hero-text h1 {
+  color: var(--text);
+  margin-bottom: 0;
+  font-size: 28px;
+  margin-right: 10px;
+}
+#blog .full-banner-blog header .hero .hero-text h1 strong {
+  color: var(--main);
+  text-shadow: none;
+}
+#blog .full-banner-blog header .hero .hero-text p {
+  color: var(--main);
+  font-size: 20px;
+  margin: 5px 0 10px;
+}
+#blog .full-banner-blog header .hero .hero-text button {
+  padding: 10px 18px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 3px 6px var(--main-80);
+  border-radius: 6px;
+  width: 120px;
+  display: inline-block;
+  height: 56px;
+  margin: auto 0 0;
+}
+#blog .full-banner-blog header .hero .hero-text button a {
+  color: var(--main);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px;
+}
+#blog .artigos {
+  flex-direction: column;
+  padding: var(--space);
+  background-color: #F8F8F8;
+}
+#blog .artigos h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin: var(--space) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main);
+}
+#blog .artigos p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--main);
+  text-align: center;
+}
+#blog .artigos .wrap {
+  flex-direction: row;
+}
+#blog .artigos .wrap .arrow {
+  display: none;
+}
+#blog .artigos .wrap .cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#blog .artigos .wrap .cards .card {
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto;
+  flex-direction: column;
+  box-shadow: 0 1px 10px #ccc;
+  border-radius: 18px;
+  padding-bottom: 10px;
+  background: #fff;
+}
+#blog .artigos .wrap .cards .card .img {
+  width: 100%;
+  height: 200px;
+}
+#blog .artigos .wrap .cards .card .card-text {
+  flex-direction: column;
+  margin: 0px;
+  padding: 5px 20px;
+  background: #fff;
+}
+#blog .artigos .wrap .cards .card .card-text span {
+  color: var(--third);
+  font-size: 20px;
+}
+#blog .artigos .wrap .cards .card .card-text h2 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: var(--main);
+}
+#blog .artigos .wrap .cards .card .card-text h5 {
+  margin: 5px 0;
+  font-size: 21px;
+  color: var(--main);
+}
+#blog .artigos .wrap .cards .card .card-text p {
+  line-height: 25px;
+  color: #636363;
+  font-size: 14px;
+  text-align: left;
+  font-weight: 400;
+}
+#blog .artigos .wrap .cards .card button {
+  padding: 10px 20px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: transparent;
+  border: none;
+}
+#blog .artigos .wrap .cards .card button a {
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 16px;
+  color: var(--third);
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  #blog .full-banner-blog {
+    margin-top: -80px;
+    position: relative;
+    flex-direction: column;
+    background-image: url("../images/photos/Grupodemáscara34.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    max-height: 900px;
+  }
+  #blog .full-banner-blog header {
+    flex-direction: row;
+    justify-content: center;
+    height: 510px;
+  }
+  #blog .full-banner-blog header .hero {
+    width: 100%;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 40px;
+    height: 510px;
+  }
+  #blog .full-banner-blog header .hero .hero-text {
+    flex-direction: column;
+    justify-content: initial;
+    padding: 0 40px 0 8rem;
+  }
+  #blog .full-banner-blog header .hero .hero-text p {
+    font-size: 16px;
+  }
+  #blog .full-banner-blog header .hero .hero-text h1 {
+    margin: 0;
+    text-align: left;
+  }
+  #blog .full-banner-blog header .hero .hero-text button {
+    font-size: 12px;
+  }
+
+  .artigos .wrap .cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  #blog .full-banner-blog header {
+    height: 630px;
+  }
+  #blog .full-banner-blog header .hero {
+    height: 630px;
+  }
+  #blog .full-banner-blog header .hero .hero-text h1 {
+    font-size: 40px;
+  }
+  #blog .full-banner-blog header .hero .hero-text p {
+    font-size: 24px;
+  }
+  #blog .full-banner-blog header .hero .hero-text button {
+    width: 165px;
+    height: 50px;
+  }
+  #blog .full-banner-blog header .hero .hero-text button a {
+    font-size: 24px;
+  }
+  #blog h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--main);
+  }
+  #blog .artigos {
+    width: 100%;
+  }
+  #blog .artigos .wrap {
+    flex-direction: row;
+  }
+  #blog .artigos .wrap .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 #register {
   flex-direction: column;
   align-items: center;
@@ -1684,6 +1932,11 @@ header .menu.logged nav .info {
   box-shadow: 0 0 10px #000000cc;
   z-index: 2;
 }
+.page-admin > main .main-content {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 .page-admin .second {
   position: relative;
   background-image: url("../images/photos/back-image-header.png");
@@ -1692,7 +1945,7 @@ header .menu.logged nav .info {
   background-position-y: center;
   background-repeat: no-repeat;
   margin-top: -20px;
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 60px;
 }
 .page-admin .second .second-content {
@@ -1716,18 +1969,20 @@ header .menu.logged nav .info {
   padding: 0 40px;
   margin-top: 40px;
   margin-bottom: 40px;
+  max-width: 500px;
 }
 .page-admin .section-header > span {
   font-size: 20px;
   text-transform: uppercase;
 }
 .page-admin .section-header > h1, .page-admin .section-header > h2 {
-  font-size: 40px;
+  display: flex;
+  font-size: 30px;
   font-weight: bold;
   margin: 0;
 }
-.page-admin .section-header > p {
-  font-size: 14px;
+.page-admin .section-header > .desktop {
+  display: none;
 }
 .page-admin .section-header.white {
   color: var(--white);
@@ -1737,9 +1992,24 @@ header .menu.logged nav .info {
   justify-content: center;
   background-color: var(--gray);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
+}
+.page-admin footer > p {
+  margin: 2px;
+}
+.page-admin.static > main > form {
+  margin-top: 40px;
+}
+.page-admin.static .section-header {
+  margin-bottom: 0;
+  margin-top: 20px;
 }
 
+@media (min-width: 768px) {
+  .page-admin .section-header {
+    max-width: 650px;
+  }
+}
 @media (min-width: 1200px) {
   .page-admin {
     flex-direction: row;
@@ -1752,6 +2022,9 @@ header .menu.logged nav .info {
     overflow-y: auto;
     min-width: 50vw;
     border-radius: 0;
+  }
+  .page-admin > main .main-content {
+    align-items: center;
   }
   .page-admin > main::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 5px rgba(42, 42, 42, 0.5);
@@ -1777,10 +2050,20 @@ header .menu.logged nav .info {
   }
   .page-admin .section-header {
     width: 100%;
-    max-width: 650px;
   }
   .page-admin .section-header > span {
     align-self: flex-start;
+  }
+  .page-admin .section-header > .desktop {
+    display: flex;
+  }
+  .page-admin .section-header > h1, .page-admin .section-header > h2 {
+    display: flex;
+    font-size: 40px;
+  }
+  .page-admin .section-header > p {
+    display: flex;
+    font-size: 14px;
   }
   .page-admin .section-header.center {
     width: initial;
@@ -1791,10 +2074,32 @@ header .menu.logged nav .info {
     right: 0;
     width: 50%;
   }
+  .page-admin.static > main {
+    padding-bottom: 0;
+  }
+  .page-admin.static .second {
+    padding-bottom: 20px;
+  }
+  .page-admin.static .second .second-content {
+    overflow-y: auto;
+    justify-content: initial;
+    padding-top: 150px;
+  }
+  .page-admin.static .section-header {
+    margin: 0;
+  }
 }
 @media (min-width: 1500px) {
   .page-admin .section-header > span {
     font-size: 25px;
+  }
+}
+@media (min-height: 750px) and (min-width: 1200px) {
+  .page-admin.static > main {
+    padding-top: 200px;
+  }
+  .page-admin.static .second .second-content {
+    padding-top: 200px;
   }
 }
 #profile .photo-field {
@@ -1873,6 +2178,105 @@ header .menu.logged nav .info {
   #profile .profile-data .profile-content {
     margin-left: 40px;
     margin-top: 0;
+  }
+}
+#schedule-user .schedule-times {
+  flex-direction: column;
+}
+#schedule-user .schedule-times > figure {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 40px;
+}
+#schedule-user .schedule-times > figure .photo-doctor {
+  width: 250px;
+}
+#schedule-user .schedule-times > figure > figcaption {
+  text-align: center;
+  background-color: var(--main-30);
+  border-radius: var(--border-radius);
+}
+#schedule-user .schedule-times > figure .doctor-name {
+  margin: 0;
+  padding: 10px;
+  font-weight: bold;
+}
+#schedule-user .schedule-times .options-wrap {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+#schedule-user .schedule-times .options {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 370px;
+}
+#schedule-user .schedule-times .options label {
+  width: calc(50% - 20px);
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+#schedule-user .schedule-times .options label span {
+  min-width: 130px;
+  width: 205px;
+  border: solid 1px var(--main);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  transition: background-color 0.2s ease-in-out;
+  border: transparent;
+  background-color: var(--bt-green);
+  color: var(--white);
+  height: 40px;
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+}
+#schedule-user .schedule-times .options label span:hover {
+  background-color: var(--hover-button);
+}
+#schedule-user .schedule-times .options label span:hover {
+  background-color: var(--bt-green-hover);
+}
+#schedule-user .schedule-times .options label span:active {
+  background-color: var(--bt-green-active);
+}
+#schedule-user .schedule-times .options label input {
+  display: none;
+}
+#schedule-user .schedule-times .options label input:checked + span {
+  background-color: var(--main);
+}
+#schedule-user .schedule-times .options label input:disabled + span {
+  background-color: var(--dark);
+  color: var(--text);
+  cursor: initial;
+}
+#schedule-user .schedule-times .options label input:disabled + span:hover {
+  background-color: var(--dark);
+}
+#schedule-user .schedule-times .options label input:disabled + span:active {
+  background-color: var(--dark);
+}
+
+@media (min-width: 1200px) {
+  #schedule-user .schedule-times {
+    flex-direction: row;
+  }
+  #schedule-user .schedule-times > figure {
+    justify-content: flex-end;
+    margin-bottom: 20px;
   }
 }
 
