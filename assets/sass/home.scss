@@ -937,3 +937,38 @@
     }
   }
 }
+
+@media (max-width: 350px) {
+  #home {
+    .full-banner-home {
+      header {
+        .image-boy {
+          background-position: 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  #home {
+    .free-trial {
+      .free-trial-opacity {
+        h2 {
+          font-size: 58px;
+          strong {
+            font-size: 58px;
+          }
+        }
+
+        p {
+          font-size: 24px;
+
+          small {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
