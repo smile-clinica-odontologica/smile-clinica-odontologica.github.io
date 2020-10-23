@@ -1650,8 +1650,114 @@ header .menu.logged nav .info {
   color: var(--main);
 }
 
+.background-transparent-blog {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: #00000030;
+  z-index: 1;
+}
+
 #blog {
   flex-direction: column;
+  /* .artigos {
+        flex-direction: column;
+        padding: var(--space);
+        background-color: #F8F8F8;
+        h3 {
+          text-align: center;
+          font-size: 40px;
+          font-weight: 600;
+          margin: var(--space) 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--main);
+        }
+        p {
+
+          margin-top: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            color: var(--main);
+            text-align: center;
+        }
+
+        .wrap {
+          flex-direction: row;
+
+          .arrow {
+            display: none;
+          }
+
+          .cards {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr ;
+
+            .card {
+              width: 100%;
+              max-width: 350px;
+              margin: 20px auto;
+              flex-direction: column;
+              box-shadow: 0 1px 10px #ccc;
+              border-radius: 18px;
+              padding-bottom: 10px;
+              background: #fff;
+              .img {
+                width: 100%;
+                height: 200px;
+              }
+              .card-text {
+                flex-direction: column;
+                margin: 0px;
+                padding: 5px 20px;
+                background: #fff;
+                span {
+                    color: var(--third);
+                    font-size: 20px;
+                }
+                h2{
+                  margin: 5px 0;
+                  font-size: 18px;
+                  color: var(--main);
+                }
+
+                h5 { 
+                  margin: 5px 0;
+                  font-size: 21px;
+                  color: var(--main);
+                }
+
+                p {
+                  line-height: 25px;
+                  color: #636363;
+                  font-size: 14px;
+                  text-align: left;
+                  font-weight: 400;
+                }
+              }
+
+              button {
+                padding: 10px 20px 10px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                background-color: transparent;
+                border: none;
+
+                a {
+                  text-decoration: none;
+                  margin: 0 5px;
+                  font-size: 16px;
+                  color: var(--third);
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+  } */
 }
 #blog .full-banner-blog {
   position: relative;
@@ -1681,7 +1787,7 @@ header .menu.logged nav .info {
 }
 #blog .full-banner-blog header .hero .hero-text {
   padding: 0 40px 0 20px;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
 }
@@ -1689,9 +1795,9 @@ header .menu.logged nav .info {
   flex-direction: column;
 }
 #blog .full-banner-blog header .hero .hero-text h1 {
-  color: var(--text);
+  color: var(--main);
   margin-bottom: 0;
-  font-size: 28px;
+  font-size: 45px;
   margin-right: 10px;
 }
 #blog .full-banner-blog header .hero .hero-text h1 strong {
@@ -1699,61 +1805,66 @@ header .menu.logged nav .info {
   text-shadow: none;
 }
 #blog .full-banner-blog header .hero .hero-text p {
-  color: var(--main);
+  color: var(--white);
   font-size: 20px;
-  margin: 5px 0 10px;
+  margin: 0 0 10px;
 }
 #blog .full-banner-blog header .hero .hero-text button {
   padding: 10px 18px;
-  background-color: white;
+  background-color: var(--main);
   border: none;
-  box-shadow: 0px 3px 6px var(--main-80);
   border-radius: 6px;
-  width: 120px;
+  width: 140px;
   display: inline-block;
   height: 56px;
-  margin: auto 0 0;
+  margin-top: 10px;
 }
 #blog .full-banner-blog header .hero .hero-text button a {
-  color: var(--main);
+  color: var(--white);
   text-decoration: none;
   font-weight: bold;
   font-size: 19px;
 }
-#blog .artigos {
+#blog .container-blog {
   flex-direction: column;
   padding: var(--space);
   background-color: #F8F8F8;
 }
-#blog .artigos h3 {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
-  margin: var(--space) 0;
-  display: flex;
+#blog .container-blog .blog-text {
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: var(--main);
 }
-#blog .artigos p {
+#blog .container-blog .blog-text h3 {
+  color: var(--main);
+  font-size: 40px;
+  margin: 0;
+}
+#blog .container-blog .blog-text #uppercase {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--main);
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+#blog .container-blog .blog-text p {
   margin-top: 10px;
   font-weight: bold;
   font-size: 18px;
   color: var(--main);
   text-align: center;
 }
-#blog .artigos .wrap {
+#blog .container-blog .wrap {
   flex-direction: row;
 }
-#blog .artigos .wrap .arrow {
+#blog .container-blog .wrap .arrow {
   display: none;
 }
-#blog .artigos .wrap .cards {
+#blog .container-blog .wrap .cards {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
 }
-#blog .artigos .wrap .cards .card {
+#blog .container-blog .wrap .cards .card {
   width: 100%;
   max-width: 350px;
   margin: 20px auto;
@@ -1761,40 +1872,32 @@ header .menu.logged nav .info {
   box-shadow: 0 1px 10px #ccc;
   border-radius: 18px;
   padding-bottom: 10px;
-  background: #fff;
 }
-#blog .artigos .wrap .cards .card .img {
+#blog .container-blog .wrap .cards .card > img {
+  object-fit: cover;
+  height: 300px;
   width: 100%;
-  height: 200px;
+  border-radius: 18px;
 }
-#blog .artigos .wrap .cards .card .card-text {
+#blog .container-blog .wrap .cards .card .card-text {
   flex-direction: column;
-  margin: 0px;
-  padding: 5px 20px;
-  background: #fff;
+  margin: 20px;
+  padding: 0 10px;
 }
-#blog .artigos .wrap .cards .card .card-text span {
-  color: var(--third);
-  font-size: 20px;
-}
-#blog .artigos .wrap .cards .card .card-text h2 {
+#blog .container-blog .wrap .cards .card .card-text h4 {
   margin: 5px 0;
   font-size: 18px;
-  color: var(--main);
+  color: var(--third);
 }
-#blog .artigos .wrap .cards .card .card-text h5 {
+#blog .container-blog .wrap .cards .card .card-text h5 {
   margin: 5px 0;
-  font-size: 21px;
+  font-size: 25px;
   color: var(--main);
 }
-#blog .artigos .wrap .cards .card .card-text p {
+#blog .container-blog .wrap .cards .card .card-text p {
   line-height: 25px;
-  color: #636363;
-  font-size: 14px;
-  text-align: left;
-  font-weight: 400;
 }
-#blog .artigos .wrap .cards .card button {
+#blog .container-blog .wrap .cards .card button {
   padding: 10px 20px 10px 10px;
   display: flex;
   align-items: center;
@@ -1802,7 +1905,7 @@ header .menu.logged nav .info {
   background-color: transparent;
   border: none;
 }
-#blog .artigos .wrap .cards .card button a {
+#blog .container-blog .wrap .cards .card button a {
   text-decoration: none;
   margin: 0 5px;
   font-size: 16px;
@@ -1845,6 +1948,10 @@ header .menu.logged nav .info {
   #blog .full-banner-blog header .hero .hero-text h1 {
     margin: 0;
     text-align: left;
+    font-size: 48px;
+  }
+  #blog .full-banner-blog header .hero .hero-text p {
+    font-size: 28px;
   }
   #blog .full-banner-blog header .hero .hero-text button {
     font-size: 12px;
@@ -1856,18 +1963,17 @@ header .menu.logged nav .info {
     grid-template-columns: 1fr;
   }
 }
+@media (min-width: 920px) {
+  #blog .container-blog .wrap .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 @media (min-width: 1200px) {
   #blog .full-banner-blog header {
     height: 630px;
   }
   #blog .full-banner-blog header .hero {
     height: 630px;
-  }
-  #blog .full-banner-blog header .hero .hero-text h1 {
-    font-size: 40px;
-  }
-  #blog .full-banner-blog header .hero .hero-text p {
-    font-size: 24px;
   }
   #blog .full-banner-blog header .hero .hero-text button {
     width: 165px;
@@ -1890,6 +1996,22 @@ header .menu.logged nav .info {
   }
   #blog .artigos .wrap .cards {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  #blog .container-blog .wrap .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1400px) {
+  #blog .container-blog .wrap .arrow {
+    display: flex;
+    align-items: center;
+  }
+  #blog .container-blog .wrap .arrow img {
+    width: 30px;
+    height: 30px;
+  }
+  #blog .container-blog .wrap .cards .card {
+    max-width: 380px;
   }
 }
 #register {
