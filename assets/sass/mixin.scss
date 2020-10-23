@@ -19,18 +19,6 @@
     }
 }
 
-@mixin button-green {
-    @include button;
-    background-color: var(--bt-green);
-    color: var(--white);
-    &:hover {
-        background-color: var(--bt-green-hover);
-    }
-    &:active {
-        background-color: var(--bt-green-active);
-    }
-}
-
 @mixin button-border {
     @include button;
     background-color: transparent;
@@ -41,5 +29,28 @@
     }
     &:active {
         background-color: var(--bt-border-active);
+    }
+}
+
+@mixin time {
+    border: transparent;
+    background-color: var(--bt-green);
+    color: var(--white);
+    &:hover {
+        background-color: var(--bt-green-hover);
+    }
+    &:active {
+        background-color: var(--bt-green-active);
+    }
+}
+@mixin time-busy {
+    background-color: var(--dark);
+    color: var(--text);
+    cursor: initial;
+    &:hover {
+        background-color: var(--dark);
+    }
+    &:active {
+        background-color: var(--dark);
     }
 }
