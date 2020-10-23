@@ -1,33 +1,15 @@
 #error {
-    .columns {
-        background-color: var(--main);
-        width: 50vh;
-        height:100%;
-        position: relative;
-        background-image: url("../images/photos/55047-removebg-preview.png");
-        background-size: cover;
-        background-position-x: 50%;
-        background-position-y: center;
-        background-repeat: no-repeat;
-        margin-top: -80px;
-        img {
-            border:1px solid var(--second);
-            margin: 100px;
-            position: relative;
-        }
-        h1 {
-            color: var(--white);
-         }
-         h2 {
-             font-size: 300px;
-             color: var(--main);
-             transform: rotate(45deg);
-             color: var(--main-90);
-         }
+    .column {
+    background-image: url("../images/photos/55047-removebg-preview.png");
+    background-color: var(--main);
+    position: absolute;
+    background-position-x: 100%;
+    background-position-y: 100%;
+    margin-top: -80px;
     }
-    
-    button {
+    .button {
         @include button;
-        color: var(--main);
+            background-color: (--white);
     }
 }
+  

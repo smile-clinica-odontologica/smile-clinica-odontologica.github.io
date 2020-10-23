@@ -182,6 +182,7 @@ form button {
   justify-content: center;
   border: 1px solid var(--main);
   color: var(--main);
+  cursor: pointer;
 }
 form button.bt-green {
   min-width: 130px;
@@ -298,6 +299,7 @@ form button.bt-green:active {
   align-items: center;
   justify-content: center;
   margin-bottom: 5px;
+  padding: 0 10px;
 }
 #footer .footer-copyright > div a {
   text-decoration: none;
@@ -336,6 +338,11 @@ form button.bt-green:active {
 @media (max-width: 300px) {
   #footer .footer-copyright .footer-copyright-images a {
     margin: 0 10px;
+  }
+}
+@media (max-width: 350px) {
+  #footer .footer-copyright .footer-copyright-images a {
+    margin: 0 8px;
   }
 }
 header {
@@ -709,6 +716,7 @@ header .menu.logged nav .info {
   display: inline-block;
   height: 50px;
   margin: auto 0 0;
+  cursor: pointer;
 }
 #home .full-banner-home header .hero .hero-text button a {
   color: var(--main);
@@ -1464,7 +1472,6 @@ header .menu.logged nav .info {
 #schedules h1 {
   color: var(--letters-title);
   font-size: 20px;
-  font-weight: bold;
   text-transform: uppercase;
 }
 #schedules h1 b {
@@ -1563,9 +1570,12 @@ header .menu.logged nav .info {
   #schedules {
     flex-direction: row;
   }
-  #schedules img {
-    width: 100%;
-    height: 100%;
+  #schedules .full-banner-schedules {
+    position: absolute;
+    background-image: url("../images/photos/Grupo de máscara 16.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -80px;
   }
   #schedules .fields {
     width: 100%;
@@ -1580,36 +1590,17 @@ header .menu.logged nav .info {
   #schedules .blocks {
     background-color: var(--white);
     box-shadow: 10px 9px 8px rgba(50, 50, 50, 0.77);
-    display: block;
   }
 }
-#error .columns {
-  background-color: var(--main);
-  width: 50vh;
-  height: 100%;
-  position: relative;
+#error .column {
   background-image: url("../images/photos/55047-removebg-preview.png");
-  background-size: cover;
-  background-position-x: 50%;
-  background-position-y: center;
-  background-repeat: no-repeat;
+  background-color: var(--main);
+  position: absolute;
+  background-position-x: 100%;
+  background-position-y: 100%;
   margin-top: -80px;
 }
-#error .columns img {
-  border: 1px solid var(--second);
-  margin: 100px;
-  position: relative;
-}
-#error .columns h1 {
-  color: var(--white);
-}
-#error .columns h2 {
-  font-size: 300px;
-  color: var(--main);
-  transform: rotate(45deg);
-  color: var(--main-90);
-}
-#error button {
+#error .button {
   min-width: 130px;
   width: 205px;
   border: solid 1px var(--main);
@@ -1625,9 +1616,9 @@ header .menu.logged nav .info {
   border-radius: var(--border-radius);
   background: var(--white);
   transition: background-color 0.2s ease-in-out;
-  color: var(--main);
+  background-color: --white;
 }
-#error button:hover {
+#error .button:hover {
   background-color: var(--hover-button);
 }
 
@@ -2066,6 +2057,248 @@ header .menu.logged nav .info {
 #order-franchises-confirm p {
   font-size: 20px;
   top: 90vh;
+}
+
+header .menu .logo#white {
+  display: block;
+}
+header .menu .logo#blue {
+  display: none;
+}
+
+.image-wrap {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  background-image: url("../images/photos/always-smile@2x.png");
+  background-size: cover;
+  background-position: -120px 0;
+}
+
+.image-wrap-transparent {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: #00000050;
+}
+
+#about {
+  flex-direction: column;
+}
+#about .full-banner-about {
+  position: relative;
+  width: 100%;
+}
+#about .full-banner-about header {
+  width: 100%;
+  height: calc(100vh - 80px);
+  padding-top: 40px;
+  flex-direction: column;
+  z-index: 3;
+  justify-content: flex-end;
+}
+#about .full-banner-about header .hero {
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 2;
+  padding: 40px 0 20px;
+  justify-content: flex-start;
+}
+#about .full-banner-about header .hero .hero-text {
+  padding: 0 40px 0 20px;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+#about .full-banner-about header .hero .hero-text h1 {
+  color: var(--white);
+  font-size: 40px;
+}
+#about .full-banner-about header .hero .hero-text h1 strong {
+  color: var(--main);
+}
+#about .text {
+  flex-direction: column;
+  padding: 20px;
+}
+#about .text p {
+  margin: 20px;
+  font-size: 25px;
+  color: var(--text);
+}
+#about .cards {
+  flex-direction: column;
+}
+#about .cards .card {
+  flex-direction: column;
+}
+#about .cards .card .square {
+  padding: 40px 0;
+  flex-direction: column;
+  background-color: var(--text);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#about .cards .card .square::before {
+  content: "";
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  background-color: var(--text);
+  bottom: -27.5px;
+  transform: rotate(135deg);
+}
+#about .cards .card .square p {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--white);
+}
+#about .cards .card .text {
+  margin-top: 30px;
+  text-align: center;
+}
+#about .support {
+  flex-direction: column;
+  margin-top: 40px;
+}
+#about .support .login {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--text);
+  padding: 20px 20px 30px;
+}
+#about .support .login h3 {
+  color: var(--white);
+  font-size: 40px;
+  margin: 10px 0;
+}
+#about .support .login form .field input {
+  border-color: var(--third);
+}
+#about .support .login form .field label {
+  color: var(--white);
+}
+#about .support .login form button {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: var(--third);
+  color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+}
+#about .support .image {
+  height: 500px;
+  background-image: url("../images/photos/image-support-about.png");
+  background-position: -200px 0;
+}
+
+@media (min-width: 650px) {
+  .image-wrap {
+    background-position: -20px 0;
+  }
+
+  #about .support .image {
+    height: 500px;
+    background-image: url("../images/photos/image-support-about.png");
+    background-position: -20px 0;
+  }
+}
+@media (min-width: 768px) {
+  .image-wrap {
+    background-position: 0px 0;
+  }
+
+  #about .full-banner-about header {
+    justify-content: center;
+    padding-bottom: 200px;
+    padding-left: var(--space);
+  }
+  #about .full-banner-about header .hero {
+    justify-content: center;
+  }
+  #about .full-banner-about header .hero .hero-text {
+    justify-content: flex-end;
+    text-align: right;
+  }
+  #about .full-banner-about header .hero .hero-text h1 {
+    width: 450px;
+    font-size: 60px;
+  }
+}
+@media (min-width: 900px) {
+  #about .support .image {
+    height: 500px;
+    background-image: url("../images/photos/image-support-about.png");
+    background-position: 200px 0;
+  }
+}
+@media (min-width: 1000px) {
+  #about .cards .card {
+    display: grid;
+    grid-template-columns: minmax(150px, 25%) 1fr;
+    margin: 20px 20px;
+  }
+  #about .cards .card .square::before {
+    bottom: initial;
+    right: -27.5px;
+  }
+  #about .cards .card .text {
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space) 60px;
+    border: 1px solid var(--third);
+    border-left: none;
+  }
+  #about .support {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+  #about .support .login {
+    justify-content: center;
+  }
+  #about .support .login form {
+    max-width: 500px;
+  }
+  #about .support .image {
+    background-position: -200px 0;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #about .text {
+    font-size: 30px;
+    align-items: center;
+    padding-top: 50px;
+  }
+  #about .text p {
+    max-width: 1000px;
+  }
+}
+@media (min-width: 1500px) {
+  #about .cards .card {
+    margin: 30px 60px;
+  }
+}
+@media (min-width: 1750px) {
+  #about .full-banner-about header .hero {
+    padding: 100px 100px 0;
+  }
+  #about .cards .card {
+    margin: 30px 100px;
+  }
+}
+@media (min-width: 1850px) {
+  #about .cards .card {
+    margin: 30px 150px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
