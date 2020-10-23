@@ -2293,5 +2293,225 @@ header .menu.logged nav .info {
     margin: 30px 150px;
   }
 }
+#services {
+  width: 100%;
+  flex-direction: column;
+}
+#services .full-banner-services {
+  width: 100%;
+  background-image: url("../images/photos/full-banner-services.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  margin-top: -80px;
+  position: relative;
+}
+#services .full-banner-services h1 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--main);
+  padding-left: var(--space);
+  position: absolute;
+  top: 75%;
+}
+#services .full-banner-services h1 span {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--white);
+}
+#services .services-aesthetic {
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--bg-gray);
+}
+#services .services-aesthetic .services-aesthetic-title {
+  width: 100%;
+}
+#services .services-aesthetic .services-aesthetic-title h2 {
+  margin: var(--space) 0;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--main);
+  padding-left: var(--space);
+}
+#services .services-aesthetic .services-aesthetic-content {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-aesthetic .services-aesthetic-content img {
+  width: 325px;
+  margin: 0 var(--space);
+}
+#services .services-aesthetic .services-aesthetic-content p {
+  margin: 0;
+  padding: var(--space);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--letters-title);
+  letter-spacing: 0;
+  opacity: 1;
+}
+#services .services-orthodontics {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-orthodontics .services-orthodontics-title {
+  width: 100%;
+}
+#services .services-orthodontics .services-orthodontics-title h3 {
+  margin: var(--space) 0;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--main);
+  padding-left: var(--space);
+}
+#services .services-orthodontics .services-orthodontics-content {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-orthodontics .services-orthodontics-content img {
+  width: 325px;
+  margin: 0 var(--space);
+}
+#services .services-orthodontics .services-orthodontics-content p {
+  margin: 0;
+  padding: var(--space);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--letters-title);
+  letter-spacing: 0;
+  opacity: 1;
+}
+#services .services-clinical-dentistry {
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--bg-gray);
+}
+#services .services-clinical-dentistry .services-clinical-dentistry-title {
+  width: 100%;
+}
+#services .services-clinical-dentistry .services-clinical-dentistry-title h4 {
+  margin: var(--space) 0;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--main);
+  padding-left: var(--space);
+}
+#services .services-clinical-dentistry .services-clinical-dentistry-content {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-clinical-dentistry .services-clinical-dentistry-content img {
+  width: 100%;
+}
+#services .services-clinical-dentistry .services-clinical-dentistry-content p {
+  margin: 0;
+  padding: var(--space);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--letters-title);
+  letter-spacing: 0;
+  opacity: 1;
+}
+#services .services-implants {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-implants .services-implants-title {
+  width: 100%;
+}
+#services .services-implants .services-implants-title h5 {
+  margin: var(--space) 0;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--main);
+  padding-left: var(--space);
+}
+#services .services-implants .services-implants-content {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-implants .services-implants-content img {
+  width: 325px;
+  margin: 0 var(--space);
+}
+#services .services-implants .services-implants-content p {
+  margin: 0;
+  padding: var(--space);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--letters-title);
+  letter-spacing: 0;
+  opacity: 1;
+}
+#services .free-trial {
+  width: 100%;
+  height: 600px;
+  background-image: url("../images/photos/free-trial-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#services .free-trial .free-trial-opacity {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  background-color: var(--main);
+  opacity: 50%;
+  flex-direction: column;
+  padding: var(--space);
+}
+#services .free-trial .free-trial-opacity h2, #services .free-trial .free-trial-opacity p, #services .free-trial .free-trial-opacity small {
+  color: var(--letters-body);
+  font-weight: 600;
+}
+#services .free-trial .free-trial-opacity h2 {
+  font-size: 65px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+#services .free-trial .free-trial-opacity h2 strong {
+  color: var(--third);
+  font-size: 65px;
+}
+#services .free-trial .free-trial-opacity p {
+  font-size: 30px;
+  margin: 0;
+}
+#services .free-trial .free-trial-opacity small {
+  font-size: 40px;
+}
+#services .free-trial button {
+  min-width: 130px;
+  width: 205px;
+  border: solid 1px var(--main);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 75%;
+  left: calc(50% - 102.5px);
+}
+#services .free-trial button:hover {
+  background-color: var(--hover-button);
+}
+#services .free-trial button a {
+  text-decoration: none;
+  color: var(--main);
+}
 
 /*# sourceMappingURL=main.css.map */
