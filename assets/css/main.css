@@ -3304,4 +3304,70 @@ header .menu.logged nav .info {
   color: var(--main);
 }
 
+@media (min-width: 400px) {
+  #services .services-aesthetic .services-aesthetic-content img {
+    margin: 0 auto;
+  }
+  #services .services-clinical-dentistry .services-clinical-dentistry-content img {
+    margin: 0 auto;
+  }
+  #services .services-orthodontics .services-orthodontics-content img {
+    margin: 0 auto;
+  }
+  #services .services-implants .services-implants-content img {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 767px) {
+  #services .full-banner-services h1 {
+    font-size: 65px;
+    top: 70%;
+  }
+  #services .full-banner-services h1 span {
+    font-size: 65px;
+  }
+  #services .services-aesthetic .services-aesthetic-content {
+    flex-direction: row;
+  }
+  #services .services-aesthetic .services-aesthetic-content img {
+    width: 50%;
+  }
+  #services .services-aesthetic .services-aesthetic-content p {
+    font-size: 22px;
+  }
+  #services .services-orthodontics .services-orthodontics-title h3 {
+    padding-left: 50%;
+  }
+  #services .services-orthodontics .services-orthodontics-content {
+    flex-direction: row-reverse;
+  }
+  #services .services-orthodontics .services-orthodontics-content img {
+    width: 50%;
+    max-height: 480px;
+    margin: auto 0;
+  }
+  #services .services-clinical-dentistry .services-clinical-dentistry-content {
+    flex-direction: row;
+    flex: 1;
+  }
+  #services .services-clinical-dentistry .services-clinical-dentistry-content img {
+    max-width: 700px;
+  }
+  #services .services-implants .services-implants-title {
+    padding-left: 50%;
+  }
+  #services .services-implants .services-implants-content {
+    flex-direction: row-reverse;
+  }
+  #services .services-implants .services-implants-content img {
+    width: 50%;
+  }
+  #services .free-trial {
+    height: 430px;
+  }
+  #services .free-trial .free-trial-opacity {
+    height: 430px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
