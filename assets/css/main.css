@@ -1312,10 +1312,30 @@ header .menu.logged nav .info {
     width: 100%;
   }
   #home .highlights #div-3 {
-    opacity: 80%;
+    background-color: transparent;
+    border: 2px solid var(--third);
+  }
+  #home .highlights #div-3 img {
+    display: none;
+  }
+  #home .highlights #div-3 #img-green {
+    display: block;
+  }
+  #home .highlights #div-3 h2, #home .highlights #div-3 p {
+    color: var(--text);
   }
   #home .highlights #div-4 {
-    opacity: 100%;
+    background-color: var(--main);
+    border: none;
+  }
+  #home .highlights #div-4 img {
+    display: block;
+  }
+  #home .highlights #div-4 #img-green {
+    display: none;
+  }
+  #home .highlights #div-4 h2, #home .highlights #div-4 p {
+    color: var(--letters-body);
   }
   #home .professional {
     flex-direction: row;
@@ -2033,10 +2053,10 @@ header .menu.logged nav .info {
   top: 90vh;
 }
 
-header .menu .logo#white {
+.header-about .menu .logo#white {
   display: block;
 }
-header .menu .logo#blue {
+.header-about .menu .logo#blue {
   display: none;
 }
 
@@ -2048,6 +2068,7 @@ header .menu .logo#blue {
   background-image: url("../images/photos/always-smile@2x.png");
   background-size: cover;
   background-position: -120px 0;
+  background-attachment: fixed;
 }
 
 .image-wrap-transparent {
@@ -2178,8 +2199,6 @@ header .menu .logo#blue {
   }
 
   #about .support .image {
-    height: 500px;
-    background-image: url("../images/photos/image-support-about.png");
     background-position: -20px 0;
   }
 }
