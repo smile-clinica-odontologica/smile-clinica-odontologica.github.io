@@ -288,6 +288,19 @@ form button:hover {
   text-decoration: none;
   color: var(--text-footer);
 }
+#footer .footer-container .container-col form h3 {
+  color: var(--main);
+}
+#footer .footer-container .container-col form .field input {
+  border-color: var(--main);
+}
+#footer .footer-container .container-col form .field label {
+  color: var(--main);
+}
+#footer .footer-container .container-col form button {
+  width: 100px;
+  height: 50px;
+}
 #footer .footer-container .logo {
   width: 100%;
   margin: var(--space) 0;
@@ -347,6 +360,11 @@ form button:hover {
   }
   #footer .footer-container .logo {
     width: 15%;
+  }
+}
+@media (min-width: 1300px) {
+  #footer .footer-container .container-col form .field input {
+    min-width: 320px;
   }
 }
 @media (max-width: 300px) {
