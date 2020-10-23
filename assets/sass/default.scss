@@ -13,52 +13,17 @@ body {
     font-family: 'Manrope', sans-serif;
     font-weight: normal;
 
-    .wrap {
-        flex-direction: column;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-    }
-
     > main {
         min-height: calc(100vh - 400px);
     }
 }
 
-@media (min-width: 650px) {
-    body {
-        .wrap {
-            background-position: -10vh 0vw;
-        }
-    }
-}
-
-@media (min-width: 768px) {
-    body {
-        .wrap {
-            background-position: -5vh 0vw;
-        }
-    }
-}
-
-@media (min-width: 1000px) {
-    body {
-        .wrap {
-            background-position: 0vh 0vw;
-        }
-    }
-}
-
 @media (min-width: 1200px) {
     body {
-        .wrap {
-            background-image: url('../images/photos/wrap@2x.png');
-            
-            #home {
-                header {
-                    .hero {
-                        padding: 0 100px 200px;
-                    }
+        #home {
+            header {
+                .hero {
+                    padding: 0 100px 200px;
                 }
             }
         }
@@ -67,23 +32,21 @@ body {
 
 @media (min-width: 1300px) {
     body {
-        .wrap {
-            #home {
-                header {
-                    .hero {
-                        .hero-text {
-                            h1 {
-                                font-size: 50px;
-                            }
-                            p {
-                                font-size: 26px;
-                            }
+        #home {
+            header {
+                .hero {
+                    .hero-text {
+                        h1 {
+                            font-size: 50px;
+                        }
+                        p {
+                            font-size: 26px;
+                        }
 
-                            button {
-                                font-size: 20px;
-                                padding: 11px 19px;
-                                width: 120px;
-                            }
+                        button {
+                            font-size: 20px;
+                            padding: 11px 19px;
+                            width: 120px;
                         }
                     }
                 }

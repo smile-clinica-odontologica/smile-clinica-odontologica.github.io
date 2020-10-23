@@ -56,6 +56,7 @@
             display: inline-block;
             height: 50px;
             margin: auto 0 0;
+            cursor: pointer;
             
             a {
               color: var(--main);
@@ -74,7 +75,7 @@
         background-image: url('../images/photos/menino-sorrindo@2x.png');
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: -40vw 0vh;
+        background-position: -40px 0px;
       }
     }
   }
@@ -90,8 +91,13 @@
       background-color: var(--main);
       padding: 50px 35px;
       &.odd {
-        opacity: 80%;
+        background-color: transparent;
+        border: 2px solid var(--third);
+        h2, p {
+          color: var(--text);
+        }
       }
+
       img {
         width: 150px;
         height: 150px;
@@ -110,6 +116,20 @@
         margin: 0;
         font-size: 15px;
         font-weight: 300;
+        text-align: center;
+      }
+    }
+    #div-3 {
+      img {
+        display: none;
+      }
+      #img-green {
+        display: block;
+      }
+    }
+    #div-4 {
+      #img-green {
+        display: none;
       }
     }
   }
@@ -118,6 +138,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    height: initial;
     .professional-photo {
         background-image: url("../images/photos/doctor-ivanesia-peixoto.jpg");
         background-size: cover;
@@ -178,6 +199,7 @@
           margin-bottom: var(--space);
         }
         > p {
+          color: var(--text);
           margin: 0;
           font-size: 15px;
           font-weight: 300;
@@ -208,6 +230,11 @@
         font-size: 65px;
         margin: 0;
         margin-bottom: 15px;
+
+        strong {
+          color: var(--third);
+          font-size: 65px;
+        }
       }
       p {
         font-size: 30px;
@@ -273,10 +300,12 @@
         max-width: 340px;
       }
       .doctors-social-media {
-        width: 350px;
-        height: 80px;
+        width: 320px;
+        min-width: 280px;
+        height: 75px;
         margin: 0 auto;
         justify-content: space-evenly;
+        align-items: center;
         background-color: var(--main);
         opacity: 30%;
         border-radius: var(--border-radius);
@@ -292,7 +321,7 @@
       h3, strong, p {
         text-align: center;
       }
-      h3, p {
+      p {
         color: var(--main);
       }
       h3 {
@@ -300,6 +329,7 @@
         font-weight: 400;
         margin: 0;
         margin: 10px 0 3px;
+        color: var(--third);
       }
       strong {
         font-size: 30px;
@@ -344,7 +374,11 @@
         width: 50px;
         height: 50px;
         justify-content: flex-start;
-        margin-left: var(--space);
+        margin-left: 60px;
+      }
+      .testimonials-people {
+        margin-left: 50px;
+        margin-right: 35px;
       }
       .testimonials-people + img {
         margin-left: calc(100% - 120px);
@@ -377,67 +411,111 @@
       small {
         font-size: 40px;
         font-weight: 400;
-        color: var(--second);
+        color: var(--third);
         margin-top: -20px;
       }
     }
   }
-  .our-values {
+
+  .home-blog {
     flex-direction: column;
-    background-color: var(--bg-gray);
-    margin: var(--space) 0;
-    padding-bottom: var(--space);
-    h3 {
-      text-align: center;
-      font-size: 40px;
-      color: var(--second);
-      font-weight: 600;
-      margin: var(--space) 0;
-    }
-    .price-tables {
+    margin-top: var(--space);
+    padding: var(--space);
+    background-color: #F8F8F8;
+    
+    .blog-text {
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      position: relative;
-      .price-tables-types {
-        flex-direction: column;
-        width: 90%;
-        max-width: 370px;
-        height: 610px;
-        border: solid 4px var(--main);
-        margin: var(--space) 100px;
-        > h3 {
-          font-size: 60px;
-          font-weight: 400;
-          color: var(--letters-title);
-        }
-        span {
-            font-size: 50px;
-            color: var(--second);
-            font-weight: 600;        
-        }
-        strong {
-          font-size: 50px;
-          color: var(--letters-title);font-weight: 600;
-        }
-        small {
-          color: var(--letters-title);
-          font-size: 20px;
-          font-weight: 600;
-          margin: auto 0;
-        }
-        > p {
-          text-align: center;
-          color: var(--letters-title);
-          font-weight: 300;
-          font-size: 20px;
-        }
-        button {
-          @include button;
-          background-color: transparent;
-          border: solid 4px var(--main);
-          color: var(--main);
-          margin-left: calc(50% - 102.5px);
+
+      h3 {
+        color: var(--main);
+        font-size: 40px;
+        margin: 0;
+      }
+
+      #uppercase {
+        text-transform: uppercase;
+        font-size: 20px;
+        color: var(--main);
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+
+      p {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--main);
+        text-align: center;
+      }
+    }
+
+    .wrap {
+      flex-direction: row;
+
+      .arrow {
+        display: none;
+      }
+
+      .cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .card {
+          width: 100%;
+          max-width: 350px;
+          margin: 20px auto;
+          flex-direction: column;
+          box-shadow: 0 1px 10px #ccc;
+          border-radius: 18px;
+          padding-bottom: 10px;
+
+          > img {
+            object-fit: cover;
+            height: 300px;
+            width: 100%;
+            border-radius: 18px;
+          }
+
+          .card-text {
+            flex-direction: column;
+            margin: 20px;
+            padding: 0 10px;
+
+            h4 {
+              margin: 5px 0;
+              font-size: 18px;
+              color: var(--third);
+            }
+
+            h5 { 
+              margin: 5px 0;
+              font-size: 25px;
+              color: var(--main);
+            }
+
+            p {
+              line-height: 25px;
+            }
+          }
+
+          button {
+            padding: 10px 20px 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            background-color: transparent;
+            border: none;
+
+            a {
+              text-decoration: none;
+              margin: 0 5px;
+              font-size: 16px;
+              color: var(--third);
+              font-weight: bold;
+            }
+          }
         }
       }
     }
@@ -449,7 +527,7 @@
     .full-banner-home {
       header {
         .image-boy {
-          background-position: -20vw 0vh;
+          background-position: -20px 0px;
         }
       }
     }
@@ -505,19 +583,19 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 20vw 0vw;
-      height: 520px;
+      height: 510px;
 
       header {
         flex-direction: row;
         justify-content: center;
-        height: 520px;
+        height: 510px;
 
         .hero {
           width: 100%;
           justify-content: center;
           padding-top: 0;
           padding-bottom: 40px;
-          height: 520px;
+          height: 510px;
           
           .hero-text {
             flex-direction: column;
@@ -541,6 +619,11 @@
         img {
           width: 80px;
           height: 80px;
+          margin-left: var(--space);
+        }
+        .testimonials-people {
+          margin-left: initial;
+          margin-right: initial;
         }
       }
       .testimonials-info {
@@ -548,14 +631,42 @@
       }
     }
 
+    
+
     .highlights {
       display: grid;
       grid-template-columns: 1fr 1fr;
       #div-3 {
         opacity: 100%;
+        background-color: var(--main);
+        border: none;
+
+        img {
+          display: block;
+        }
+
+        #img-green {
+          display: none;
+        }
+        
+        h2, p { 
+          color: var(--letters-body);
+        }
       }
       #div-4 {
-        opacity: 80%;
+        background-color: transparent;
+        border: 2px solid var(--third);
+
+        img {
+          display: none;
+        }
+        #img-green {
+          display: block;
+        }
+
+        h2, p {
+          color: var(--text);
+        }
       }
     }
 
@@ -577,6 +688,14 @@
         padding: var(--space) calc(var(--space) * 2);
         h2 {
           margin-top: calc(var(--space) * 2);
+        }
+      }
+    }
+
+    .home-blog {
+      .wrap {
+        .cards {
+          grid-template-columns: 1fr 1fr;
         }
       }
     }
@@ -616,17 +735,48 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       width: 100%;
       #div-3 {
-        opacity: 80%;
+        background-color: transparent;
+        border: 2px solid var(--third);
+        img {
+          display: none;
+        }
+        #img-green {
+          display: block;
+        }
+        h2, p {
+          color: var(--text);
+        }
       }
       #div-4 {
-        opacity: 100%;
+        background-color: var(--main);
+        border: none;
+        img {
+          display: block;
+        }
+
+        #img-green {
+          display: none;
+        }
+        
+        h2, p { 
+          color: var(--letters-body);
+        }
       }
     }
     .professional {
       flex-direction: row;
+      height: 980px;
       .professional-photo {
         height: 100%;
         background-position: -60vh 0vw;
+      }
+
+      .legend {
+        text-align: left;
+        strong {
+          color: var(--third);
+          padding-left: 20px;
+        }
       }
     }
     .free-trial {
@@ -697,9 +847,13 @@
         }
       }
     }
-    .our-values {
-      .price-tables{
-        flex-direction: row;
+
+    .home-blog {
+      .wrap {
+
+        .cards {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
       }
     }
   }
@@ -724,6 +878,25 @@
             p {
               font-size: 24px;
             }
+          }
+        }
+      }
+    }
+    .home-blog {
+      .wrap {
+        .arrow {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        .cards {
+          .card {
+            max-width: 380px;
           }
         }
       }

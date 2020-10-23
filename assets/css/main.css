@@ -50,47 +50,23 @@ body {
   font-family: "Manrope", sans-serif;
   font-weight: normal;
 }
-body .wrap {
-  flex-direction: column;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-}
 body > main {
   min-height: calc(100vh - 400px);
 }
 
-@media (min-width: 650px) {
-  body .wrap {
-    background-position: -10vh 0vw;
-  }
-}
-@media (min-width: 768px) {
-  body .wrap {
-    background-position: -5vh 0vw;
-  }
-}
-@media (min-width: 1000px) {
-  body .wrap {
-    background-position: 0vh 0vw;
-  }
-}
 @media (min-width: 1200px) {
-  body .wrap {
-    background-image: url("../images/photos/wrap@2x.png");
-  }
-  body .wrap #home header .hero {
+  body #home header .hero {
     padding: 0 100px 200px;
   }
 }
 @media (min-width: 1300px) {
-  body .wrap #home header .hero .hero-text h1 {
+  body #home header .hero .hero-text h1 {
     font-size: 50px;
   }
-  body .wrap #home header .hero .hero-text p {
+  body #home header .hero .hero-text p {
     font-size: 26px;
   }
-  body .wrap #home header .hero .hero-text button {
+  body #home header .hero .hero-text button {
     font-size: 20px;
     padding: 11px 19px;
     width: 120px;
@@ -102,6 +78,7 @@ form {
   padding: 0 40px;
   flex-direction: column;
   z-index: 1;
+  margin: 0 auto;
 }
 form .fields {
   flex-direction: column;
@@ -109,10 +86,10 @@ form .fields {
 form .form-title {
   color: var(--form-title-color);
   font-weight: bold;
-  font-size: 50px;
+  font-size: 40px;
   align-self: center;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 form .field {
   position: relative;
@@ -125,7 +102,7 @@ form .field.only {
 }
 form .field label {
   position: absolute;
-  font-size: 20px;
+  font-size: 18px;
   top: 15px;
   transition: 0.2s all;
   color: var(--text-main);
@@ -150,7 +127,7 @@ form .field input, form .field select {
   width: 100%;
   padding-top: 15px;
   line-height: 2em;
-  font-size: 20px;
+  font-size: 18px;
   outline: none;
   color: var(--text-main);
   font-weight: bold;
@@ -263,6 +240,11 @@ form button:hover {
     margin-left: 60px;
   }
 }
+@media (min-width: 1200px) {
+  form {
+    margin: initial;
+  }
+}
 #footer {
   flex-direction: column;
   width: 100%;
@@ -291,7 +273,6 @@ form button:hover {
   flex-direction: row;
   font-weight: 300;
   height: 50px;
-  margin: auto 0;
 }
 #footer .footer-container .container-col ul li.li-title {
   font-size: 20px;
@@ -325,15 +306,18 @@ form button:hover {
 }
 #footer .footer-copyright h3 {
   font-size: 20px;
-  padding-left: var(--space);
+  margin: 1em auto;
 }
 #footer .footer-copyright > div {
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding: 0 10px;
 }
 #footer .footer-copyright > div a {
   text-decoration: none;
   color: var(--text-footer-copyright);
-  margin-left: var(--space);
   font-size: 15px;
 }
 #footer .footer-copyright > div p + a {
@@ -343,11 +327,12 @@ form button:hover {
   margin: 0 10px;
 }
 #footer .footer-copyright .footer-copyright-images {
-  justify-content: space-evenly;
   margin: var(--space) 0;
+  max-width: 500px;
+  margin: 10px auto;
 }
 #footer .footer-copyright .footer-copyright-images a {
-  margin: 0;
+  margin: 0 var(--space);
 }
 #footer .footer-copyright .footer-copyright-images img {
   width: 30px;
@@ -362,6 +347,16 @@ form button:hover {
   }
   #footer .footer-container .logo {
     width: 15%;
+  }
+}
+@media (max-width: 300px) {
+  #footer .footer-copyright .footer-copyright-images a {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 350px) {
+  #footer .footer-copyright .footer-copyright-images a {
+    margin: 0 8px;
   }
 }
 header {
@@ -735,6 +730,7 @@ header .menu.logged nav .info {
   display: inline-block;
   height: 50px;
   margin: auto 0 0;
+  cursor: pointer;
 }
 #home .full-banner-home header .hero .hero-text button a {
   color: var(--main);
@@ -748,7 +744,7 @@ header .menu.logged nav .info {
   background-image: url("../images/photos/menino-sorrindo@2x.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: -40vw 0vh;
+  background-position: -40px 0px;
 }
 #home .highlights {
   width: 100%;
@@ -764,7 +760,11 @@ header .menu.logged nav .info {
   padding: 50px 35px;
 }
 #home .highlights div.odd {
-  opacity: 80%;
+  background-color: transparent;
+  border: 2px solid var(--third);
+}
+#home .highlights div.odd h2, #home .highlights div.odd p {
+  color: var(--text);
 }
 #home .highlights div img {
   width: 150px;
@@ -784,12 +784,23 @@ header .menu.logged nav .info {
   margin: 0;
   font-size: 15px;
   font-weight: 300;
+  text-align: center;
+}
+#home .highlights #div-3 img {
+  display: none;
+}
+#home .highlights #div-3 #img-green {
+  display: block;
+}
+#home .highlights #div-4 #img-green {
+  display: none;
 }
 #home .professional {
   flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: center;
+  height: initial;
 }
 #home .professional .professional-photo {
   background-image: url("../images/photos/doctor-ivanesia-peixoto.jpg");
@@ -853,6 +864,7 @@ header .menu.logged nav .info {
   margin-bottom: var(--space);
 }
 #home .professional div.professional-icons-text > p {
+  color: var(--text);
   margin: 0;
   font-size: 15px;
   font-weight: 300;
@@ -882,6 +894,10 @@ header .menu.logged nav .info {
   font-size: 65px;
   margin: 0;
   margin-bottom: 15px;
+}
+#home .free-trial .free-trial-opacity h2 strong {
+  color: var(--third);
+  font-size: 65px;
 }
 #home .free-trial .free-trial-opacity p {
   font-size: 30px;
@@ -964,10 +980,12 @@ header .menu.logged nav .info {
   max-width: 340px;
 }
 #home .doctors .doctor-information .doctors-social-media {
-  width: 350px;
-  height: 80px;
+  width: 320px;
+  min-width: 280px;
+  height: 75px;
   margin: 0 auto;
   justify-content: space-evenly;
+  align-items: center;
   background-color: var(--main);
   opacity: 30%;
   border-radius: var(--border-radius);
@@ -983,7 +1001,7 @@ header .menu.logged nav .info {
 #home .doctors .doctor-information h3, #home .doctors .doctor-information strong, #home .doctors .doctor-information p {
   text-align: center;
 }
-#home .doctors .doctor-information h3, #home .doctors .doctor-information p {
+#home .doctors .doctor-information p {
   color: var(--main);
 }
 #home .doctors .doctor-information h3 {
@@ -991,6 +1009,7 @@ header .menu.logged nav .info {
   font-weight: 400;
   margin: 0;
   margin: 10px 0 3px;
+  color: var(--third);
 }
 #home .doctors .doctor-information strong {
   font-size: 30px;
@@ -1035,7 +1054,11 @@ header .menu.logged nav .info {
   width: 50px;
   height: 50px;
   justify-content: flex-start;
-  margin-left: var(--space);
+  margin-left: 60px;
+}
+#home .testimonials .testimonials-photo + div .testimonials-people {
+  margin-left: 50px;
+  margin-right: 35px;
 }
 #home .testimonials .testimonials-photo + div .testimonials-people + img {
   margin-left: calc(100% - 120px);
@@ -1068,91 +1091,101 @@ header .menu.logged nav .info {
 #home .testimonials .testimonials-people small {
   font-size: 40px;
   font-weight: 400;
-  color: var(--second);
+  color: var(--third);
   margin-top: -20px;
 }
-#home .our-values {
+#home .home-blog {
   flex-direction: column;
-  background-color: var(--bg-gray);
-  margin: var(--space) 0;
-  padding-bottom: var(--space);
+  margin-top: var(--space);
+  padding: var(--space);
+  background-color: #F8F8F8;
 }
-#home .our-values h3 {
-  text-align: center;
-  font-size: 40px;
-  color: var(--second);
-  font-weight: 600;
-  margin: var(--space) 0;
-}
-#home .our-values .price-tables {
+#home .home-blog .blog-text {
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  position: relative;
 }
-#home .our-values .price-tables .price-tables-types {
-  flex-direction: column;
-  width: 90%;
-  max-width: 370px;
-  height: 610px;
-  border: solid 4px var(--main);
-  margin: var(--space) 100px;
-}
-#home .our-values .price-tables .price-tables-types > h3 {
-  font-size: 60px;
-  font-weight: 400;
-  color: var(--letters-title);
-}
-#home .our-values .price-tables .price-tables-types span {
-  font-size: 50px;
-  color: var(--second);
-  font-weight: 600;
-}
-#home .our-values .price-tables .price-tables-types strong {
-  font-size: 50px;
-  color: var(--letters-title);
-  font-weight: 600;
-}
-#home .our-values .price-tables .price-tables-types small {
-  color: var(--letters-title);
-  font-size: 20px;
-  font-weight: 600;
-  margin: auto 0;
-}
-#home .our-values .price-tables .price-tables-types > p {
-  text-align: center;
-  color: var(--letters-title);
-  font-weight: 300;
-  font-size: 20px;
-}
-#home .our-values .price-tables .price-tables-types button {
-  min-width: 130px;
-  width: 205px;
-  border: solid 1px var(--main);
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
-  font-weight: bold;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: var(--border-radius);
-  background: var(--white);
-  transition: background-color 0.2s ease-in-out;
-  background-color: transparent;
-  border: solid 4px var(--main);
+#home .home-blog .blog-text h3 {
   color: var(--main);
-  margin-left: calc(50% - 102.5px);
+  font-size: 40px;
+  margin: 0;
 }
-#home .our-values .price-tables .price-tables-types button:hover {
-  background-color: var(--hover-button);
+#home .home-blog .blog-text #uppercase {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--main);
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+#home .home-blog .blog-text p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--main);
+  text-align: center;
+}
+#home .home-blog .wrap {
+  flex-direction: row;
+}
+#home .home-blog .wrap .arrow {
+  display: none;
+}
+#home .home-blog .wrap .cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#home .home-blog .wrap .cards .card {
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto;
+  flex-direction: column;
+  box-shadow: 0 1px 10px #ccc;
+  border-radius: 18px;
+  padding-bottom: 10px;
+}
+#home .home-blog .wrap .cards .card > img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  border-radius: 18px;
+}
+#home .home-blog .wrap .cards .card .card-text {
+  flex-direction: column;
+  margin: 20px;
+  padding: 0 10px;
+}
+#home .home-blog .wrap .cards .card .card-text h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: var(--third);
+}
+#home .home-blog .wrap .cards .card .card-text h5 {
+  margin: 5px 0;
+  font-size: 25px;
+  color: var(--main);
+}
+#home .home-blog .wrap .cards .card .card-text p {
+  line-height: 25px;
+}
+#home .home-blog .wrap .cards .card button {
+  padding: 10px 20px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: transparent;
+  border: none;
+}
+#home .home-blog .wrap .cards .card button a {
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 16px;
+  color: var(--third);
+  font-weight: bold;
 }
 
 @media (min-width: 500px) {
   #home .full-banner-home header .image-boy {
-    background-position: -20vw 0vh;
+    background-position: -20px 0px;
   }
 }
 @media (min-width: 550px) {
@@ -1182,19 +1215,19 @@ header .menu.logged nav .info {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 20vw 0vw;
-    height: 520px;
+    height: 510px;
   }
   #home .full-banner-home header {
     flex-direction: row;
     justify-content: center;
-    height: 520px;
+    height: 510px;
   }
   #home .full-banner-home header .hero {
     width: 100%;
     justify-content: center;
     padding-top: 0;
     padding-bottom: 40px;
-    height: 520px;
+    height: 510px;
   }
   #home .full-banner-home header .hero .hero-text {
     flex-direction: column;
@@ -1210,6 +1243,11 @@ header .menu.logged nav .info {
   #home .testimonials .testimonials-photo + div img {
     width: 80px;
     height: 80px;
+    margin-left: var(--space);
+  }
+  #home .testimonials .testimonials-photo + div .testimonials-people {
+    margin-left: initial;
+    margin-right: initial;
   }
   #home .testimonials .testimonials-info {
     padding: 0 50px;
@@ -1220,9 +1258,30 @@ header .menu.logged nav .info {
   }
   #home .highlights #div-3 {
     opacity: 100%;
+    background-color: var(--main);
+    border: none;
+  }
+  #home .highlights #div-3 img {
+    display: block;
+  }
+  #home .highlights #div-3 #img-green {
+    display: none;
+  }
+  #home .highlights #div-3 h2, #home .highlights #div-3 p {
+    color: var(--letters-body);
   }
   #home .highlights #div-4 {
-    opacity: 80%;
+    background-color: transparent;
+    border: 2px solid var(--third);
+  }
+  #home .highlights #div-4 img {
+    display: none;
+  }
+  #home .highlights #div-4 #img-green {
+    display: block;
+  }
+  #home .highlights #div-4 h2, #home .highlights #div-4 p {
+    color: var(--text);
   }
   #home .doctors .doctors-title p {
     width: 700px;
@@ -1235,6 +1294,9 @@ header .menu.logged nav .info {
   }
   #home .free-trial .free-trial-opacity h2 {
     margin-top: calc(var(--space) * 2);
+  }
+  #home .home-blog .wrap .cards {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 1200px) {
@@ -1265,17 +1327,45 @@ header .menu.logged nav .info {
     width: 100%;
   }
   #home .highlights #div-3 {
-    opacity: 80%;
+    background-color: transparent;
+    border: 2px solid var(--third);
+  }
+  #home .highlights #div-3 img {
+    display: none;
+  }
+  #home .highlights #div-3 #img-green {
+    display: block;
+  }
+  #home .highlights #div-3 h2, #home .highlights #div-3 p {
+    color: var(--text);
   }
   #home .highlights #div-4 {
-    opacity: 100%;
+    background-color: var(--main);
+    border: none;
+  }
+  #home .highlights #div-4 img {
+    display: block;
+  }
+  #home .highlights #div-4 #img-green {
+    display: none;
+  }
+  #home .highlights #div-4 h2, #home .highlights #div-4 p {
+    color: var(--letters-body);
   }
   #home .professional {
     flex-direction: row;
+    height: 980px;
   }
   #home .professional .professional-photo {
     height: 100%;
     background-position: -60vh 0vw;
+  }
+  #home .professional .legend {
+    text-align: left;
+  }
+  #home .professional .legend strong {
+    color: var(--third);
+    padding-left: 20px;
   }
   #home .free-trial {
     height: 300px;
@@ -1341,8 +1431,8 @@ header .menu.logged nav .info {
     font-size: 45px;
     max-width: 70vw;
   }
-  #home .our-values .price-tables {
-    flex-direction: row;
+  #home .home-blog .wrap .cards {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (min-width: 1400px) {
@@ -1363,6 +1453,17 @@ header .menu.logged nav .info {
   }
   #home .full-banner-home header .hero .hero-text p {
     font-size: 24px;
+  }
+  #home .home-blog .wrap .arrow {
+    display: flex;
+    align-items: center;
+  }
+  #home .home-blog .wrap .arrow img {
+    width: 30px;
+    height: 30px;
+  }
+  #home .home-blog .wrap .cards .card {
+    max-width: 380px;
   }
 }
 @media (min-width: 1600px) {
@@ -1854,6 +1955,7 @@ header .menu.logged nav .info {
 }
 #franchises {
   width: 100%;
+  flex-direction: column;
 }
 #franchises .full-banner-franchises {
   width: 100%;
@@ -1864,6 +1966,7 @@ header .menu.logged nav .info {
 #franchises .full-banner-franchises img {
   position: absolute;
   width: 100%;
+  max-height: 800px;
   margin-top: -80px;
 }
 #franchises .full-banner-franchises img.franchises-banner-desktop {
@@ -1915,7 +2018,274 @@ header .menu.logged nav .info {
   font-weight: 600;
   color: var(--main);
 }
+#franchises .why-franchises {
+  width: 100%;
+  flex-direction: column;
+}
+#franchises .why-franchises .why-franchises-title {
+  width: 100%;
+}
+#franchises .why-franchises .why-franchises-title > h2 {
+  margin: 0;
+  padding-left: var(--space);
+  padding-bottom: var(--space);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--main);
+}
+#franchises .why-franchises .why-franchises-content {
+  width: 100%;
+  flex-direction: column;
+}
+#franchises .why-franchises .why-franchises-content img {
+  width: 325px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px #0000005C;
+  border-radius: 4px;
+  opacity: 1;
+}
+#franchises .why-franchises .why-franchises-content p {
+  margin: 0;
+  padding: var(--space);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--letters-title);
+  letter-spacing: 0;
+  opacity: 1;
+}
+#franchises .why-franchises-smile {
+  width: 100%;
+  flex-direction: column;
+}
+#franchises .why-franchises-smile .why-franchises-smile-title {
+  width: 100%;
+}
+#franchises .why-franchises-smile .why-franchises-smile-title h3 {
+  margin: 0;
+  padding-left: var(--space);
+  text-align: left;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: var(--main);
+  opacity: 1;
+}
+#franchises .why-franchises-smile .why-franchises-smile-content {
+  width: 100%;
+  flex-direction: column;
+}
+#franchises .why-franchises-smile .why-franchises-smile-content img {
+  width: 100%;
+  max-width: 475px;
+}
+#franchises .why-franchises-smile .why-franchises-smile-content p {
+  margin: 0;
+  padding: var(--space);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--letters-title);
+  letter-spacing: 0;
+  opacity: 1;
+}
+#franchises #know-more {
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--main);
+}
+#franchises #know-more > div {
+  flex-direction: column;
+}
+#franchises #know-more h4 {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--letters-body);
+}
+#franchises #know-more form .field {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+}
+#franchises #know-more form .field label {
+  position: absolute;
+  font-size: 20px;
+  top: 15px;
+  transition: 0.2s all;
+  color: var(--text-main);
+}
+#franchises #know-more form .field input {
+  border: none;
+  border-bottom: 2px solid var(--text-main);
+  width: 100%;
+  padding-top: 15px;
+  line-height: 2em;
+  font-size: 20px;
+  outline: none;
+  color: var(--letters-body);
+  font-weight: bold;
+  transition: 0.2s all;
+  background-color: transparent;
+}
+#franchises #know-more form .field input:focus {
+  border-bottom: 2px solid var(--text-main-80);
+}
+#franchises #know-more form .field input:focus + label {
+  color: var(--text-main-80);
+}
+#franchises #know-more form .field input:valid + label, #franchises #know-more form .field input:focus + label {
+  top: 2px;
+  font-size: 14px;
+}
+#franchises #know-more form .field input[type=date] {
+  background: url("/assets/images/photos/hour.svg") 97% 50% no-repeat;
+}
+#franchises #know-more form .field input[type=date]::-webkit-inner-spin-button {
+  display: none;
+}
+#franchises #know-more form .field input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+#franchises #know-more button {
+  min-width: 130px;
+  width: 205px;
+  border: solid 1px var(--main);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  transition: background-color 0.2s ease-in-out;
+  margin: var(--space) auto;
+  margin-left: calc(100% - 245px);
+}
+#franchises #know-more button:hover {
+  background-color: var(--hover-button);
+}
+#franchises #know-more button a {
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  color: var(--main);
+}
 
+@media (min-width: 576px) {
+  #franchises .full-banner-franchises {
+    max-height: 260px;
+  }
+  #franchises .full-banner-franchises img.franchises-banner-mobile {
+    display: none;
+  }
+  #franchises .full-banner-franchises img.franchises-banner-desktop {
+    display: flex;
+  }
+  #franchises .full-banner-franchises h1 {
+    margin-top: 11%;
+    font-size: 20px;
+  }
+  #franchises .why-franchises-smile-content img {
+    margin: 0 auto;
+  }
+  #franchises #know-more button {
+    margin: var(--space) auto;
+  }
+}
+@media (min-width: 1200px) {
+  #franchises .full-banner-franchises {
+    max-height: none;
+    height: 675px;
+  }
+  #franchises .full-banner-franchises h1 {
+    font-size: 62px;
+  }
+  #franchises .full-banner-franchises p {
+    font-size: 40px;
+    padding: 0 8%;
+  }
+  #franchises .full-banner-franchises button {
+    position: absolute;
+    top: 20.5em;
+    left: calc(50% - 102.5px);
+  }
+  #franchises .why-franchises .why-franchises-title > h2 {
+    font-size: 46px;
+    padding-left: 50%;
+  }
+  #franchises .why-franchises .why-franchises-content {
+    flex-direction: row-reverse;
+  }
+  #franchises .why-franchises .why-franchises-content img {
+    width: 600px;
+    padding-right: var(--space);
+  }
+  #franchises .why-franchises .why-franchises-content p {
+    font-size: 25px;
+  }
+  #franchises .why-franchises-smile {
+    margin-top: 150px;
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-title > h3 {
+    text-align: right;
+    font-size: 46px;
+    padding-right: 62%;
+    margin: var(--space) 0;
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-content {
+    flex-direction: row;
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-content img {
+    padding-left: var(--space);
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-content p {
+    font-size: 28px;
+    margin: auto;
+  }
+  #franchises #know-more {
+    margin-top: var(--space);
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #franchises #know-more > div {
+    margin: var(--space) 0;
+  }
+  #franchises #know-more h4 {
+    font-size: 45px;
+    margin: auto 0;
+  }
+}
+@media (min-width: 1500px) {
+  #franchises .full-banner-franchises {
+    height: 750px;
+  }
+  #franchises .full-banner-franchises button {
+    top: 22em;
+  }
+  #franchises .why-franchises .why-franchises-title {
+    padding-left: 20%;
+  }
+  #franchises .why-franchises .why-franchises-content {
+    justify-content: space-around;
+  }
+  #franchises .why-franchises .why-franchises-content p {
+    padding: 0 var(--space);
+    margin: auto 0;
+    font-size: 35px;
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-title {
+    padding-right: 25%;
+  }
+  #franchises .why-franchises-smile .why-franchises-smile-content img {
+    padding: 0 calc(var(--space) *2);
+  }
+}
 .page-admin {
   margin-top: -80px;
   padding-top: 80px;
@@ -2278,6 +2648,501 @@ header .menu.logged nav .info {
     justify-content: flex-end;
     margin-bottom: 20px;
   }
+}
+#order-franchises-confirm {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: var(--gray);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: var(--main);
+  font-weight: 600;
+  margin: 0;
+}
+#order-franchises-confirm img, #order-franchises-confirm h1, #order-franchises-confirm h2, #order-franchises-confirm p {
+  position: absolute;
+}
+#order-franchises-confirm img {
+  width: 150px;
+  top: 10vh;
+}
+#order-franchises-confirm h1 {
+  font-size: 30px;
+  top: 50vh;
+}
+#order-franchises-confirm h2 {
+  font-size: 15px;
+  top: 60vh;
+}
+#order-franchises-confirm p {
+  font-size: 20px;
+  top: 90vh;
+}
+
+.header-about .menu .logo#white {
+  display: block;
+}
+.header-about .menu .logo#blue {
+  display: none;
+}
+
+.image-wrap {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  background-image: url("../images/photos/always-smile@2x.png");
+  background-size: cover;
+  background-position: -120px 0;
+  background-attachment: fixed;
+}
+
+.image-wrap-transparent {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: #00000050;
+}
+
+#about {
+  flex-direction: column;
+}
+#about .full-banner-about {
+  position: relative;
+  width: 100%;
+}
+#about .full-banner-about header {
+  width: 100%;
+  height: calc(100vh - 80px);
+  padding-top: 40px;
+  flex-direction: column;
+  z-index: 3;
+  justify-content: flex-end;
+}
+#about .full-banner-about header .hero {
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 2;
+  padding: 40px 0 20px;
+  justify-content: flex-start;
+}
+#about .full-banner-about header .hero .hero-text {
+  padding: 0 40px 0 20px;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+#about .full-banner-about header .hero .hero-text h1 {
+  color: var(--white);
+  font-size: 40px;
+}
+#about .full-banner-about header .hero .hero-text h1 strong {
+  color: var(--main);
+}
+#about .text {
+  flex-direction: column;
+  padding: 20px;
+}
+#about .text p {
+  margin: 20px;
+  font-size: 25px;
+  color: var(--text);
+}
+#about .cards {
+  flex-direction: column;
+}
+#about .cards .card {
+  flex-direction: column;
+}
+#about .cards .card .square {
+  padding: 40px 0;
+  flex-direction: column;
+  background-color: var(--text);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#about .cards .card .square::before {
+  content: "";
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  background-color: var(--text);
+  bottom: -27.5px;
+  transform: rotate(135deg);
+}
+#about .cards .card .square p {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--white);
+}
+#about .cards .card .text {
+  margin-top: 30px;
+  text-align: center;
+}
+#about .support {
+  flex-direction: column;
+  margin-top: 40px;
+}
+#about .support .login {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--text);
+  padding: 20px 20px 30px;
+}
+#about .support .login h3 {
+  color: var(--white);
+  font-size: 40px;
+  margin: 10px 0;
+}
+#about .support .login form .field input {
+  border-color: var(--third);
+}
+#about .support .login form .field label {
+  color: var(--white);
+}
+#about .support .login form button {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: var(--third);
+  color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+}
+#about .support .image {
+  height: 500px;
+  background-image: url("../images/photos/image-support-about.png");
+  background-position: -200px 0;
+}
+
+@media (min-width: 650px) {
+  .image-wrap {
+    background-position: -20px 0;
+  }
+
+  #about .support .image {
+    background-position: -20px 0;
+  }
+}
+@media (min-width: 768px) {
+  .image-wrap {
+    background-position: 0px 0;
+  }
+
+  #about .full-banner-about header {
+    justify-content: center;
+    padding-bottom: 200px;
+    padding-left: var(--space);
+  }
+  #about .full-banner-about header .hero {
+    justify-content: center;
+  }
+  #about .full-banner-about header .hero .hero-text {
+    justify-content: flex-end;
+    text-align: right;
+  }
+  #about .full-banner-about header .hero .hero-text h1 {
+    width: 450px;
+    font-size: 60px;
+  }
+}
+@media (min-width: 900px) {
+  #about .support .image {
+    height: 500px;
+    background-image: url("../images/photos/image-support-about.png");
+    background-position: 200px 0;
+  }
+}
+@media (min-width: 1000px) {
+  #about .cards .card {
+    display: grid;
+    grid-template-columns: minmax(150px, 25%) 1fr;
+    margin: 20px 20px;
+  }
+  #about .cards .card .square::before {
+    bottom: initial;
+    right: -27.5px;
+  }
+  #about .cards .card .text {
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space) 60px;
+    border: 1px solid var(--third);
+    border-left: none;
+  }
+  #about .support {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+  #about .support .login {
+    justify-content: center;
+  }
+  #about .support .login form {
+    max-width: 500px;
+  }
+  #about .support .image {
+    background-position: -200px 0;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #about .text {
+    font-size: 30px;
+    align-items: center;
+    padding-top: 50px;
+  }
+  #about .text p {
+    max-width: 1000px;
+  }
+}
+@media (min-width: 1500px) {
+  #about .cards .card {
+    margin: 30px 60px;
+  }
+}
+@media (min-width: 1750px) {
+  #about .full-banner-about header .hero {
+    padding: 100px 100px 0;
+  }
+  #about .cards .card {
+    margin: 30px 100px;
+  }
+}
+@media (min-width: 1850px) {
+  #about .cards .card {
+    margin: 30px 150px;
+  }
+}
+#services {
+  width: 100%;
+  flex-direction: column;
+}
+#services .full-banner-services {
+  width: 100%;
+  background-image: url("../images/photos/full-banner-services.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  margin-top: -80px;
+  position: relative;
+}
+#services .full-banner-services h1 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--main);
+  padding-left: var(--space);
+  position: absolute;
+  top: 75%;
+}
+#services .full-banner-services h1 span {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--white);
+}
+#services .services-aesthetic {
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--bg-gray);
+}
+#services .services-aesthetic .services-aesthetic-title {
+  width: 100%;
+}
+#services .services-aesthetic .services-aesthetic-title h2 {
+  margin: var(--space) 0;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--main);
+  padding-left: var(--space);
+}
+#services .services-aesthetic .services-aesthetic-content {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-aesthetic .services-aesthetic-content img {
+  width: 325px;
+  margin: 0 var(--space);
+}
+#services .services-aesthetic .services-aesthetic-content p {
+  margin: 0;
+  padding: var(--space);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--letters-title);
+  letter-spacing: 0;
+  opacity: 1;
+}
+#services .services-orthodontics {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-orthodontics .services-orthodontics-title {
+  width: 100%;
+}
+#services .services-orthodontics .services-orthodontics-title h3 {
+  margin: var(--space) 0;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--main);
+  padding-left: var(--space);
+}
+#services .services-orthodontics .services-orthodontics-content {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-orthodontics .services-orthodontics-content img {
+  width: 325px;
+  margin: 0 var(--space);
+}
+#services .services-orthodontics .services-orthodontics-content p {
+  margin: 0;
+  padding: var(--space);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--letters-title);
+  letter-spacing: 0;
+  opacity: 1;
+}
+#services .services-clinical-dentistry {
+  width: 100%;
+  flex-direction: column;
+  background-color: var(--bg-gray);
+}
+#services .services-clinical-dentistry .services-clinical-dentistry-title {
+  width: 100%;
+}
+#services .services-clinical-dentistry .services-clinical-dentistry-title h4 {
+  margin: var(--space) 0;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--main);
+  padding-left: var(--space);
+}
+#services .services-clinical-dentistry .services-clinical-dentistry-content {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-clinical-dentistry .services-clinical-dentistry-content img {
+  width: 100%;
+}
+#services .services-clinical-dentistry .services-clinical-dentistry-content p {
+  margin: 0;
+  padding: var(--space);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--letters-title);
+  letter-spacing: 0;
+  opacity: 1;
+}
+#services .services-implants {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-implants .services-implants-title {
+  width: 100%;
+}
+#services .services-implants .services-implants-title h5 {
+  margin: var(--space) 0;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--main);
+  padding-left: var(--space);
+}
+#services .services-implants .services-implants-content {
+  width: 100%;
+  flex-direction: column;
+}
+#services .services-implants .services-implants-content img {
+  width: 325px;
+  margin: 0 var(--space);
+}
+#services .services-implants .services-implants-content p {
+  margin: 0;
+  padding: var(--space);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--letters-title);
+  letter-spacing: 0;
+  opacity: 1;
+}
+#services .free-trial {
+  width: 100%;
+  height: 600px;
+  background-image: url("../images/photos/free-trial-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#services .free-trial .free-trial-opacity {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  background-color: var(--main);
+  opacity: 50%;
+  flex-direction: column;
+  padding: var(--space);
+}
+#services .free-trial .free-trial-opacity h2, #services .free-trial .free-trial-opacity p, #services .free-trial .free-trial-opacity small {
+  color: var(--letters-body);
+  font-weight: 600;
+}
+#services .free-trial .free-trial-opacity h2 {
+  font-size: 65px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+#services .free-trial .free-trial-opacity h2 strong {
+  color: var(--third);
+  font-size: 65px;
+}
+#services .free-trial .free-trial-opacity p {
+  font-size: 30px;
+  margin: 0;
+}
+#services .free-trial .free-trial-opacity small {
+  font-size: 40px;
+}
+#services .free-trial button {
+  min-width: 130px;
+  width: 205px;
+  border: solid 1px var(--main);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 75%;
+  left: calc(50% - 102.5px);
+}
+#services .free-trial button:hover {
+  background-color: var(--hover-button);
+}
+#services .free-trial button a {
+  text-decoration: none;
+  color: var(--main);
 }
 
 /*# sourceMappingURL=main.css.map */
