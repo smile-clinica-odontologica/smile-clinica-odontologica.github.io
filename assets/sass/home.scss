@@ -735,10 +735,32 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       width: 100%;
       #div-3 {
-        opacity: 80%;
+        background-color: transparent;
+        border: 2px solid var(--third);
+        img {
+          display: none;
+        }
+        #img-green {
+          display: block;
+        }
+        h2, p {
+          color: var(--text);
+        }
       }
       #div-4 {
-        opacity: 100%;
+        background-color: var(--main);
+        border: none;
+        img {
+          display: block;
+        }
+
+        #img-green {
+          display: none;
+        }
+        
+        h2, p { 
+          color: var(--letters-body);
+        }
       }
     }
     .professional {

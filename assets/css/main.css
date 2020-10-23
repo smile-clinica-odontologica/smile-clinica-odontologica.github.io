@@ -1312,10 +1312,30 @@ header .menu.logged nav .info {
     width: 100%;
   }
   #home .highlights #div-3 {
-    opacity: 80%;
+    background-color: transparent;
+    border: 2px solid var(--third);
+  }
+  #home .highlights #div-3 img {
+    display: none;
+  }
+  #home .highlights #div-3 #img-green {
+    display: block;
+  }
+  #home .highlights #div-3 h2, #home .highlights #div-3 p {
+    color: var(--text);
   }
   #home .highlights #div-4 {
-    opacity: 100%;
+    background-color: var(--main);
+    border: none;
+  }
+  #home .highlights #div-4 img {
+    display: block;
+  }
+  #home .highlights #div-4 #img-green {
+    display: none;
+  }
+  #home .highlights #div-4 h2, #home .highlights #div-4 p {
+    color: var(--letters-body);
   }
   #home .professional {
     flex-direction: row;
