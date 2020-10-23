@@ -1474,6 +1474,25 @@ header .menu.logged nav .info {
     font-size: 24px;
   }
 }
+@media (max-width: 350px) {
+  #home .full-banner-home header .image-boy {
+    background-position: 0 0;
+  }
+}
+@media (max-width: 380px) {
+  #home .free-trial .free-trial-opacity h2 {
+    font-size: 58px;
+  }
+  #home .free-trial .free-trial-opacity h2 strong {
+    font-size: 58px;
+  }
+  #home .free-trial .free-trial-opacity p {
+    font-size: 24px;
+  }
+  #home .free-trial .free-trial-opacity p small {
+    font-size: 28px;
+  }
+}
 #schedules {
   flex-direction: column;
 }
