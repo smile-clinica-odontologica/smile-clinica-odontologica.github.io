@@ -4,6 +4,7 @@
 ## Acesse o site [aqui](https://smile-clinica-odontologica.github.io/)
 
 ...ou então abaixo você pode ter um gostinho de como ficou...
+<hr />
 <img src="assets/images/photos/site-example.png" width="100px">
 <hr />
 
@@ -31,10 +32,10 @@ git pull origin master
 
 - [x] Colocar o favicon
     - Temos apenas um problema: o site favicon-generator não gerou os favicons com fundo transparente.
-- [] Colocar link para voltar para a home tanto no logotipo do header, quanto no do footer
+- [x] Colocar link para voltar para a home tanto no logotipo do header, quanto no do footer
 - [x] Definir quais páginas teremos
-- [] Ajustar as tag description das páginas
-- [] Fazer "deploy" no github pages
+- [x] Ajustar as tag description das páginas
+- [x] Fazer "deploy" no github pages
 - [] 
 
 
