@@ -27,15 +27,7 @@ git pull origin master
 - [x] Colocar o favicon
     - Temos apenas um problema: o site favicon-generator não gerou os favicons com fundo transparente.
 - [] Colocar link para voltar para a home tanto no logotipo do header, quanto no do footer
-- [] Definir quais páginas teremos
-    - Home = capa + Blog + Chamada Franquia + Contato
-    - Franquia (explicação + formulário)
-    - Estética
-    - Ortodontia
-    - Clínico
-    - Implantes
-    - Agendamento
-    - Cadastro
+- [x] Definir quais páginas teremos
 
 
 - [] Concluir a criação do Layout
