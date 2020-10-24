@@ -1,5 +1,5 @@
 # smile
-<img src="assets/images/logo.svg" width="100px">
+<img src="assets/images/logo.svg" width="500px">
 
 ## Acesse o site [aqui](https://smile-clinica-odontologica.github.io/)
 
