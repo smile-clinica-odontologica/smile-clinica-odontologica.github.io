@@ -1,26 +1,99 @@
 #error {
-    .columns, .colum {
-    background-color: var(--main);
-    flex-direction: column;
+    width: calc(100% - 6px);
+    height: 100vh;
+    background-color: rgb(90, 150, 213, 0.5);
+    border: solid 3px var(--main);
+    position: relative;
+    img, h1, h2, button {
+        position: absolute;
+     
     }
-    h1 {
-        font-size: 18px;
-        color: var(--white);
-        position: relative;
-        b {
-            background-image:-webkit-linear-gradient(#eee, #333);
+    img {
+        &.teeth {
+            width: 100%;
+            max-width: 355px;
+            margin: 0 auto;
+            top: 1%;
         }
     }
-    .button {
-       
-        text-align: center;
-        padding: 10px 10px;
-        border: 1px solid;
-        border-radius: 6px;
-        background-color: var(--white);
-        font-size: 18px;
-        margin: 0 auto;
+    h1 {
         color: var(--main);
-       
+        font-weight: 600;
+        font-size: 150px;
+        transform: rotate(320deg);
+        bottom: 0;
+        right: 0;
+        margin: 20%;
+    }
+    h2 {
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        top: 30%;
+    }
+    img {
+        &.smile {
+            max-width: 330px;
+            height: 74px;
+            margin: 0;
+            top: 40%;
+            margin-left: 10%;
+        }
+    }
+    button {
+        @include button;
+        width: 315px;
+        margin: 0 auto;
+        top: 53%;
+        color: var(--main);
+        font-size:17px;
+        margin-left: 10%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    #error {
+        img {
+            &.teeth {
+                width: 60%;
+                max-width: unset;
+                margin: auto;
+                margin-left: 20%;
+                border: solid 3px var(--main);
+                
+            }
+        }
+        h1 {
+            position: relative;
+            margin:initial ;
+            top: 1;
+            font-size: 300px;
+        }
+        h2 {
+            margin-left: 22%;
+            top: 72%;
+            font-size: 22px;
+        }
+        img {
+            &.smile {
+                width: 20%;
+                margin-left: 59%;
+                top: 70%;
+            }
+        }
+        button {
+            @include button;
+            width:400px;
+            margin: 0 auto;
+            top: 85%;
+            color: var(--main);
+            font-size:17px;
+            margin-left: 35%;
+        }
     }
 }
+          
+     
+  
