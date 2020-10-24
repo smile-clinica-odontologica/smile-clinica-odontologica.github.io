@@ -1674,6 +1674,7 @@ header .menu.logged nav .info {
   position: absolute;
   background-color: #00000030;
   z-index: 1;
+  max-height: 900px;
 }
 
 #blog {
