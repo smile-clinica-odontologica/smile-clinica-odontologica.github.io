@@ -8,6 +8,27 @@
 <img src="assets/images/photos/site-example.png" width="400px">
 <hr />
 
+## Conheça o Briefing
+
+Empresária no ramo odontológico
+
+A rede de clínicas odontológicas Smile é uma das mais conceituadas do país. Fundada em 1964, nasceu com o objetivo de trazer o que tem de mais sofisticado e moderno no tratamento aos seus cliente para proporcionar o melhor resultado possível. 
+
+A Smile está reestruturando sua identidade visual. Com isto, a plataforma será seu principal meio de comunicação com seus clientes e novos visitantes.
+ 
+VEJA OS PRINCIPAIS SERVIÇOS OFERECIDOS
+
+- Estética
+- Ortodontia
+- Clínico
+- Implantes
+
+Além disso, a Smile oferece um modelo de Franquia para quem tem interesse em investir no setor de Odontologia.
+
+Ela também conta com uma equipe de Dentistas colunistas que mantém o Blog sempre atualizado.
+
+<hr />
+
 ## Como começar?
 1. git clone https://github.com/VelterGarcias/smile.git
 2. npm install
@@ -19,31 +40,20 @@
 git pull origin master
 ```
 
-## Requisitos do Projeto
-- Temos de usar as fotos de clínicas, tanto das áreas internas quanto das áreas internas.
-    - quando falar da clínica é para usar imagens da clinica mesmo, não usar imagens de outros lugares.
-- As outras imagens são apenas sugestões, não são obrigatórias e podemos buscar outras imagens também.
-- Não tem quantidade de imagens mínima.
-
-
-
-
 ## To-do
 
 - [x] Colocar o favicon
-    - Temos apenas um problema: o site favicon-generator não gerou os favicons com fundo transparente.
 - [x] Colocar link para voltar para a home tanto no logotipo do header, quanto no do footer
 - [x] Definir quais páginas teremos
 - [x] Ajustar as tag description das páginas
 - [x] Fazer "deploy" no github pages
-- [] 
 
 
 - [x] Concluir a criação do Layout
 - [x] Fazer a divisão das tarefas
 
     
-- [] Designação de desenvolvimento em HTML e CSS
+- [x] Designação de desenvolvimento em HTML e CSS
     
     -Home: João
 
