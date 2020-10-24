@@ -28,15 +28,14 @@ git pull origin master
     - Temos apenas um problema: o site favicon-generator não gerou os favicons com fundo transparente.
 - [] Colocar link para voltar para a home tanto no logotipo do header, quanto no do footer
 - [x] Definir quais páginas teremos
+- [] Ajustar as tag description das páginas
+- [] Fazer "deploy" no github pages
+- [] 
 
 
-- [] Concluir a criação do Layout
-- [] Fazer a divisão das tarefas
-    - Footer: Myltiane
-    - Header: João
-    - Design: Lucas e João
-    
-    --//--
+- [x] Concluir a criação do Layout
+- [x] Fazer a divisão das tarefas
+
     
 - [] Designação de desenvolvimento em HTML e CSS
     
@@ -66,14 +65,4 @@ git pull origin master
 
 - [] Adicione aqui as tarefas que você achar importantes...
 
-
-&::-webkit-datetime-edit-month-field {
-    color: red;
-  }
-  &::-webkit-datetime-edit-day-field {
-    color: white;
-  }
-  &::-webkit-datetime-edit-year-field {
-    color: blue;
-  }
 

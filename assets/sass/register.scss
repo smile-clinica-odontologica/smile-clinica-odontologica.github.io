@@ -13,6 +13,9 @@
         align-items:center;
         justify-content: center;
         height: 200px;
+        .logo {
+            display: flex;
+        }
         svg {
             width: 100px;
             height: 100%;

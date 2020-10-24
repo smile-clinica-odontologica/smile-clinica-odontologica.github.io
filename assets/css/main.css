@@ -2050,6 +2050,9 @@ header .menu.logged nav .info {
   justify-content: center;
   height: 200px;
 }
+#register > header .logo {
+  display: flex;
+}
 #register > header svg {
   width: 100px;
   height: 100%;
