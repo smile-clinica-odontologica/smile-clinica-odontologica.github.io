@@ -2853,6 +2853,12 @@ header .menu.logged nav .info {
 .header-about .menu .logo#blue {
   display: none;
 }
+.header-about .menu.open .logo#white {
+  display: none;
+}
+.header-about .menu.open .logo#blue {
+  display: block;
+}
 
 .image-wrap {
   position: absolute;
