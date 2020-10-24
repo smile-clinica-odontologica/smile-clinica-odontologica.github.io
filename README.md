@@ -1,5 +1,10 @@
 # smile
 <img src="assets/images/logo.svg" width="100px">
+
+## Acesse o site [aqui](https://smile-clinica-odontologica.github.io/)
+
+...ou então abaixo você pode ter um gostinho de como ficou...
+<img src="assets/images/photos/site-example.png" width="100px">
 <hr />
 
 ## Como começar?
