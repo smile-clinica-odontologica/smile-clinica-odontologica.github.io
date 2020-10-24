@@ -1,0 +1,84 @@
+#schedule-user {
+    .schedule-times {
+        flex-direction: column;
+        > figure {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            margin-bottom: 40px;
+            .photo-doctor {
+                width: 250px;
+            }
+            > figcaption {
+                text-align: center;
+                background-color: var(--main-30);
+                border-radius: var(--border-radius);
+                
+            }
+            .doctor-name {
+                margin: 0;
+                padding: 10px;
+                font-weight: bold;
+            }
+        }
+        .options-wrap {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+        }
+        .options {
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            max-width: 370px;
+            label {
+                width: calc(50% - 20px);
+                max-width: 150px;
+               
+                margin-bottom: 20px;
+                span {
+                    @include button;
+                    @include time;
+                    height: 40px;
+                    display: flex;
+                    width: 100%;
+                    font-weight: bold;
+                }
+                input {
+                    display: none;
+                    &:checked + span {
+                        background-color: var(--main);
+                    }
+                    &:disabled + span {
+                        @include time-busy;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 1200px) {
+    #schedule-user {
+        .schedule-times {
+            flex-direction: row;
+            
+            > figure {
+                justify-content: flex-end;
+                margin-bottom: 20px;
+                .photo-doctor {
+
+                }
+                > figcaption {
+
+                }
+                .doctor-name {
+                    
+                }
+            }
+            
+        }
+    }
+}

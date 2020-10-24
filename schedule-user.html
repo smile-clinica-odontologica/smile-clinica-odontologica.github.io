@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agende sua Consulta | Smile </title>
+    <meta name="description" content="Conheça a Ferrari Auto Center">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#E1DEDD">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#E1DEDD">
+    <link rel="preload" href="assets/css/main.css" as="style" />
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+
+            <a href="/index.html" class="logo" id="blue">
+                <img src="assets/images/logo_white.svg" alt="Logo Smile">
+            </a>
+
+            <button class="btn-open">
+                <svg id="menu-black-18dp" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <path id="Caminho_215" data-name="Caminho 215" d="M0,0H32V32H0Z" fill="none" />
+                    <path id="Caminho_216" data-name="Caminho 216" d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z"
+                        transform="translate(0 4)" />
+                </svg>
+            </button>
+
+            <button class="btn-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M0,0H24V24H0Z" fill="none" />
+                    <path
+                        d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z" />
+                </svg>
+            </button>
+
+            <nav>
+                <ul>
+                    <li><a href="/schedule-user.html">Agendar Consulta</a></li>
+                    <li><a href="/profile.html">Perfil</a></li>
+                    <li id="login"><a href="/index.html">Sair</a></li>
+                </ul>
+
+                <div class="info">
+                    <hr />
+                    <div class="content">
+                        <picture>
+                            <img src="assets/images/photos/joaozitodeskater.gif" alt="Imagem perfil">
+                        </picture>
+                        <div>
+                            <a href="profile.html">
+                                <strong>João Rafael</strong>
+                                <small>joaorceschini@gmail.com</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+    <section id="schedule-user" class="page-admin static">
+        <main>
+            <div class="main-content">
+                <div class="section-header white">
+                    <span>Consulta</span>
+                    <h1>Agende sua Consulta</h1>
+                    <p>Você pode se sentir a vontade para escolher o seu Doutor preferido! Veja como é fácil, preencha o
+                        formulário abaixo!</p>
+                </div>
+
+                <form id="form-profile">
+
+
+                    <div class="fields">
+                        <div class="field">
+                            <select name="service" id="service" required>
+                                <option disabled></option>
+                                <option value="txt">Estética</option>
+                                <option selected value="pdf">Ortodontia</option>
+                                <option value="epub">Clínica</option>
+                                <option value="fb2">Implantes</option>
+                            </select>
+                            <label for="service">Selecione um serviço</label>
+
+                        </div>
+
+                        <div class="field">
+                            <select name="doctor" id="doctor" required>
+                                <option disabled></option>
+                                <option selected value="pdf">Dra. Ivanesia Peixoto</option>
+                                <option value="txt">Dr. Luiz Peixoto</option>
+                                <option value="epub">Dr. Lucas Filho</option>
+                                <option value="fb2">Dr. João Rafael</option>
+                                <option value="mobi">Dra. Vanessa Blanco</option>
+                            </select>
+                            <label for="doctor">Escolha um doutor</label>
+
+                        </div>
+                    </div>
+
+                    <div class="fields">
+                        <div class="field">
+                            <input type="date" name="birth_at" id="birth_at" value="2020-10-26" />
+                            <label for="birth_at">Data</label>
+
+                        </div>
+
+                        <div class="field">
+                            <input type="time" name="time" id="time" />
+                            <label for="time">Hora</label>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="actions">
+                        <button class="bt-green" type="submit">Agendar</button>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </main>
+        <section class="second">
+            <div class="overlay"></div>
+            <div class="second-content">
+                <div class="section-header">
+                    <span>Disponibilidade</span>
+                    <h2 class="desktop">Na data escolhida</h2>
+                    <p class="desktop">Aqui você consegue ver a agenda do seu médico. Escolha um horário disponível ou
+                        caso necessário
+                        altere o data escolhida.</p>
+                </div>
+
+                <div class="schedule-times">
+
+                    <figure>
+                        <picture>
+                            <img class="photo-doctor" src="assets/images/photos/doctor-peixoto.png"
+                                alt="Foto do doutor selecionado">
+                        </picture>
+                        <figcaption>
+                            <h3 class="doctor-name">Dra. Ivanesia Peixoto</h3>
+                        </figcaption>
+                    </figure>
+
+
+                    <div class="options-wrap">
+                        <h3>Segunda, 26 de Outubro de 2020</h3>
+
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="option" value="8:00" disabled>
+                                <span>8:00</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="option" value="9:00">
+                                <span>9:00</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="option" value="10:00" disabled>
+                                <span>10:00</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="option" value="11:00" disabled>
+                                <span>11:00</span>
+                            </label>
+
+
+                            <label>
+                                <input type="radio" name="option" value="13:00">
+                                <span>13:00</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="option" value="14:00">
+                                <span>14:00</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="option" value="15:00" disabled>
+                                <span>15:00</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="option" value="12:00">
+                                <span>16:00</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>© Smile 2020 Allright reserved.</p>
+        </footer>
+    </section>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

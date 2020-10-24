@@ -40,6 +40,26 @@
                     }
                 }
             }
+
+            form {
+                h3 {
+                    color: var(--main);
+                }
+                .field {
+                    input {
+                        border-color: var(--main);
+                    }
+
+                    label {
+                        color: var(--main);
+                    }
+                }
+
+                button {
+                    width: 100px;
+                    height: 50px;
+                }
+            }
         }
         .logo {
             width: 100%;
@@ -106,6 +126,22 @@
                 width: 15%;
             }
         }
+    }
+}
+
+@media (min-width: 1300px) {
+    #footer {
+       .footer-container {
+           .container-col {
+                form {
+                    .field {
+                        input {
+                            min-width: 320px;
+                        }
+                    }
+                }
+           }
+       } 
     }
 }
 

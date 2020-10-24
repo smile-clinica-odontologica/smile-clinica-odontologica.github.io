@@ -1,4 +1,4 @@
-header {
+.header-about {
   .menu {
     .logo {
       &#white {
@@ -20,6 +20,7 @@ header {
   background-image: url('../images/photos/always-smile@2x.png');
   background-size: cover;
   background-position: -120px 0;
+  background-attachment: fixed;
 }
 
 .image-wrap-transparent {
@@ -174,8 +175,6 @@ header {
  #about {
    .support {
     .image {
-      height: 500px;
-      background-image: url('../images/photos/image-support-about.png');
       background-position: -20px 0;
     }
    }
