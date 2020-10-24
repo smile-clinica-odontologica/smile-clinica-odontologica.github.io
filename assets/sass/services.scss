@@ -203,4 +203,181 @@
       }
 }
 
+@media (min-width: 400px) {
+    #services {
+        .services-aesthetic {
+            .services-aesthetic-content {
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+        .services-clinical-dentistry {
+            .services-clinical-dentistry-content {
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+        .services-orthodontics {
+            .services-orthodontics-content {
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+        .services-implants {
+            .services-implants-content {
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
 
+@media (min-width: 767px) {
+    #services {
+        .full-banner-services {
+            h1 {
+                font-size: 65px;
+                top: 70%;
+                span {
+                    font-size: 65px;
+                }
+            }
+        }
+        .services-aesthetic {
+            .services-aesthetic-content {
+                flex-direction: row;
+                img {
+                    width: 50%;
+                }
+                p {
+                    font-size: 22px;
+                }
+            }
+        }
+        .services-orthodontics {
+            .services-orthodontics-title {
+                h3 {
+                    padding-left: 50%;
+                }
+            }
+            .services-orthodontics-content {
+                flex-direction: row-reverse;
+                img {
+                    width: 50%;
+                    max-height: 480px;
+                    margin: auto 0;
+                }
+            }
+        }
+        .services-clinical-dentistry {
+            .services-clinical-dentistry-content {
+                flex-direction: row;
+                flex: 1;
+                img {
+                    max-width: 700px;
+                }
+            }
+        }
+        .services-implants {
+            .services-implants-title {
+                padding-left: 50%;
+            }
+            .services-implants-content {
+                flex-direction: row-reverse;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+        .free-trial {
+            height: 430px;
+            .free-trial-opacity {
+                height: 430px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #services {
+        .full-banner-services {
+            background-image: url('../images/photos/full-banner-services-desktop.jpg');
+            h1 {
+                max-width: 65%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #services {
+        .full-banner-services {
+            h1 {
+                padding-left: 5%;
+            }
+        }
+        .services-aesthetic,
+        .services-orthodontics,
+        .services-clinical-dentistry,
+        .services-implants {
+            padding: 0 5%;
+        }
+        .services-aesthetic {
+            .services-aesthetic-content {
+                p {
+                    font-size: 31px;
+                }
+            }
+        }
+        .services-orthodontics {
+            .services-orthodontics-content {
+                p {
+                    font-size: 25px;
+                }
+            }
+        }
+        .services-clinical-dentistry {
+            .services-clinical-dentistry-content {
+                p {
+                    font-size: 25px;
+                }
+            }
+        }
+        .services-implants {
+            .services-implants-content {
+                flex-direction: row-reverse;
+                h5 {
+                    padding-left: 35%;
+                }
+                p {
+                    font-size: 25px;
+                }
+            }
+        }
+        .free-trial {
+            height: 300px;
+            flex-direction: row;
+            .free-trial-opacity {
+              height: 300px;
+              strong {
+                font-size: 100px;
+              }
+              p, small {
+                font-size: 50px;
+              }
+              p + br {
+                display: none;
+              }
+            }
+            > button {
+              position: relative;
+              top: calc(70% - 30px);
+              left: 80%;
+            }
+          }
+    }
+}

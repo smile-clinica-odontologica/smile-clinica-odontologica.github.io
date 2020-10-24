@@ -4,8 +4,6 @@ const menu = document.querySelector('.menu');
 
 const body = document.querySelector('body')
 
-const btnLogin = document.querySelector('#login');
-
 btnOpen.addEventListener('click', e => {
 
   menu.classList.add('open')
@@ -18,8 +16,3 @@ btnClose.addEventListener('click', e => {
 
 })
 
-btnLogin.addEventListener('click', e => {
-
-  menu.classList.add('logged')
-
-})

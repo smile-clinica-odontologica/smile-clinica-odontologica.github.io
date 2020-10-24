@@ -293,6 +293,7 @@ form button:hover {
 }
 #footer .footer-container .container-col form .field input {
   border-color: var(--main);
+  color: var(--third);
 }
 #footer .footer-container .container-col form .field label {
   color: var(--main);
@@ -1795,6 +1796,7 @@ header .menu.logged nav .info {
   position: absolute;
   background-color: #00000030;
   z-index: 1;
+  max-height: 900px;
 }
 
 #blog {
@@ -2169,6 +2171,9 @@ header .menu.logged nav .info {
   align-items: center;
   justify-content: center;
   height: 200px;
+}
+#register > header .logo {
+  display: flex;
 }
 #register > header svg {
   width: 100px;
@@ -2970,6 +2975,12 @@ header .menu.logged nav .info {
 .header-about .menu .logo#blue {
   display: none;
 }
+.header-about .menu.open .logo#white {
+  display: none;
+}
+.header-about .menu.open .logo#blue {
+  display: block;
+}
 
 .image-wrap {
   position: absolute;
@@ -3423,6 +3434,130 @@ header .menu.logged nav .info {
 #services .free-trial button a {
   text-decoration: none;
   color: var(--main);
+}
+
+@media (min-width: 400px) {
+  #services .services-aesthetic .services-aesthetic-content img {
+    margin: 0 auto;
+  }
+  #services .services-clinical-dentistry .services-clinical-dentistry-content img {
+    margin: 0 auto;
+  }
+  #services .services-orthodontics .services-orthodontics-content img {
+    margin: 0 auto;
+  }
+  #services .services-implants .services-implants-content img {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 767px) {
+  #services .full-banner-services h1 {
+    font-size: 65px;
+    top: 70%;
+  }
+  #services .full-banner-services h1 span {
+    font-size: 65px;
+  }
+  #services .services-aesthetic .services-aesthetic-content {
+    flex-direction: row;
+  }
+  #services .services-aesthetic .services-aesthetic-content img {
+    width: 50%;
+  }
+  #services .services-aesthetic .services-aesthetic-content p {
+    font-size: 22px;
+  }
+  #services .services-orthodontics .services-orthodontics-title h3 {
+    padding-left: 50%;
+  }
+  #services .services-orthodontics .services-orthodontics-content {
+    flex-direction: row-reverse;
+  }
+  #services .services-orthodontics .services-orthodontics-content img {
+    width: 50%;
+    max-height: 480px;
+    margin: auto 0;
+  }
+  #services .services-clinical-dentistry .services-clinical-dentistry-content {
+    flex-direction: row;
+    flex: 1;
+  }
+  #services .services-clinical-dentistry .services-clinical-dentistry-content img {
+    max-width: 700px;
+  }
+  #services .services-implants .services-implants-title {
+    padding-left: 50%;
+  }
+  #services .services-implants .services-implants-content {
+    flex-direction: row-reverse;
+  }
+  #services .services-implants .services-implants-content img {
+    width: 50%;
+  }
+  #services .free-trial {
+    height: 430px;
+  }
+  #services .free-trial .free-trial-opacity {
+    height: 430px;
+  }
+}
+@media (min-width: 992px) {
+  #services .full-banner-services {
+    background-image: url("../images/photos/full-banner-services-desktop.jpg");
+  }
+  #services .full-banner-services h1 {
+    max-width: 65%;
+  }
+}
+@media (min-width: 1200px) {
+  #services .full-banner-services h1 {
+    padding-left: 5%;
+  }
+  #services .services-aesthetic,
+#services .services-orthodontics,
+#services .services-clinical-dentistry,
+#services .services-implants {
+    padding: 0 5%;
+  }
+  #services .services-aesthetic .services-aesthetic-content p {
+    font-size: 31px;
+  }
+  #services .services-orthodontics .services-orthodontics-content p {
+    font-size: 25px;
+  }
+  #services .services-clinical-dentistry .services-clinical-dentistry-content p {
+    font-size: 25px;
+  }
+  #services .services-implants .services-implants-content {
+    flex-direction: row-reverse;
+  }
+  #services .services-implants .services-implants-content h5 {
+    padding-left: 35%;
+  }
+  #services .services-implants .services-implants-content p {
+    font-size: 25px;
+  }
+  #services .free-trial {
+    height: 300px;
+    flex-direction: row;
+  }
+  #services .free-trial .free-trial-opacity {
+    height: 300px;
+  }
+  #services .free-trial .free-trial-opacity strong {
+    font-size: 100px;
+  }
+  #services .free-trial .free-trial-opacity p, #services .free-trial .free-trial-opacity small {
+    font-size: 50px;
+  }
+  #services .free-trial .free-trial-opacity p + br {
+    display: none;
+  }
+  #services .free-trial > button {
+    position: relative;
+    top: calc(70% - 30px);
+    left: 80%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

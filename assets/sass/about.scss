@@ -9,6 +9,17 @@
         display: none;
       }
     }
+
+    &.open {
+      .logo {
+        &#white {
+          display: none;
+        }
+        &#blue {
+          display: block;
+        }
+      }
+    }
   }
 }
 

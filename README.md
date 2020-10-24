@@ -1,5 +1,32 @@
 # smile
 <img src="assets/images/logo.svg" width="100px">
+
+## Acesse o site [aqui](https://smile-clinica-odontologica.github.io/)
+
+...ou então abaixo você pode ter um gostinho de como ficou...
+<hr />
+<img src="assets/images/photos/site-example.png" width="400px">
+<hr />
+
+## Conheça o Briefing
+
+Empresária no ramo odontológico
+
+A rede de clínicas odontológicas Smile é uma das mais conceituadas do país. Fundada em 1964, nasceu com o objetivo de trazer o que tem de mais sofisticado e moderno no tratamento aos seus cliente para proporcionar o melhor resultado possível. 
+
+A Smile está reestruturando sua identidade visual. Com isto, a plataforma será seu principal meio de comunicação com seus clientes e novos visitantes.
+ 
+VEJA OS PRINCIPAIS SERVIÇOS OFERECIDOS
+
+- Estética
+- Ortodontia
+- Clínico
+- Implantes
+
+Além disso, a Smile oferece um modelo de Franquia para quem tem interesse em investir no setor de Odontologia.
+
+Ela também conta com uma equipe de Dentistas colunistas que mantém o Blog sempre atualizado.
+
 <hr />
 
 ## Como começar?
@@ -13,40 +40,20 @@
 git pull origin master
 ```
 
-## Requisitos do Projeto
-- Temos de usar as fotos de clínicas, tanto das áreas internas quanto das áreas internas.
-    - quando falar da clínica é para usar imagens da clinica mesmo, não usar imagens de outros lugares.
-- As outras imagens são apenas sugestões, não são obrigatórias e podemos buscar outras imagens também.
-- Não tem quantidade de imagens mínima.
-
-
-
-
 ## To-do
 
 - [x] Colocar o favicon
-    - Temos apenas um problema: o site favicon-generator não gerou os favicons com fundo transparente.
-- [] Colocar link para voltar para a home tanto no logotipo do header, quanto no do footer
-- [] Definir quais páginas teremos
-    - Home = capa + Blog + Chamada Franquia + Contato
-    - Franquia (explicação + formulário)
-    - Estética
-    - Ortodontia
-    - Clínico
-    - Implantes
-    - Agendamento
-    - Cadastro
+- [x] Colocar link para voltar para a home tanto no logotipo do header, quanto no do footer
+- [x] Definir quais páginas teremos
+- [x] Ajustar as tag description das páginas
+- [x] Fazer "deploy" no github pages
 
 
-- [] Concluir a criação do Layout
-- [] Fazer a divisão das tarefas
-    - Footer: Myltiane
-    - Header: João
-    - Design: Lucas e João
+- [x] Concluir a criação do Layout
+- [x] Fazer a divisão das tarefas
+
     
-    --//--
-    
-- [] Designação de desenvolvimento em HTML e CSS
+- [x] Designação de desenvolvimento em HTML e CSS
     
     -Home: João
 
@@ -72,16 +79,13 @@ git pull origin master
 
 
 
-- [] Adicione aqui as tarefas que você achar importantes...
 
+## Bugs: 
+- [] menu mobile não tem overlay. 
+- [] botão login no mobile fica fora da visualização por conta do cabeçalho do Chrome. (Mas não tem como ver isso no Pc pq a visualização mobile não tem cabeçalho de endereço) kkk
+- [] Campo de data no mobile está estranho. (No Chrome pelo menos)
+- [] a cor do Focus ou hover dos time options está estranha no mobile.
+- [] a foto de fundo das minhas páginas era melhor que fosse a do bebê, coloquei a da médica e esqueci de trocar.
+- [] melhorar pontuação no liteHouse.
 
-&::-webkit-datetime-edit-month-field {
-    color: red;
-  }
-  &::-webkit-datetime-edit-day-field {
-    color: white;
-  }
-  &::-webkit-datetime-edit-year-field {
-    color: blue;
-  }
-
+- [] Se lembrarem de mais vão escrevendo...
