@@ -1796,7 +1796,6 @@ header .menu.logged nav .info {
   position: absolute;
   background-color: #00000030;
   z-index: 1;
-  max-height: 900px;
 }
 
 #blog {
@@ -1971,6 +1970,31 @@ header .menu.logged nav .info {
   padding: var(--space);
   background-color: #F8F8F8;
 }
+#blog .container-blog .section {
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+#blog .container-blog .section .title {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+}
+#blog .container-blog .section .title::before {
+  content: "";
+  width: 300px;
+  height: 3px;
+  background-color: var(--third);
+  position: absolute;
+  top: 4px;
+}
+#blog .container-blog .section .title h5 {
+  padding-top: 10px;
+  font-size: 24px;
+  color: var(--main);
+  margin: 6px 0;
+}
 #blog .container-blog .blog-text {
   flex-direction: column;
   align-items: center;
@@ -1993,6 +2017,11 @@ header .menu.logged nav .info {
   font-size: 18px;
   color: var(--main);
   text-align: center;
+}
+#blog .container-blog .blog-text h5 {
+  font-size: 24px;
+  color: var(--main);
+  margin: 6px 0;
 }
 #blog .container-blog .wrap {
   flex-direction: row;
@@ -2064,7 +2093,6 @@ header .menu.logged nav .info {
     background-repeat: no-repeat;
     background-position: center center;
     height: 100vh;
-    max-height: 900px;
   }
   #blog .full-banner-blog header {
     flex-direction: row;
@@ -2990,7 +3018,6 @@ header .menu.logged nav .info {
   background-image: url("../images/photos/always-smile@2x.png");
   background-size: cover;
   background-position: -120px 0;
-  background-attachment: fixed;
 }
 
 .image-wrap-transparent {
