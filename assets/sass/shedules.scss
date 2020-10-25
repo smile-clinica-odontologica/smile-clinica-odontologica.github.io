@@ -9,11 +9,12 @@
         background-size: cover;
         background-repeat: no-repeat;
         margin-top: -80px;
+        align-items: flex-end;
         h1 {
             color: var(--letters-title);
             font-size: 60px;
             padding: 0 var(--space);
-            margin-top: 70vh;
+            margin: var(--space) 0;
             b {
                 color: var(--green);
     
@@ -28,7 +29,7 @@
         width: 100%;
         background-color: var(--main);
         form {
-            padding: 0 var(--space);
+            // padding: 0 var(--space);
             h2, h3, h4 {
                 margin: 0;
                 margin-bottom: var(--space);
@@ -47,44 +48,44 @@
                 font-weight: 300;
                 font-size: 20px;
             }
-            .field {
-                color:var(--letters-body);
-                [type="date"] {
-                    background: var(--main) url('../images/photos/calendar.png')  97% 50% no-repeat ;
-                }
-                [type="date"]::-webkit-inner-spin-button {
-                    display: none;
-                }
-                [type="date"]::-webkit-calendar-picker-indicator {
-                    opacity: 0;
-                }
-                [type="time"] {
-                    background: var(--main) url('../images/photos/relogio.png')  97% 50% no-repeat ;
-                }
-                [type="time"]::-webkit-inner-spin-button {
-                display: none;
-                }
-                [type="time"]::-webkit-calendar-picker-indicator {
-                    opacity: 0;
-                }
-                input {
-                    border-left: 0px;
-                    border-top: 0px;
-                    border-color: var(--letters-body);
-                    background-color: var(--main);
-                    color: var(--letters-body);
-                    padding-bottom: var(--space);
+            // .field {
+            //     color:var(--letters-body);
+            //     [type="date"] {
+            //         background: var(--main) url('../images/photos/calendar.png')  97% 50% no-repeat ;
+            //     }
+            //     [type="date"]::-webkit-inner-spin-button {
+            //         display: none;
+            //     }
+            //     [type="date"]::-webkit-calendar-picker-indicator {
+            //         opacity: 0;
+            //     }
+            //     [type="time"] {
+            //         background: var(--main) url('../images/photos/relogio.png')  97% 50% no-repeat ;
+            //     }
+            //     [type="time"]::-webkit-inner-spin-button {
+            //     display: none;
+            //     }
+            //     [type="time"]::-webkit-calendar-picker-indicator {
+            //         opacity: 0;
+            //     }
+            //     input {
+            //         border-left: 0px;
+            //         border-top: 0px;
+            //         border-color: var(--letters-body);
+            //         background-color: var(--main);
+            //         color: var(--letters-body);
+            //         padding-bottom: var(--space);
                     
-                }
-                label {
-                    color: var(--letters-body);
-                    padding-bottom: var(--space);
-                    font-size: 25px;
-                    &.no-text {
-                        line-height: 0;
-                    }
-                }                
-            }
+            //     }
+            //     label {
+            //         color: var(--letters-body);
+            //         padding-bottom: var(--space);
+            //         font-size: 25px;
+            //         &.no-text {
+            //             line-height: 0;
+            //         }
+            //     }                
+            // }
             .button {
                 @include button;
                 color: var(--main);
@@ -94,16 +95,24 @@
     }        
     .block {
         background-color: var(--gray);
-        flex-direction: column;
         justify-content: center;
         align-items: center;
+        .wrap-block {
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 0 auto;
+        }
         .blocks  {
-            width: 320px;
-            height: 320px;
+            width: 250px;
+            height: 250px;
             margin: 50px auto;
             background-color: var(--white);
-            box-shadow:5px 5px 20px (#0000005C);
-            display: block;
+            box-shadow: 5px 5px 20px #0000005C;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             h5, p {
                 font-weight: bold;
                 color: var(--green); 
@@ -112,8 +121,6 @@
             }
             h5 {
                 font-size: 60px;
-                margin-top: 50px;
-                margin-bottom: 30px;
             }
             p {
                 font-size: 30px;
@@ -147,10 +154,6 @@
             flex-direction: row;
             .section-fields, .block {
                 width: 50%;
-            }
-            .block {
-                flex-direction: row;
-                flex-wrap: wrap;
             }
         }
     }
