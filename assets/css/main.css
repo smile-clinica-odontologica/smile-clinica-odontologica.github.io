@@ -1529,95 +1529,92 @@ header .menu.logged nav .info {
 }
 #schedules {
   flex-direction: column;
+  width: 100%;
 }
 #schedules .full-banner-schedules {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("../images/photos/Grupo de máscara 16.png");
+  background-image: url("../images/photos/full-banner-schedules-mobile.jpg");
   background-size: cover;
-  background-position-x: 39%;
-  background-position-y: center;
   background-repeat: no-repeat;
   margin-top: -80px;
-  align-items: flex-end;
 }
 #schedules .full-banner-schedules h1 {
   color: var(--letters-title);
-  font-size: 50px;
-  margin-left: 6%;
+  font-size: 60px;
+  padding: 0 var(--space);
+  margin-top: 70vh;
 }
 #schedules .full-banner-schedules h1 b {
   color: var(--green);
 }
+#schedules .flex {
+  flex-direction: column;
+}
 #schedules .section-fields {
   width: 100%;
   background-color: var(--main);
-  color: var(--white);
 }
-#schedules .field {
-  color: var(--white);
+#schedules .section-fields form {
+  padding: 0 var(--space);
 }
-#schedules .field [type=date] {
-  background: var(--main) url("../images/photos/calendar.png") 97% 50% no-repeat;
+#schedules .section-fields form h2, #schedules .section-fields form h3, #schedules .section-fields form h4 {
+  margin: 0;
+  margin-bottom: var(--space);
+  color: var(--letters-body);
 }
-#schedules .field [type=date]::-webkit-inner-spin-button {
-  display: none;
-}
-#schedules .field [type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-#schedules .field [type=time] {
-  background: var(--main) url("../images/photos/relogio.png") 97% 50% no-repeat;
-}
-#schedules .field [type=time]::-webkit-inner-spin-button {
-  display: none;
-}
-#schedules .field [type=time]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-#schedules .field input {
-  border-left: 0px;
-  border-top: 0px;
-  border-color: var(--white);
-  background-color: var(--main);
-  color: var(--white);
-}
-#schedules .field label {
-  color: var(--white);
-}
-#schedules .block {
-  background-color: var(--gray);
-  display: block;
-}
-#schedules .blocks {
-  margin-top: 30px;
-  margin-left: 70px;
-  margin-right: 70px;
-  background-color: var(--white);
-  box-shadow: 5px 5px 20px #0000005C;
-  display: block;
-}
-#schedules .blocks h1 {
-  color: var(--green);
-  text-align: center;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 6em;
+#schedules .section-fields form h2 {
   font-size: 30px;
+  font-weight: 400;
+  margin-top: var(--space);
 }
-#schedules .blocks p {
-  color: var(--green);
-  text-align: center;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 6em;
-  font-weight: bold;
+#schedules .section-fields form h3 {
+  font-size: 37.5px;
+  font-weight: 600;
+}
+#schedules .section-fields form h4 {
+  font-weight: 300;
   font-size: 20px;
 }
-#schedules .button {
+#schedules .section-fields form .field {
+  color: var(--letters-body);
+}
+#schedules .section-fields form .field [type=date] {
+  background: var(--main) url("../images/photos/calendar.png") 97% 50% no-repeat;
+}
+#schedules .section-fields form .field [type=date]::-webkit-inner-spin-button {
+  display: none;
+}
+#schedules .section-fields form .field [type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+#schedules .section-fields form .field [type=time] {
+  background: var(--main) url("../images/photos/relogio.png") 97% 50% no-repeat;
+}
+#schedules .section-fields form .field [type=time]::-webkit-inner-spin-button {
+  display: none;
+}
+#schedules .section-fields form .field [type=time]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+#schedules .section-fields form .field input {
+  border-left: 0px;
+  border-top: 0px;
+  border-color: var(--letters-body);
+  background-color: var(--main);
+  color: var(--letters-body);
+  padding-bottom: var(--space);
+}
+#schedules .section-fields form .field label {
+  color: var(--letters-body);
+  padding-bottom: var(--space);
+  font-size: 25px;
+}
+#schedules .section-fields form .field label.no-text {
+  line-height: 0;
+}
+#schedules .section-fields form .button {
   min-width: 130px;
   width: 205px;
   border: solid 1px var(--main);
@@ -1634,43 +1631,74 @@ header .menu.logged nav .info {
   background: var(--white);
   transition: background-color 0.2s ease-in-out;
   color: var(--main);
+  font-size: 30px;
 }
-#schedules .button:hover {
+#schedules .section-fields form .button:hover {
   background-color: var(--hover-button);
 }
+#schedules .block {
+  background-color: var(--gray);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#schedules .block .blocks {
+  width: 320px;
+  height: 320px;
+  margin: 50px auto;
+  background-color: var(--white);
+  box-shadow: 5px 5px 20px #0000005C;
+  display: block;
+}
+#schedules .block .blocks h5, #schedules .block .blocks p {
+  font-weight: bold;
+  color: var(--green);
+  margin: 0 auto;
+  text-align: center;
+}
+#schedules .block .blocks h5 {
+  font-size: 60px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+#schedules .block .blocks p {
+  font-size: 30px;
+}
 
-@media (min-width: 1200px) {
-  #schedules {
+@media (min-width: 768px) {
+  #schedules .full-banner-schedules h1 {
+    font-size: 80px;
+    margin-top: 75vh;
+  }
+}
+@media (min-width: 992px) {
+  #schedules .full-banner-schedules {
+    background-image: url("../images/photos/full-banner-schedules.jpg");
+  }
+  #schedules .full-banner-schedules h1 {
+    margin-top: 40vh;
+    padding-right: 50%;
+  }
+  #schedules .flex {
+    flex-direction: row;
+  }
+  #schedules .flex .section-fields, #schedules .flex .block {
+    width: 50%;
+  }
+  #schedules .flex .block {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  #schedules .full-banner-schedules {
-    width: 100%;
-    max-height: none;
-    height: 675px;
-    position: relative;
-    background-image: url("../images/photos/Grupo de máscara 16.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: -80px;
-  }
-  #schedules .section-fields {
-    background-color: var(--main);
-    color: var(--white);
-    width: 50%;
-  }
-  #schedules .field {
-    height: 50%;
-    width: 100%;
+}
+@media (min-width: 1200px) {
+  #schedules .full-banner-schedules h1 {
+    font-size: 100px;
   }
   #schedules .blocks {
     flex-direction: row;
     flex-wrap: wrap;
     background-color: var(--white);
     box-shadow: 10px 9px 8px rgba(50, 50, 50, 0.77);
-  }
-  #schedules .block {
-    width: 50%;
   }
 }
 #error {
