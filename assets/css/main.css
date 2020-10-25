@@ -996,10 +996,9 @@ header .menu.logged nav .info {
   width: 100%;
 }
 #home .doctors .doctor-information img {
-  max-width: 340px;
+  max-width: 280px;
 }
 #home .doctors .doctor-information .doctors-social-media {
-  width: 320px;
   min-width: 280px;
   height: 75px;
   margin: 0 auto;
@@ -1216,6 +1215,9 @@ header .menu.logged nav .info {
   }
   #home .professional .only-desktop div .professional-icons-text {
     flex-direction: column;
+  }
+  #home .doctors .doctor-information img {
+    max-width: 340px;
   }
 }
 @media (min-width: 600px) {

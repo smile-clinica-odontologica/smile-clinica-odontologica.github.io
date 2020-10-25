@@ -297,10 +297,9 @@
       align-items: center;
       width: 100%;
       img {
-        max-width: 340px;
+        max-width: 280px;
       }
       .doctors-social-media {
-        width: 320px;
         min-width: 280px;
         height: 75px;
         margin: 0 auto;
@@ -546,6 +545,14 @@
           .professional-icons-text {
             flex-direction: column;
           }
+        }
+      }
+    }
+
+    .doctors {
+      .doctor-information {
+        img {
+          max-width: 340px
         }
       }
     }
