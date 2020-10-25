@@ -1544,7 +1544,7 @@ header .menu.logged nav .info {
   color: var(--letters-title);
   font-size: 60px;
   padding: 0 var(--space);
-  margin-top: 73vh;
+  margin-top: 70vh;
 }
 #schedules .full-banner-schedules h1 b {
   color: var(--green);
@@ -1554,69 +1554,59 @@ header .menu.logged nav .info {
   background-color: var(--main);
   color: var(--white);
 }
-#schedules .field {
-  color: var(--white);
+#schedules .section-fields form {
+  padding: 0 var(--space);
 }
-#schedules .field [type=date] {
+#schedules .section-fields form h3, #schedules .section-fields form h3 {
+  margin: 0;
+  color: var(--letters-body);
+}
+#schedules .section-fields form h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+#schedules .section-fields form h3 {
+  font-size: 37.5px;
+  font-weight: 600;
+}
+#schedules .section-fields form .field {
+  color: var(--letters-body);
+}
+#schedules .section-fields form .field [type=date] {
   background: var(--main) url("../images/photos/calendar.png") 97% 50% no-repeat;
 }
-#schedules .field [type=date]::-webkit-inner-spin-button {
+#schedules .section-fields form .field [type=date]::-webkit-inner-spin-button {
   display: none;
 }
-#schedules .field [type=date]::-webkit-calendar-picker-indicator {
+#schedules .section-fields form .field [type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
-#schedules .field [type=time] {
+#schedules .section-fields form .field [type=time] {
   background: var(--main) url("../images/photos/relogio.png") 97% 50% no-repeat;
 }
-#schedules .field [type=time]::-webkit-inner-spin-button {
+#schedules .section-fields form .field [type=time]::-webkit-inner-spin-button {
   display: none;
 }
-#schedules .field [type=time]::-webkit-calendar-picker-indicator {
+#schedules .section-fields form .field [type=time]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
-#schedules .field input {
+#schedules .section-fields form .field input {
   border-left: 0px;
   border-top: 0px;
-  border-color: var(--white);
+  border-color: var(--letters-body);
   background-color: var(--main);
-  color: var(--white);
+  color: var(--letters-body);
+  padding-bottom: var(--space);
 }
-#schedules .field label {
-  color: var(--white);
+#schedules .section-fields form .field label {
+  color: var(--letters-body);
+  padding-bottom: var(--space);
+  font-size: 25px;
 }
-#schedules .block {
-  background-color: var(--gray);
-  display: block;
+#schedules .section-fields form .field label.no-text {
+  line-height: 0;
 }
-#schedules .blocks {
-  margin-top: 30px;
-  margin-left: 70px;
-  margin-right: 70px;
-  background-color: var(--white);
-  box-shadow: 5px 5px 20px #0000005C;
-  display: block;
-}
-#schedules .blocks h1 {
-  color: var(--green);
-  text-align: center;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 6em;
-  font-size: 30px;
-}
-#schedules .blocks p {
-  color: var(--green);
-  text-align: center;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 6em;
-  font-weight: bold;
-  font-size: 20px;
-}
-#schedules .button {
+#schedules .section-fields form .button {
   min-width: 130px;
   width: 205px;
   border: solid 1px var(--main);
@@ -1633,9 +1623,38 @@ header .menu.logged nav .info {
   background: var(--white);
   transition: background-color 0.2s ease-in-out;
   color: var(--main);
+  font-size: 30px;
 }
-#schedules .button:hover {
+#schedules .section-fields form .button:hover {
   background-color: var(--hover-button);
+}
+#schedules .block {
+  background-color: var(--gray);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#schedules .block .blocks {
+  width: 320px;
+  height: 320px;
+  margin: 50px auto;
+  background-color: var(--white);
+  box-shadow: 5px 5px 20px #0000005C;
+  display: block;
+}
+#schedules .block .blocks h5, #schedules .block .blocks p {
+  font-weight: bold;
+  color: var(--green);
+  margin: 0 auto;
+  text-align: center;
+}
+#schedules .block .blocks h5 {
+  font-size: 60px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+#schedules .block .blocks p {
+  font-size: 30px;
 }
 
 @media (min-width: 1200px) {

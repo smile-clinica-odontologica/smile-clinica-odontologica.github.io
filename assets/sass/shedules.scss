@@ -13,7 +13,7 @@
             color: var(--letters-title);
             font-size: 60px;
             padding: 0 var(--space);
-            margin-top: 73vh;
+            margin-top: 70vh;
             b {
                 color: var(--green);
     
@@ -25,76 +25,93 @@
         width: 100%;
         background-color: var(--main);
         color: var(--white);
+        form {
+            padding: 0 var(--space);
+            h3, h3 {
+                margin: 0;
+                color: var(--letters-body);
+            }
+            h2 {
+                font-size: 30px;
+                font-weight: 400;
+            }
+            h3 {
+                font-size: 37.5px;
+                font-weight: 600;
+            }
+            .field {
+                color:var(--letters-body);
+                [type="date"] {
+                    background: var(--main) url('../images/photos/calendar.png')  97% 50% no-repeat ;
+                }
+                [type="date"]::-webkit-inner-spin-button {
+                    display: none;
+                }
+                [type="date"]::-webkit-calendar-picker-indicator {
+                    opacity: 0;
+                }
+                [type="time"] {
+                    background: var(--main) url('../images/photos/relogio.png')  97% 50% no-repeat ;
+                }
+                [type="time"]::-webkit-inner-spin-button {
+                display: none;
+                }
+                [type="time"]::-webkit-calendar-picker-indicator {
+                    opacity: 0;
+                }
+                input {
+                    border-left: 0px;
+                    border-top: 0px;
+                    border-color: var(--letters-body);
+                    background-color: var(--main);
+                    color: var(--letters-body);
+                    padding-bottom: var(--space);
+                    
+                }
+                label {
+                    color: var(--letters-body);
+                    padding-bottom: var(--space);
+                    font-size: 25px;
+                    &.no-text {
+                        line-height: 0;
+                    }
+                }                
+            }
+            .button {
+                @include button;
+                color: var(--main);
+                font-size: 30px;
+            }
         }
-    .field {
-        color:var(--white);
-        [type="date"] {
-            background: var(--main) url('../images/photos/calendar.png')  97% 50% no-repeat ;
-          }
-          [type="date"]::-webkit-inner-spin-button {
-            display: none;
-          }
-          [type="date"]::-webkit-calendar-picker-indicator {
-            opacity: 0;
-          }
-          [type="time"] {
-            background: var(--main) url('../images/photos/relogio.png')  97% 50% no-repeat ;
-          }
-          [type="time"]::-webkit-inner-spin-button {
-              display: none;
-          }
-          [type="time"]::-webkit-calendar-picker-indicator {
-            opacity: 0;
-          }
-          input {
-              border-left: 0px;
-              border-top: 0px;
-              border-color: var(--white);
-              background-color: var(--main);
-              color: var(--white);
-              
-          }
-          label {
-              color: var(--white);
-          }
-
-    }
-    
+    }        
     .block {
         background-color: var(--gray);
-        display: block;
-    }
-    .blocks  {
-        margin-top: 30px;
-        margin-left: 70px;
-        margin-right: 70px;
-        background-color: var(--white);
-        box-shadow:5px 5px 20px (#0000005C);
-        display: block;
-        h1 {
-            color: var(--green);
-            text-align: center;
-            margin-top: 50px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 6em;
-            font-size: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .blocks  {
+            width: 320px;
+            height: 320px;
+            margin: 50px auto;
+            background-color: var(--white);
+            box-shadow:5px 5px 20px (#0000005C);
+            display: block;
+            h5, p {
+                font-weight: bold;
+                color: var(--green); 
+                margin: 0 auto;
+                text-align: center;
+            }
+            h5 {
+                font-size: 60px;
+                margin-top: 50px;
+                margin-bottom: 30px;
+            }
+            p {
+                font-size: 30px;
+            }
+            
         }
-        p {
-            color: var(--green);
-            text-align: center;
-            margin-top: 50px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 6em;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        
-    }
-    .button {
-        @include button;
-        color: var(--main);
     }
 }
 
