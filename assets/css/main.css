@@ -1529,23 +1529,22 @@ header .menu.logged nav .info {
 }
 #schedules {
   flex-direction: column;
+  width: 100%;
 }
 #schedules .full-banner-schedules {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("../images/photos/Grupo de máscara 16.png");
+  background-image: url("../images/photos/full-banner-schedules-mobile.jpg");
   background-size: cover;
-  background-position-x: 39%;
-  background-position-y: center;
   background-repeat: no-repeat;
   margin-top: -80px;
-  align-items: flex-end;
 }
 #schedules .full-banner-schedules h1 {
   color: var(--letters-title);
-  font-size: 50px;
-  margin-left: 6%;
+  font-size: 60px;
+  padding: 0 var(--space);
+  margin-top: 73vh;
 }
 #schedules .full-banner-schedules h1 b {
   color: var(--green);
@@ -2990,7 +2989,6 @@ header .menu.logged nav .info {
   background-image: url("../images/photos/always-smile@2x.png");
   background-size: cover;
   background-position: -120px 0;
-  background-attachment: fixed;
 }
 
 .image-wrap-transparent {
