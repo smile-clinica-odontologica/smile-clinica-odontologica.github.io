@@ -188,6 +188,12 @@ form .field input[type=time]::-webkit-calendar-picker-indicator, form .field tex
   opacity: 0;
   cursor: pointer;
 }
+form .field input:-webkit-autofill, form .field input:-webkit-autofill:hover, form .field input:-webkit-autofill:focus, form .field input:-webkit-autofill:active, form .field textarea:-webkit-autofill, form .field textarea:-webkit-autofill:hover, form .field textarea:-webkit-autofill:focus, form .field textarea:-webkit-autofill:active, form .field select:-webkit-autofill, form .field select:-webkit-autofill:hover, form .field select:-webkit-autofill:focus, form .field select:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #69E0A5 inset;
+}
+form .field input:-webkit-autofill, form .field textarea:-webkit-autofill, form .field select:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-main);
+}
 form .actions {
   flex-direction: column;
 }
@@ -335,6 +341,12 @@ form button:hover {
 #footer .footer-container .container-col form .field input {
   border-color: var(--main);
   color: var(--main);
+}
+#footer .footer-container .container-col form .field input:-webkit-autofill, #footer .footer-container .container-col form .field input:-webkit-autofill:hover, #footer .footer-container .container-col form .field input:-webkit-autofill:focus, #footer .footer-container .container-col form .field input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #5a95d52f inset;
+}
+#footer .footer-container .container-col form .field input:-webkit-autofill {
+  -webkit-text-fill-color: var(--main);
 }
 #footer .footer-container .container-col form .field label {
   color: var(--main);
