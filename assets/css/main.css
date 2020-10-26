@@ -1333,6 +1333,69 @@ header .menu.logged nav .info {
   font-size: 18px;
   color: var(--main);
 }
+#home .services-home {
+  width: 100%;
+  height: 100vh;
+  max-height: 780px;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+#home .services-home .image-services-home {
+  background-image: url("../images/photos/full-banner-services-desktop.jpg");
+  background-size: cover;
+  height: 300px;
+}
+#home .services-home > div {
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+}
+#home .services-home .text-services-home {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 50px 0;
+}
+#home .services-home .text-services-home h5 {
+  color: var(--main);
+  font-size: 35px;
+  margin: 5px 0;
+}
+#home .services-home .text-services-home ul {
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+}
+#home .services-home .text-services-home ul li {
+  color: var(--third);
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 3px 0;
+}
+#home .services-home .text-services-home p {
+  text-align: center;
+  font-size: 18px;
+  color: var(--text);
+}
+#home .services-home .text-services-home p#p2 {
+  display: none;
+}
+#home .services-home button {
+  height: 40px;
+  margin: 0 50px;
+  background-color: transparent;
+  align-items: center;
+  justify-content: flex-end;
+  border: none;
+  margin-top: 5px;
+}
+#home .services-home button a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--third);
+  margin-right: 5px;
+}
 
 @media (min-width: 440px) {
   #home .full-banner-home {
@@ -1486,6 +1549,54 @@ header .menu.logged nav .info {
   }
   #home .home-franchises button {
     margin-bottom: var(--space);
+  }
+  #home .services-home {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  #home .services-home .image-services-home {
+    width: 50%;
+    height: 100%;
+    background-position: -600px;
+    background-repeat: no-repeat;
+  }
+  #home .services-home > div {
+    width: 50%;
+    flex-direction: column;
+    position: relative;
+  }
+  #home .services-home .text-services-home {
+    align-items: flex-end;
+    width: 100%;
+    padding-top: 50px;
+    position: relative;
+  }
+  #home .services-home .text-services-home ul {
+    flex-direction: column;
+    text-align: flex-end;
+    padding: 0;
+  }
+  #home .services-home .text-services-home ul li {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  #home .services-home .text-services-home p {
+    max-width: 450px;
+    text-align: right;
+  }
+  #home .services-home .text-services-home p#p2 {
+    display: block;
+  }
+  #home .services-home button {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+  }
+  #home .services-home button a {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--third);
+    margin-right: 5px;
   }
 }
 @media (min-width: 992px) {
@@ -1694,6 +1805,12 @@ header .menu.logged nav .info {
   }
   #home .full-banner-home header .hero .hero-text p {
     font-size: 24px;
+  }
+  #home .services-home #wrap-services {
+    padding-right: 60px;
+  }
+  #home .services-home #wrap-services button {
+    padding-right: 60px;
   }
 }
 @media (max-width: 350px) {
