@@ -2187,6 +2187,7 @@ header .menu.logged nav .info {
   }
   #blog .full-banner-blog header .hero {
     height: 630px;
+    margin-top: 10%;
   }
   #blog .full-banner-blog header .hero .hero-text button {
     width: 165px;
@@ -2215,6 +2216,9 @@ header .menu.logged nav .info {
   }
 }
 @media (min-width: 1400px) {
+  #blog .full-banner-blog header .hero {
+    margin-top: 15%;
+  }
   #blog .container-blog .wrap .arrow {
     display: flex;
     align-items: center;
