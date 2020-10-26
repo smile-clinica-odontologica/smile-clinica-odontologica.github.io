@@ -188,6 +188,12 @@ form .field input[type=time]::-webkit-calendar-picker-indicator, form .field tex
   opacity: 0;
   cursor: pointer;
 }
+form .field input:-webkit-autofill, form .field input:-webkit-autofill:hover, form .field input:-webkit-autofill:focus, form .field input:-webkit-autofill:active, form .field textarea:-webkit-autofill, form .field textarea:-webkit-autofill:hover, form .field textarea:-webkit-autofill:focus, form .field textarea:-webkit-autofill:active, form .field select:-webkit-autofill, form .field select:-webkit-autofill:hover, form .field select:-webkit-autofill:focus, form .field select:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #69E0A5 inset !important;
+}
+form .field input:-webkit-autofill, form .field textarea:-webkit-autofill, form .field select:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-main) !important;
+}
 form .actions {
   flex-direction: column;
 }
@@ -288,6 +294,12 @@ form button:hover {
   flex-direction: column;
   width: 100%;
 }
+#footer .footer-container .container-col {
+  max-width: 300px;
+}
+#footer .footer-container .container-col:last-child {
+  align-self: center;
+}
 #footer .footer-container .container-col ul {
   flex-direction: column;
   padding: var(--space);
@@ -316,12 +328,25 @@ form button:hover {
 #footer .footer-container .container-col ul li a:hover {
   color: var(--second);
 }
-#footer .footer-container .container-col form h3 {
+#footer .footer-container .container-col form {
+  padding: var(--space);
+  margin: 0;
+}
+#footer .footer-container .container-col form .form-title {
   color: var(--main);
+  font-size: 20px;
+  font-weight: bold;
+  align-self: flex-start;
 }
 #footer .footer-container .container-col form .field input {
   border-color: var(--main);
   color: var(--main);
+}
+#footer .footer-container .container-col form .field input:-webkit-autofill, #footer .footer-container .container-col form .field input:-webkit-autofill:hover, #footer .footer-container .container-col form .field input:-webkit-autofill:focus, #footer .footer-container .container-col form .field input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #5a95d52f inset !important;
+}
+#footer .footer-container .container-col form .field input:-webkit-autofill {
+  -webkit-text-fill-color: var(--main) !important;
 }
 #footer .footer-container .container-col form .field label {
   color: var(--main);
@@ -333,6 +358,8 @@ form button:hover {
 #footer .footer-container .logo {
   width: 100%;
   margin: var(--space) 0;
+  min-width: 150px;
+  padding-bottom: 90px;
 }
 #footer .footer-container .logo a {
   margin-left: calc(50% - 45px);
@@ -356,6 +383,7 @@ form button:hover {
   justify-content: center;
   margin-bottom: 5px;
   padding: 0 10px;
+  text-align: center;
 }
 #footer .footer-copyright > div a {
   text-decoration: none;
@@ -374,7 +402,7 @@ form button:hover {
   margin: 10px auto;
 }
 #footer .footer-copyright .footer-copyright-images a {
-  margin: 0 var(--space);
+  margin: 0 8px;
 }
 #footer .footer-copyright .footer-copyright-images img {
   width: 30px;
@@ -382,6 +410,26 @@ form button:hover {
   margin: auto 0;
 }
 
+@media (min-width: 576px) {
+  #footer .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1600px;
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  #footer .footer-title {
+    justify-content: center;
+  }
+  #footer .footer-copyright {
+    flex-direction: row;
+  }
+  #footer .footer-copyright .footer-copyright-images a {
+    margin: 0 10px;
+  }
+}
 @media (min-width: 1200px) {
   #footer .footer-container {
     flex-direction: row;
@@ -390,20 +438,13 @@ form button:hover {
   #footer .footer-container .logo {
     width: 15%;
   }
+  #footer .footer-copyright .footer-copyright-images a {
+    margin: 0 var(--space);
+  }
 }
 @media (min-width: 1300px) {
   #footer .footer-container .container-col form .field input {
     min-width: 320px;
-  }
-}
-@media (max-width: 300px) {
-  #footer .footer-copyright .footer-copyright-images a {
-    margin: 0 10px;
-  }
-}
-@media (max-width: 350px) {
-  #footer .footer-copyright .footer-copyright-images a {
-    margin: 0 8px;
   }
 }
 header {
@@ -3207,9 +3248,9 @@ header .menu.logged nav .info {
   flex-direction: column;
   padding: 20px;
 }
-#about .text p {
+#about .text > p {
   margin: 20px;
-  font-size: 25px;
+  font-size: 16px;
   color: var(--text);
 }
 #about .cards {

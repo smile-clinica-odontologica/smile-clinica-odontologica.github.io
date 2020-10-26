@@ -86,6 +86,7 @@ git pull origin master
 - [x] Campo de data no mobile está estranho. (No Chrome pelo menos)
 - [x] a cor do Focus ou hover dos time options está estranha no mobile.
 - [x] a foto de fundo das minhas páginas era melhor que fosse a do bebê, coloquei a da médica e esqueci de trocar.
+- [] Melhorar os forms quando o user escolhe preenchimento automático
 - [] melhorar pontuação no liteHouse.
 
 - [] Se lembrarem de mais vão escrevendo...
