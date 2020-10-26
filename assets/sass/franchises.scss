@@ -63,6 +63,7 @@
             box-shadow: 5px 5px 5px #0000005C;
             border-radius: 4px;
             opacity: 1;
+            border-radius: var(--space);
             }
             p {
             margin: 0;
@@ -227,6 +228,11 @@
                 font-size: 24px;
             }
         }
+        .why-franchises-smile-content {
+            img {
+                border-radius: var(--space);
+            }
+        }
     }
 }
 
@@ -259,7 +265,7 @@
                 flex-direction: row-reverse;
                 img {
                     width: 600px;
-                    padding-right: var(--space);
+                    margin-right: var(--space);
                 }
                 p {
                     font-size: 25px;
@@ -279,7 +285,7 @@
             .why-franchises-smile-content {
                 flex-direction: row;
                 img {
-                    padding-left: var(--space);
+                    margin-left: var(--space);
                 }
                 p {
                     font-size: 28px;

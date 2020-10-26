@@ -830,7 +830,7 @@ header .menu.logged nav .info {
   flex-direction: column;
 }
 #home .full-banner-home header .hero .hero-text h1 {
-  color: var(--text);
+  color: #222;
   margin-bottom: 0;
   font-size: 34px;
   font-weight: 600;
@@ -2527,6 +2527,7 @@ header .menu.logged nav .info {
   box-shadow: 5px 5px 5px #0000005C;
   border-radius: 4px;
   opacity: 1;
+  border-radius: var(--space);
 }
 #franchises .why-franchises .why-franchises-content p {
   margin: 0;
@@ -2692,6 +2693,9 @@ header .menu.logged nav .info {
   #franchises .full-banner-franchises p {
     font-size: 24px;
   }
+  #franchises .why-franchises-smile-content img {
+    border-radius: var(--space);
+  }
 }
 @media (min-width: 1200px) {
   #franchises .full-banner-franchises {
@@ -2719,7 +2723,7 @@ header .menu.logged nav .info {
   }
   #franchises .why-franchises .why-franchises-content img {
     width: 600px;
-    padding-right: var(--space);
+    margin-right: var(--space);
   }
   #franchises .why-franchises .why-franchises-content p {
     font-size: 25px;
@@ -2737,7 +2741,7 @@ header .menu.logged nav .info {
     flex-direction: row;
   }
   #franchises .why-franchises-smile .why-franchises-smile-content img {
-    padding-left: var(--space);
+    margin-left: var(--space);
   }
   #franchises .why-franchises-smile .why-franchises-smile-content p {
     font-size: 28px;
@@ -3671,6 +3675,8 @@ header .menu.logged nav .info {
   }
   #services .services-aesthetic .services-aesthetic-content img {
     width: 50%;
+    margin-left: var(--space);
+    border-radius: var(--space);
   }
   #services .services-aesthetic .services-aesthetic-content p {
     font-size: 22px;
@@ -3685,6 +3691,8 @@ header .menu.logged nav .info {
     width: 50%;
     max-height: 480px;
     margin: auto 0;
+    margin-right: var(--space);
+    border-radius: var(--space);
   }
   #services .services-clinical-dentistry .services-clinical-dentistry-content {
     flex-direction: row;
@@ -3692,6 +3700,9 @@ header .menu.logged nav .info {
   }
   #services .services-clinical-dentistry .services-clinical-dentistry-content img {
     max-width: 700px;
+    max-height: 560px;
+    margin-left: var(--space);
+    border-radius: var(--space);
   }
   #services .services-implants .services-implants-title {
     padding-left: 50%;
@@ -3701,6 +3712,9 @@ header .menu.logged nav .info {
   }
   #services .services-implants .services-implants-content img {
     width: 50%;
+    margin-right: var(--space);
+    border-radius: var(--space);
+    margin-bottom: var(--space);
   }
   #services .free-trial {
     height: 430px;
