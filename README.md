@@ -87,6 +87,4 @@ git pull origin master
 - [x] a cor do Focus ou hover dos time options está estranha no mobile.
 - [x] a foto de fundo das minhas páginas era melhor que fosse a do bebê, coloquei a da médica e esqueci de trocar.
 - [x] Melhorar os forms quando o user escolhe preenchimento automático
-- [] melhorar pontuação no liteHouse.
-
-- [] Se lembrarem de mais vão escrevendo...
+- [x] melhorar pontuação no liteHouse.
