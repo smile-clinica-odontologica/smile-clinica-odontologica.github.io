@@ -105,8 +105,8 @@ header {
         flex-direction: column;
         padding: 0;
         margin: 0;
-        padding-top: 200px;
-
+        padding-top: 35vh;
+        overflow-y: auto;
         li {
           align-items: center;
           padding: 2px;
@@ -209,15 +209,13 @@ header {
             opacity: 1;
 
             &#login {
-              position: absolute;
-              bottom: 0;
               margin-bottom: 70px;
               background-color: var(--main);
               width: 200px;
               align-items: center;
               justify-content: center;
               border-radius: 6px;
-              
+              margin-top: auto;
               a {
                 color: white;
                 width: 100%;
