@@ -467,24 +467,24 @@
             flex-direction: column;
             margin: 20px;
             padding: 0 10px;
-
+            
             h4 {
               margin: 5px 0;
               font-size: 18px;
               color: var(--third);
             }
-
+            
             h5 { 
               margin: 5px 0;
               font-size: 25px;
               color: var(--main);
             }
-
+            
             p {
               line-height: 25px;
             }
           }
-
+          
           button {
             padding: 10px 20px 10px 10px;
             display: flex;
@@ -492,7 +492,7 @@
             justify-content: flex-end;
             background-color: transparent;
             border: none;
-
+            
             a {
               text-decoration: none;
               margin: 0 5px;
@@ -505,12 +505,53 @@
       }
     }
   }
+  .home-franchises {
+    flex-direction: column;
+    width: 100%;
+    height: 550px;
+    max-height: 550px;
+    background-image: url('../images/photos/home-franchises-mobile-440.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -65vw;
+    justify-content: center;
+    align-items: end;
+    padding: 0 var(--space);
+    padding-right: 35vw;
+    h6, p {
+      font-weight: 600;
+      margin: 0;
+    }
+    h6 {
+      font-size: 30px;
+      color: var(--text);
+      margin: var(--space) 0;   
+    }
+    p {
+      font-size: 20px;
+      color: var(--main);
+      margin-bottom: var(--space);
+    }
+    button {
+      @include button;
+      height: 45;
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        color: var(--main);
+      }
+    }
+  }
 }
+
 
 @media (min-width: 440px) {
   #home {
     .full-banner-home {
       background-position-x: 0;
+    }
+    .home-franchises {
+      background-position-x: -43vw;
     }
   }
 }
@@ -526,6 +567,9 @@
           background-position: -20px 0px;
         }
       }
+    }
+    .home-franchises {
+      background-position-x: -23vw;
     }
   }
 }
@@ -562,6 +606,9 @@
       .professional-photo {
         background-position-y: -23vh;
       }
+    }
+    .home-franchises {
+      background-position-x: 0;
     }
   }  
 }
@@ -689,6 +736,20 @@
         .cards {
           grid-template-columns: 1fr 1fr;
         }
+      }
+    }
+    .home-franchises {
+      background-image: url('../images/photos/home-franchises.jpg');
+      padding-right: 0;
+      justify-content: flex-end;
+      h6 {
+        font-size: 40px;
+      }
+      p {
+        display: none;
+      }
+      button {
+        margin-bottom: var(--space);
       }
     }
   }
@@ -860,6 +921,16 @@
         .cards {
           grid-template-columns: 1fr 1fr 1fr;
         }
+      }
+    }
+    .home-franchises {
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding-right: var(--space);
+      h6 {
+        font-size: 60px;
+        padding-left: 400px;
+        text-align: right;
       }
     }
   }
