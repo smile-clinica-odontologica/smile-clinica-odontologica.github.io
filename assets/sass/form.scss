@@ -45,7 +45,11 @@ form {
         select + label {
             z-index: 0;
         }
-        input, select {
+        textarea {
+            resize: vertical;
+            overflow: auto;
+        }
+        input, textarea, select {
             
             border: none;
             border-bottom: 2px solid var(--text-main);

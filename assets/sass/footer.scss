@@ -37,6 +37,10 @@
                         font-size: 17px;
                         text-decoration: none;
                         color: var(--text-footer);
+                        transition: all .2s ease-in-out;
+                        &:hover {
+                            color: var(--second);
+                        }
                     }
                 }
             }

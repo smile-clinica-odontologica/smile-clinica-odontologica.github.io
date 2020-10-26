@@ -16,10 +16,32 @@ body {
     > main {
         min-height: calc(100vh - 400px);
     }
+
+    .menu-overlay {
+        z-index: 0;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+    &.open {
+        overflow: hidden;
+        .menu-overlay {
+            opacity: 1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--main-30);
+            z-index: 5;
+        }
+    }
 }
 
 @media (min-width: 1200px) {
     body {
+        .menu-overlay {
+            display: none;
+        }
         #home {
             header {
                 .hero {

@@ -53,8 +53,29 @@ body {
 body > main {
   min-height: calc(100vh - 400px);
 }
+body .menu-overlay {
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+body.open {
+  overflow: hidden;
+}
+body.open .menu-overlay {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-30);
+  z-index: 5;
+}
 
 @media (min-width: 1200px) {
+  body .menu-overlay {
+    display: none;
+  }
   body #home header .hero {
     padding: 0 100px 200px;
   }
@@ -121,7 +142,11 @@ form .field select:focus {
 form .field select + label {
   z-index: 0;
 }
-form .field input, form .field select {
+form .field textarea {
+  resize: vertical;
+  overflow: auto;
+}
+form .field input, form .field textarea, form .field select {
   border: none;
   border-bottom: 2px solid var(--text-main);
   width: 100%;
@@ -134,33 +159,33 @@ form .field input, form .field select {
   transition: 0.2s all;
   background-color: transparent;
 }
-form .field input:focus, form .field select:focus {
+form .field input:focus, form .field textarea:focus, form .field select:focus {
   border-bottom: 2px solid var(--text-main-80);
 }
-form .field input:focus + label, form .field select:focus + label {
+form .field input:focus + label, form .field textarea:focus + label, form .field select:focus + label {
   color: var(--text-main-80);
 }
-form .field input:valid + label, form .field input:focus + label, form .field select:valid + label, form .field select:focus + label {
+form .field input:valid + label, form .field input:focus + label, form .field textarea:valid + label, form .field textarea:focus + label, form .field select:valid + label, form .field select:focus + label {
   top: 2px;
   font-size: 14px;
 }
-form .field input[type=date], form .field select[type=date] {
+form .field input[type=date], form .field textarea[type=date], form .field select[type=date] {
   background: url("/assets/images/photos/hour.svg") 97% 50% no-repeat;
 }
-form .field input[type=date]::-webkit-inner-spin-button, form .field select[type=date]::-webkit-inner-spin-button {
+form .field input[type=date]::-webkit-inner-spin-button, form .field textarea[type=date]::-webkit-inner-spin-button, form .field select[type=date]::-webkit-inner-spin-button {
   display: none;
 }
-form .field input[type=date]::-webkit-calendar-picker-indicator, form .field select[type=date]::-webkit-calendar-picker-indicator {
+form .field input[type=date]::-webkit-calendar-picker-indicator, form .field textarea[type=date]::-webkit-calendar-picker-indicator, form .field select[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
   cursor: pointer;
 }
-form .field input[type=time], form .field select[type=time] {
+form .field input[type=time], form .field textarea[type=time], form .field select[type=time] {
   background: var(--main) url("../images/photos/relogio.png") 97% 50% no-repeat;
 }
-form .field input[type=time]::-webkit-inner-spin-button, form .field select[type=time]::-webkit-inner-spin-button {
+form .field input[type=time]::-webkit-inner-spin-button, form .field textarea[type=time]::-webkit-inner-spin-button, form .field select[type=time]::-webkit-inner-spin-button {
   display: none;
 }
-form .field input[type=time]::-webkit-calendar-picker-indicator, form .field select[type=time]::-webkit-calendar-picker-indicator {
+form .field input[type=time]::-webkit-calendar-picker-indicator, form .field textarea[type=time]::-webkit-calendar-picker-indicator, form .field select[type=time]::-webkit-calendar-picker-indicator {
   opacity: 0;
   cursor: pointer;
 }
@@ -287,6 +312,10 @@ form button:hover {
   font-size: 17px;
   text-decoration: none;
   color: var(--text-footer);
+  transition: all 0.2s ease-in-out;
+}
+#footer .footer-container .container-col ul li a:hover {
+  color: var(--second);
 }
 #footer .footer-container .container-col form h3 {
   color: var(--main);
@@ -383,6 +412,14 @@ header {
   width: 100%;
   position: relative;
   z-index: 4;
+}
+header #logo-white {
+  opacity: 1;
+  transform: opacity 0.5s ease-in-out;
+}
+header #logo-blue {
+  opacity: 0;
+  transform: opacity 0.5s ease-in-out;
 }
 header .menu {
   width: 100%;
@@ -485,6 +522,10 @@ header .menu nav ul li a {
   text-decoration: none;
   font-size: 16px;
   color: var(--main);
+  transition: all 0.2s ease-in-out;
+}
+header .menu nav ul li a:hover {
+  color: var(--second);
 }
 header .menu nav .info {
   opacity: 0;
@@ -520,6 +561,14 @@ header .menu nav .info .content > div a {
 header .menu nav .info .content > div a small {
   color: var(--dark-blue);
 }
+header .menu.open #logo-white {
+  transform: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+header .menu.open #logo-blue {
+  transform: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
 header .menu.open .logo {
   position: absolute;
   right: calc(300px - 200px);
@@ -547,7 +596,7 @@ header .menu.open nav ul li {
 header .menu.open nav ul li#login {
   position: absolute;
   bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   background-color: var(--main);
   width: 200px;
   align-items: center;
@@ -556,6 +605,8 @@ header .menu.open nav ul li#login {
 }
 header .menu.open nav ul li#login a {
   color: white;
+  width: 100%;
+  text-align: center;
 }
 header .menu.open nav .info {
   display: none;
@@ -587,7 +638,6 @@ header .menu.logged nav .info {
   header .menu.open nav ul li#login {
     background-color: var(--main);
     border-radius: 6px;
-    display: block;
     position: initial;
     width: initial;
     margin: auto 0;
@@ -649,14 +699,16 @@ header .menu.logged nav .info {
   header .menu nav ul li#login {
     background-color: var(--main);
     border-radius: 6px;
-    display: block;
     position: initial;
     width: initial;
     margin: auto 0;
-    padding: 6px 6px;
   }
-  header .menu nav ul li#login a {
+  header .menu nav ul li#login > a {
     color: white;
+    padding: 5px 12px;
+  }
+  header .menu nav ul li#login > a:hover {
+    color: var(--second);
   }
   header .menu nav .info {
     display: none;
@@ -3095,7 +3147,7 @@ header .menu.logged nav .info {
   font-size: 40px;
   margin: 10px 0;
 }
-#about .support .login form .field input {
+#about .support .login form .field input, #about .support .login form .field textarea {
   border-color: var(--third);
 }
 #about .support .login form .field label {
@@ -3149,7 +3201,7 @@ header .menu.logged nav .info {
 }
 @media (min-width: 900px) {
   #about .support .image {
-    height: 500px;
+    height: 600px;
     background-image: url("../images/photos/image-support-about.png");
     background-position: 200px 0;
   }

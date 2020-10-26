@@ -148,7 +148,7 @@
 
       form {
         .field {
-          input {
+          input, textarea {
             border-color: var(--third);
           }
 
@@ -221,7 +221,7 @@
   #about {
     .support {
      .image {
-       height: 500px;
+       height: 600px;
        background-image: url('../images/photos/image-support-about.png');
        background-position: 200px 0;
      }
