@@ -288,6 +288,12 @@ form button:hover {
   flex-direction: column;
   width: 100%;
 }
+#footer .footer-container .container-col {
+  max-width: 300px;
+}
+#footer .footer-container .container-col:last-child {
+  align-self: center;
+}
 #footer .footer-container .container-col ul {
   flex-direction: column;
   padding: var(--space);
@@ -316,8 +322,15 @@ form button:hover {
 #footer .footer-container .container-col ul li a:hover {
   color: var(--second);
 }
-#footer .footer-container .container-col form h3 {
+#footer .footer-container .container-col form {
+  padding: var(--space);
+  margin: 0;
+}
+#footer .footer-container .container-col form .form-title {
   color: var(--main);
+  font-size: 20px;
+  font-weight: bold;
+  align-self: flex-start;
 }
 #footer .footer-container .container-col form .field input {
   border-color: var(--main);
@@ -333,6 +346,8 @@ form button:hover {
 #footer .footer-container .logo {
   width: 100%;
   margin: var(--space) 0;
+  min-width: 150px;
+  padding-bottom: 90px;
 }
 #footer .footer-container .logo a {
   margin-left: calc(50% - 45px);
@@ -356,6 +371,7 @@ form button:hover {
   justify-content: center;
   margin-bottom: 5px;
   padding: 0 10px;
+  text-align: center;
 }
 #footer .footer-copyright > div a {
   text-decoration: none;
@@ -374,7 +390,7 @@ form button:hover {
   margin: 10px auto;
 }
 #footer .footer-copyright .footer-copyright-images a {
-  margin: 0 var(--space);
+  margin: 0 8px;
 }
 #footer .footer-copyright .footer-copyright-images img {
   width: 30px;
@@ -382,6 +398,26 @@ form button:hover {
   margin: auto 0;
 }
 
+@media (min-width: 576px) {
+  #footer .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1600px;
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  #footer .footer-title {
+    justify-content: center;
+  }
+  #footer .footer-copyright {
+    flex-direction: row;
+  }
+  #footer .footer-copyright .footer-copyright-images a {
+    margin: 0 10px;
+  }
+}
 @media (min-width: 1200px) {
   #footer .footer-container {
     flex-direction: row;
@@ -390,20 +426,13 @@ form button:hover {
   #footer .footer-container .logo {
     width: 15%;
   }
+  #footer .footer-copyright .footer-copyright-images a {
+    margin: 0 var(--space);
+  }
 }
 @media (min-width: 1300px) {
   #footer .footer-container .container-col form .field input {
     min-width: 320px;
-  }
-}
-@media (max-width: 300px) {
-  #footer .footer-copyright .footer-copyright-images a {
-    margin: 0 10px;
-  }
-}
-@media (max-width: 350px) {
-  #footer .footer-copyright .footer-copyright-images a {
-    margin: 0 8px;
   }
 }
 header {
@@ -3108,9 +3137,9 @@ header .menu.logged nav .info {
   flex-direction: column;
   padding: 20px;
 }
-#about .text p {
+#about .text > p {
   margin: 20px;
-  font-size: 25px;
+  font-size: 16px;
   color: var(--text);
 }
 #about .cards {
