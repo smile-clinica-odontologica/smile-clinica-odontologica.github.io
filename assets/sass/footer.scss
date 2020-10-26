@@ -66,10 +66,10 @@
                         &:-webkit-autofill:hover, 
                         &:-webkit-autofill:focus, 
                         &:-webkit-autofill:active  {
-                            -webkit-box-shadow: 0 0 0 30px #5a95d52f inset;
+                            -webkit-box-shadow: 0 0 0 30px #5a95d52f inset !important;
                         }
                         &:-webkit-autofill {
-                            -webkit-text-fill-color: var(--main);
+                            -webkit-text-fill-color: var(--main) !important;
                         }
                     }
 
