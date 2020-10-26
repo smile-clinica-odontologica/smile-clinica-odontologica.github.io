@@ -363,12 +363,13 @@ header {
               position: initial;
               width: initial;
               margin: auto 0;
+              transition: all 0.2s ease-in-out;
               > a {
                 color: white;
                 padding: 5px 12px;
-                &:hover {
-                  color: var(--second);
-                }
+              }
+              &:hover {
+                background-color: var(--second);
               }
             }
           }

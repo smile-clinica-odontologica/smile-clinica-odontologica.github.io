@@ -702,13 +702,14 @@ header .menu.logged nav .info {
     position: initial;
     width: initial;
     margin: auto 0;
+    transition: all 0.2s ease-in-out;
   }
   header .menu nav ul li#login > a {
     color: white;
     padding: 5px 12px;
   }
-  header .menu nav ul li#login > a:hover {
-    color: var(--second);
+  header .menu nav ul li#login:hover {
+    background-color: var(--second);
   }
   header .menu nav .info {
     display: none;
