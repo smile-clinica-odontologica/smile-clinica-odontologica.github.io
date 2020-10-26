@@ -1702,45 +1702,54 @@ header .menu.logged nav .info {
   }
 }
 #error {
-  width: calc(100% - 6px);
+  width: 100%;
   height: 100vh;
   background-color: rgba(90, 150, 213, 0.5);
   border: solid 3px var(--main);
   position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-#error img, #error h1, #error h2, #error button {
+#error .wrap-error {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 150px;
+  padding-top: 20px;
+}
+#error .wrap-error > h1 {
   position: absolute;
-}
-#error img.teeth {
-  width: 100%;
-  max-width: 355px;
-  margin: 0 auto;
-  top: 1%;
-}
-#error h1 {
+  margin: 0;
   color: var(--main);
   font-weight: 600;
-  font-size: 150px;
+  font-size: 100px;
   transform: rotate(320deg);
-  bottom: 0;
-  right: 0;
-  margin: 20%;
+  bottom: 20px;
+  right: 10px;
 }
-#error h2 {
+#error .wrap-error > img.teeth {
+  width: 80%;
+  max-width: 355px;
+  margin: 0 auto;
+}
+#error .wrap-error > img.smile {
+  max-width: 330px;
+  width: 90%;
+}
+#error .wrap-error > h2 {
+  max-width: 400px;
   color: var(--white);
   font-size: 20px;
   font-weight: 600;
   text-align: center;
-  top: 30%;
-}
-#error img.smile {
-  max-width: 330px;
-  height: 74px;
+  top: 20px;
+  padding: 0 20px;
   margin: 0;
-  top: 40%;
-  margin-left: 10%;
+  margin-bottom: 20px;
 }
-#error button {
+#error .wrap-error > a {
   min-width: 130px;
   width: 205px;
   border: solid 1px var(--main);
@@ -1756,66 +1765,51 @@ header .menu.logged nav .info {
   border-radius: var(--border-radius);
   background: var(--white);
   transition: background-color 0.2s ease-in-out;
-  width: 315px;
-  margin: 0 auto;
-  top: 53%;
+  max-width: 325px;
+  width: 90%;
+  padding: 5px 10px;
+  margin: 20px auto;
   color: var(--main);
-  font-size: 17px;
-  margin-left: 10%;
+  font-size: 16px;
+  z-index: 2;
 }
-#error button:hover {
+#error .wrap-error > a:hover {
   background-color: var(--hover-button);
 }
 
-@media (min-width: 1200px) {
-  #error img.teeth {
-    width: 60%;
-    max-width: unset;
-    margin: auto;
-    margin-left: 20%;
-    border: solid 3px var(--main);
+@media (min-height: 750px) and (max-width: 768px) {
+  #error .wrap-error {
+    padding-bottom: 300px;
   }
-  #error h1 {
-    position: relative;
-    margin: initial;
-    top: 1;
-    font-size: 300px;
+  #error .wrap-error > h1 {
+    font-size: 150px;
+    margin-bottom: 40px;
+    margin-right: 30px;
   }
-  #error h2 {
-    margin-left: 22%;
-    top: 72%;
-    font-size: 22px;
+}
+@media (min-width: 768px) {
+  #error .wrap-error {
+    width: 100%;
+    max-width: 900px;
+    padding-bottom: 30px;
+    margin-top: 50px;
   }
-  #error img.smile {
-    width: 20%;
-    margin-left: 59%;
-    top: 70%;
+  #error .wrap-error > h1 {
+    font-size: 200px;
+    top: 0;
+    left: 0;
+    right: initial;
+    bottom: initial;
   }
-  #error button {
-    min-width: 130px;
-    width: 205px;
-    border: solid 1px var(--main);
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: var(--border-radius);
-    background: var(--white);
-    transition: background-color 0.2s ease-in-out;
-    width: 400px;
-    margin: 0 auto;
-    top: 85%;
-    color: var(--main);
-    font-size: 17px;
-    margin-left: 35%;
+  #error .wrap-error > h2 {
+    font-size: 30px;
   }
-  #error button:hover {
-    background-color: var(--hover-button);
+  #error .wrap-error > img.teeth {
+    max-width: 450px;
+  }
+  #error .wrap-error > img.smile {
+    max-width: 330px;
+    width: 90%;
   }
 }
 .background-transparent-blog {
