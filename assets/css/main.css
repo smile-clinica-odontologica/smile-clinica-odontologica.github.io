@@ -3781,5 +3781,39 @@ header .menu.logged nav .info {
     left: 80%;
   }
 }
+#terms, #politic {
+  width: 100%;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: var(--space) auto;
+  margin-top: 100px;
+  padding: 0 var(--space);
+}
+#terms ol, #politic ol {
+  flex-direction: column;
+  color: #222;
+}
+#terms ul, #politic ul {
+  flex-direction: column;
+  color: #222;
+}
+#terms h1, #politic h1 {
+  color: var(--main);
+  font-weight: 600;
+}
+#terms h2, #terms h3, #politic h2, #politic h3 {
+  color: var(--text);
+  font-weight: 400;
+}
+#terms p, #politic p {
+  color: #222;
+  font-weight: 300;
+  margin: 0;
+}
+#terms p a, #politic p a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--main);
+}
 
 /*# sourceMappingURL=main.css.map */
