@@ -3,7 +3,7 @@
     flex-direction: column;
     .full-banner-services {
         width: 100%;
-        background-image: url('../images/photos/full-banner-services.jpg');
+        background-image: url('../images/photos/services1.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         height: 800px;
@@ -20,7 +20,7 @@
             span {
                 font-size: 40px;
                 font-weight: 600;
-                color: var(--white);
+                color: var(--text);
             }
         }
     }
@@ -315,7 +315,7 @@
 @media (min-width: 992px) {
     #services {
         .full-banner-services {
-            background-image: url('../images/photos/full-banner-services-desktop.jpg');
+            background-image: url('../images/photos/services2.jpg');
             h1 {
                 max-width: 65%;
             }

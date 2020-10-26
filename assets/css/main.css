@@ -3550,7 +3550,7 @@ header .menu.logged nav .info {
 }
 #services .full-banner-services {
   width: 100%;
-  background-image: url("../images/photos/full-banner-services.jpg");
+  background-image: url("../images/photos/services1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 800px;
@@ -3569,7 +3569,7 @@ header .menu.logged nav .info {
 #services .full-banner-services h1 span {
   font-size: 40px;
   font-weight: 600;
-  color: var(--white);
+  color: var(--text);
 }
 #services .services-aesthetic {
   width: 100%;
@@ -3842,7 +3842,7 @@ header .menu.logged nav .info {
 }
 @media (min-width: 992px) {
   #services .full-banner-services {
-    background-image: url("../images/photos/full-banner-services-desktop.jpg");
+    background-image: url("../images/photos/services2.jpg");
   }
   #services .full-banner-services h1 {
     max-width: 65%;
