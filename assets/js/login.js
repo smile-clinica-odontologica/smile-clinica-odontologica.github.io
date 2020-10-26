@@ -1,8 +1,8 @@
 const btnLogin = document.querySelector('#login');
-const menu = document.querySelector('.menu');
+const menuLogged = document.querySelector('.menu');
 
 btnLogin.addEventListener('click', e => {
 
-  menu.classList.add('logged')
+  menuLogged.classList.add('logged')
 
 })
