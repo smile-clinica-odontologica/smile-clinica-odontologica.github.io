@@ -2,19 +2,13 @@
     width: 100%;
     flex-direction: column;
     .full-banner-franchises {
+        background-image: url('../images/photos/full-banner-franchises-mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
         width: 100%;
-        height: 758px;
         position: relative;
         flex-direction: column;
-        img {
-            position: absolute;
-            width: 100%;
-            max-height: 800px;
-            margin-top: -80px;
-            &.franchises-banner-desktop {
-                display: none;
-            }
-        }
+        margin-top: -80px;
         h1, p {
             color: var(--letters-title);
             margin: 0;
@@ -37,6 +31,7 @@
             background-color: var(--white);
             z-index: 1;
             margin: 0 auto;
+            margin-bottom: var(--space);
             a {
                 text-decoration: none;
                 font-size: 20px;
@@ -197,17 +192,13 @@
     #franchises {
         .full-banner-franchises {
             max-height: 260px;
-            img {
-                &.franchises-banner-mobile {
-                    display: none;
-                }
-                &.franchises-banner-desktop {
-                    display: flex;
-                }
-            }
+            background-image: url('../images/photos/full-banner-franchises.png');
             h1 {
-                margin-top: 11%;
-                font-size: 20px;
+                margin-top: 25%;
+                font-size: 17px;
+            }
+            p {
+                font-size: 11px;
             }
         }
         .why-franchises-smile-content {
@@ -218,6 +209,22 @@
         #know-more {
             button {
                 margin: var(--space) auto;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #franchises {
+        .full-banner-franchises {
+            max-height: initial;
+            height: 420px;
+            h1 {
+                margin-top: 17%;
+                font-size: 39px;
+            }
+            p{
+                font-size: 24px;
             }
         }
     }
@@ -237,7 +244,7 @@
             }
             button {
                 position: absolute;
-                top: 20.5em;
+                top: 24.5em;
                 left: calc(50% - 102.5px);
             }
         }
@@ -300,7 +307,7 @@
         .full-banner-franchises {
             height: 750px;
             button {
-                top: 22em;
+                top: 27em;
             }
         }
         .why-franchises {

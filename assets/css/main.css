@@ -1411,6 +1411,12 @@ header .menu.logged nav .info {
   #home .professional .professional-photo {
     background-position-y: -14vw;
   }
+  #home .free-trial {
+    height: 400px;
+  }
+  #home .free-trial .free-trial-opacity {
+    height: 400px;
+  }
   #home .doctors .doctors-title p {
     width: 700px;
     text-align: center;
@@ -2400,19 +2406,13 @@ header .menu.logged nav .info {
   flex-direction: column;
 }
 #franchises .full-banner-franchises {
+  background-image: url("../images/photos/full-banner-franchises-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 758px;
   position: relative;
   flex-direction: column;
-}
-#franchises .full-banner-franchises img {
-  position: absolute;
-  width: 100%;
-  max-height: 800px;
   margin-top: -80px;
-}
-#franchises .full-banner-franchises img.franchises-banner-desktop {
-  display: none;
 }
 #franchises .full-banner-franchises h1, #franchises .full-banner-franchises p {
   color: var(--letters-title);
@@ -2450,6 +2450,7 @@ header .menu.logged nav .info {
   background-color: var(--white);
   z-index: 1;
   margin: 0 auto;
+  margin-bottom: var(--space);
 }
 #franchises .full-banner-franchises button:hover {
   background-color: var(--hover-button);
@@ -2622,22 +2623,33 @@ header .menu.logged nav .info {
 @media (min-width: 576px) {
   #franchises .full-banner-franchises {
     max-height: 260px;
-  }
-  #franchises .full-banner-franchises img.franchises-banner-mobile {
-    display: none;
-  }
-  #franchises .full-banner-franchises img.franchises-banner-desktop {
-    display: flex;
+    background-image: url("../images/photos/full-banner-franchises.png");
   }
   #franchises .full-banner-franchises h1 {
-    margin-top: 11%;
-    font-size: 20px;
+    margin-top: 25%;
+    font-size: 17px;
+  }
+  #franchises .full-banner-franchises p {
+    font-size: 11px;
   }
   #franchises .why-franchises-smile-content img {
     margin: 0 auto;
   }
   #franchises #know-more button {
     margin: var(--space) auto;
+  }
+}
+@media (min-width: 768px) {
+  #franchises .full-banner-franchises {
+    max-height: initial;
+    height: 420px;
+  }
+  #franchises .full-banner-franchises h1 {
+    margin-top: 17%;
+    font-size: 39px;
+  }
+  #franchises .full-banner-franchises p {
+    font-size: 24px;
   }
 }
 @media (min-width: 1200px) {
@@ -2654,7 +2666,7 @@ header .menu.logged nav .info {
   }
   #franchises .full-banner-franchises button {
     position: absolute;
-    top: 20.5em;
+    top: 24.5em;
     left: calc(50% - 102.5px);
   }
   #franchises .why-franchises .why-franchises-title > h2 {
@@ -2708,7 +2720,7 @@ header .menu.logged nav .info {
     height: 750px;
   }
   #franchises .full-banner-franchises button {
-    top: 22em;
+    top: 27em;
   }
   #franchises .why-franchises .why-franchises-title {
     padding-left: 20%;
