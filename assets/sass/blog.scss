@@ -403,6 +403,7 @@
           height:  630px;
           .hero {
             height: 630px;
+            margin-top: 10%;
   
             .hero-text {
               button {
@@ -444,6 +445,13 @@
 
 @media  (min-width: 1400px) {
   #blog {
+    .full-banner-blog {
+      header {
+        .hero {
+          margin-top: 15%;
+        }
+      }
+    }
     .container-blog {
       .wrap {
         .arrow {

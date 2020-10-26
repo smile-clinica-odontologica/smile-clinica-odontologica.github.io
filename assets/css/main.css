@@ -750,7 +750,13 @@ header .menu.logged nav .info {
   flex-direction: column;
 }
 #home .full-banner-home {
+  width: 100%;
   position: relative;
+  background-image: url("../images/photos/home-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -50vw;
+  margin-top: -80px;
 }
 #home .full-banner-home header {
   width: 100%;
@@ -759,16 +765,22 @@ header .menu.logged nav .info {
   flex-direction: column;
   z-index: 3;
   justify-content: flex-end;
+  /*.image-boy {
+    width: 100%;
+    height: 70%;
+    background-position: -40px 0px;
+  }*/
 }
 #home .full-banner-home header .hero {
   align-items: flex-start;
+  text-align: end;
   flex-direction: column;
   z-index: 2;
   padding: 40px 0 20px;
   justify-content: flex-end;
 }
 #home .full-banner-home header .hero .hero-text {
-  padding: 0 40px 0 20px;
+  padding: 0 20px 0 20px;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
@@ -779,25 +791,15 @@ header .menu.logged nav .info {
 #home .full-banner-home header .hero .hero-text h1 {
   color: var(--text);
   margin-bottom: 0;
-  font-size: 28px;
+  font-size: 34px;
+  font-weight: 600;
   margin-right: 10px;
-}
-#home .full-banner-home header .hero .hero-text h1 strong {
-  color: var(--main);
-  text-shadow: none;
 }
 #home .full-banner-home header .hero .hero-text p {
   color: var(--main);
   font-size: 20px;
+  font-weight: 600;
   margin: 5px 0 10px;
-}
-#home .full-banner-home header .image-boy {
-  width: 100%;
-  height: 70%;
-  background-image: url("../images/photos/menino-sorrindo@2x.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: -40px 0px;
 }
 #home .highlights {
   width: 100%;
@@ -1237,7 +1239,15 @@ header .menu.logged nav .info {
   font-weight: bold;
 }
 
+@media (min-width: 440px) {
+  #home .full-banner-home {
+    background-position-x: 0;
+  }
+}
 @media (min-width: 500px) {
+  #home .full-banner-home header .hero {
+    text-align: start;
+  }
   #home .full-banner-home header .image-boy {
     background-position: -20px 0px;
   }
@@ -1256,14 +1266,9 @@ header .menu.logged nav .info {
     max-width: 340px;
   }
 }
-@media (min-width: 600px) {
-  #home .full-banner-home header .image-boy {
-    background-position: -10vw 0vh;
-  }
-}
-@media (min-width: 600px) {
-  #home .full-banner-home header .image-boy {
-    background-position: 0vw 0vh;
+@media (min-width: 650px) {
+  #home .professional .professional-photo {
+    background-position-y: -23vh;
   }
 }
 @media (min-width: 768px) {
@@ -1340,6 +1345,9 @@ header .menu.logged nav .info {
   #home .highlights #div-4 h2, #home .highlights #div-4 p {
     color: var(--text);
   }
+  #home .professional .professional-photo {
+    background-position-y: -14vw;
+  }
   #home .doctors .doctors-title p {
     width: 700px;
     text-align: center;
@@ -1354,6 +1362,11 @@ header .menu.logged nav .info {
   }
   #home .home-blog .wrap .cards {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  #home .professional .professional-photo {
+    max-width: 600px;
   }
 }
 @media (min-width: 1200px) {
@@ -1411,10 +1424,14 @@ header .menu.logged nav .info {
   }
   #home .professional {
     flex-direction: row;
-    height: 980px;
+    height: 1090px;
+  }
+  #home .professional .only-desktop {
+    max-height: 100%;
   }
   #home .professional .professional-photo {
     height: 100%;
+    width: 100%;
     background-position: -10vh 0vw;
   }
   #home .professional .legend {
@@ -2164,6 +2181,7 @@ header .menu.logged nav .info {
   }
   #blog .full-banner-blog header .hero {
     height: 630px;
+    margin-top: 10%;
   }
   #blog .full-banner-blog header .hero .hero-text button {
     width: 165px;
@@ -2192,6 +2210,9 @@ header .menu.logged nav .info {
   }
 }
 @media (min-width: 1400px) {
+  #blog .full-banner-blog header .hero {
+    margin-top: 15%;
+  }
   #blog .container-blog .wrap .arrow {
     display: flex;
     align-items: center;
