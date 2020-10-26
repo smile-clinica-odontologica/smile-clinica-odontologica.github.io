@@ -1267,10 +1267,67 @@ header .menu.logged nav .info {
   color: var(--third);
   font-weight: bold;
 }
+#home .home-franchises {
+  flex-direction: column;
+  width: 100%;
+  height: 550px;
+  max-height: 550px;
+  background-image: url("../images/photos/home-franchises-mobile-440.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -65vw;
+  justify-content: center;
+  align-items: end;
+  padding: 0 var(--space);
+  padding-right: 35vw;
+}
+#home .home-franchises h6, #home .home-franchises p {
+  font-weight: 600;
+  margin: 0;
+}
+#home .home-franchises h6 {
+  font-size: 30px;
+  color: var(--text);
+  margin: var(--space) 0;
+}
+#home .home-franchises p {
+  font-size: 20px;
+  color: var(--main);
+  margin-bottom: var(--space);
+}
+#home .home-franchises button {
+  min-width: 130px;
+  width: 205px;
+  border: solid 1px var(--main);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  transition: background-color 0.2s ease-in-out;
+  height: 45;
+}
+#home .home-franchises button:hover {
+  background-color: var(--hover-button);
+}
+#home .home-franchises button a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--main);
+}
 
 @media (min-width: 440px) {
   #home .full-banner-home {
     background-position-x: 0;
+  }
+  #home .home-franchises {
+    background-position-x: -43vw;
   }
 }
 @media (min-width: 500px) {
@@ -1279,6 +1336,9 @@ header .menu.logged nav .info {
   }
   #home .full-banner-home header .image-boy {
     background-position: -20px 0px;
+  }
+  #home .home-franchises {
+    background-position-x: -23vw;
   }
 }
 @media (min-width: 550px) {
@@ -1298,6 +1358,9 @@ header .menu.logged nav .info {
 @media (min-width: 650px) {
   #home .professional .professional-photo {
     background-position-y: -23vh;
+  }
+  #home .home-franchises {
+    background-position-x: 0;
   }
 }
 @media (min-width: 768px) {
@@ -1391,6 +1454,20 @@ header .menu.logged nav .info {
   }
   #home .home-blog .wrap .cards {
     grid-template-columns: 1fr 1fr;
+  }
+  #home .home-franchises {
+    background-image: url("../images/photos/home-franchises.jpg");
+    padding-right: 0;
+    justify-content: flex-end;
+  }
+  #home .home-franchises h6 {
+    font-size: 40px;
+  }
+  #home .home-franchises p {
+    display: none;
+  }
+  #home .home-franchises button {
+    margin-bottom: var(--space);
   }
 }
 @media (min-width: 992px) {
@@ -1536,6 +1613,16 @@ header .menu.logged nav .info {
   }
   #home .home-blog .wrap .cards {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  #home .home-franchises {
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-right: var(--space);
+  }
+  #home .home-franchises h6 {
+    font-size: 60px;
+    padding-left: 400px;
+    text-align: right;
   }
 }
 @media (min-width: 1400px) {
