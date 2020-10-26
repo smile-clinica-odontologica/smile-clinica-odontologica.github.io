@@ -978,10 +978,9 @@ header .menu.logged nav .info {
   width: 100%;
 }
 #home .doctors .doctor-information img {
-  max-width: 340px;
+  max-width: 280px;
 }
 #home .doctors .doctor-information .doctors-social-media {
-  width: 320px;
   min-width: 280px;
   height: 75px;
   margin: 0 auto;
@@ -1198,6 +1197,9 @@ header .menu.logged nav .info {
   }
   #home .professional .only-desktop div .professional-icons-text {
     flex-direction: column;
+  }
+  #home .doctors .doctor-information img {
+    max-width: 340px;
   }
 }
 @media (min-width: 600px) {
@@ -1521,12 +1523,13 @@ header .menu.logged nav .info {
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -80px;
+  align-items: flex-end;
 }
 #schedules .full-banner-schedules h1 {
   color: var(--letters-title);
   font-size: 60px;
   padding: 0 var(--space);
-  margin-top: 70vh;
+  margin: var(--space) 0;
 }
 #schedules .full-banner-schedules h1 b {
   color: var(--green);
@@ -1537,9 +1540,6 @@ header .menu.logged nav .info {
 #schedules .section-fields {
   width: 100%;
   background-color: var(--main);
-}
-#schedules .section-fields form {
-  padding: 0 var(--space);
 }
 #schedules .section-fields form h2, #schedules .section-fields form h3, #schedules .section-fields form h4 {
   margin: 0;
@@ -1558,43 +1558,6 @@ header .menu.logged nav .info {
 #schedules .section-fields form h4 {
   font-weight: 300;
   font-size: 20px;
-}
-#schedules .section-fields form .field {
-  color: var(--letters-body);
-}
-#schedules .section-fields form .field [type=date] {
-  background: var(--main) url("../images/photos/calendar.png") 97% 50% no-repeat;
-}
-#schedules .section-fields form .field [type=date]::-webkit-inner-spin-button {
-  display: none;
-}
-#schedules .section-fields form .field [type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-#schedules .section-fields form .field [type=time] {
-  background: var(--main) url("../images/photos/relogio.png") 97% 50% no-repeat;
-}
-#schedules .section-fields form .field [type=time]::-webkit-inner-spin-button {
-  display: none;
-}
-#schedules .section-fields form .field [type=time]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-#schedules .section-fields form .field input {
-  border-left: 0px;
-  border-top: 0px;
-  border-color: var(--letters-body);
-  background-color: var(--main);
-  color: var(--letters-body);
-  padding-bottom: var(--space);
-}
-#schedules .section-fields form .field label {
-  color: var(--letters-body);
-  padding-bottom: var(--space);
-  font-size: 25px;
-}
-#schedules .section-fields form .field label.no-text {
-  line-height: 0;
 }
 #schedules .section-fields form .button {
   min-width: 130px;
@@ -1620,17 +1583,25 @@ header .menu.logged nav .info {
 }
 #schedules .block {
   background-color: var(--gray);
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+#schedules .block .wrap-block {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+}
 #schedules .block .blocks {
-  width: 320px;
-  height: 320px;
+  width: 250px;
+  height: 250px;
   margin: 50px auto;
   background-color: var(--white);
   box-shadow: 5px 5px 20px #0000005C;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #schedules .block .blocks h5, #schedules .block .blocks p {
   font-weight: bold;
@@ -1640,8 +1611,6 @@ header .menu.logged nav .info {
 }
 #schedules .block .blocks h5 {
   font-size: 60px;
-  margin-top: 50px;
-  margin-bottom: 30px;
 }
 #schedules .block .blocks p {
   font-size: 30px;
@@ -1666,10 +1635,6 @@ header .menu.logged nav .info {
   }
   #schedules .flex .section-fields, #schedules .flex .block {
     width: 50%;
-  }
-  #schedules .flex .block {
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 }
 @media (min-width: 1200px) {
@@ -1806,7 +1771,6 @@ header .menu.logged nav .info {
   position: absolute;
   background-color: #00000030;
   z-index: 1;
-  max-height: 900px;
 }
 
 #blog {
@@ -1981,6 +1945,31 @@ header .menu.logged nav .info {
   padding: var(--space);
   background-color: #F8F8F8;
 }
+#blog .container-blog .section {
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+#blog .container-blog .section .title {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+}
+#blog .container-blog .section .title::before {
+  content: "";
+  width: 300px;
+  height: 3px;
+  background-color: var(--third);
+  position: absolute;
+  top: 4px;
+}
+#blog .container-blog .section .title h5 {
+  padding-top: 10px;
+  font-size: 24px;
+  color: var(--main);
+  margin: 6px 0;
+}
 #blog .container-blog .blog-text {
   flex-direction: column;
   align-items: center;
@@ -2003,6 +1992,11 @@ header .menu.logged nav .info {
   font-size: 18px;
   color: var(--main);
   text-align: center;
+}
+#blog .container-blog .blog-text h5 {
+  font-size: 24px;
+  color: var(--main);
+  margin: 6px 0;
 }
 #blog .container-blog .wrap {
   flex-direction: row;
@@ -2074,7 +2068,6 @@ header .menu.logged nav .info {
     background-repeat: no-repeat;
     background-position: center center;
     height: 100vh;
-    max-height: 900px;
   }
   #blog .full-banner-blog header {
     flex-direction: row;
