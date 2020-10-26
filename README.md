@@ -81,10 +81,10 @@ git pull origin master
 
 
 ## Bugs: 
-- [] menu mobile não tem overlay. 
+- [x] menu mobile não tem overlay. 
 - [] botão login no mobile fica fora da visualização por conta do cabeçalho do Chrome. (Mas não tem como ver isso no Pc pq a visualização mobile não tem cabeçalho de endereço) kkk
-- [] Campo de data no mobile está estranho. (No Chrome pelo menos)
-- [] a cor do Focus ou hover dos time options está estranha no mobile.
+- [x] Campo de data no mobile está estranho. (No Chrome pelo menos)
+- [x] a cor do Focus ou hover dos time options está estranha no mobile.
 - [] a foto de fundo das minhas páginas era melhor que fosse a do bebê, coloquei a da médica e esqueci de trocar.
 - [] melhorar pontuação no liteHouse.
 

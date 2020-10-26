@@ -508,7 +508,8 @@ header .menu nav ul {
   flex-direction: column;
   padding: 0;
   margin: 0;
-  padding-top: 200px;
+  padding-top: 35vh;
+  overflow-y: auto;
 }
 header .menu nav ul li {
   align-items: center;
@@ -593,14 +594,13 @@ header .menu.open nav ul li {
   opacity: 1;
 }
 header .menu.open nav ul li#login {
-  position: absolute;
-  bottom: 0;
   margin-bottom: 70px;
   background-color: var(--main);
   width: 200px;
   align-items: center;
   justify-content: center;
   border-radius: 6px;
+  margin-top: auto;
 }
 header .menu.open nav ul li#login a {
   color: white;
@@ -2649,7 +2649,7 @@ header .menu.logged nav .info {
 }
 .page-admin .second {
   position: relative;
-  background-image: url("../images/photos/back-image-header.png");
+  background-image: url("../images/photos/full-banner-schedules.jpg");
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
